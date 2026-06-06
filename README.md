@@ -18,7 +18,7 @@ We are happy to accept contributions from anybody.
 
 ## License
 
-All RMC-14 specific code for the content repository is licensed under [MIT](https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT).
+All [RMC-14](https://github.com/RMC-14/RMC-14.git) specific code for the content repository is licensed under [MIT](https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT).
 
 All SvX scrims specific code for the content repository is licensed under MIT
 
