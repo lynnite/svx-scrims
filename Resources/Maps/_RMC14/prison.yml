@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.2
   forkId: ""
   forkVersion: ""
-  time: 05/28/2026 22:24:32
-  entityCount: 22454
+  time: 06/03/2026 06:24:11
+  entityCount: 22436
 maps:
 - 1
 grids:
@@ -80158,6 +80158,51 @@ entities:
       parent: 1
 - proto: DoorXenoResinImpenetrable
   entities:
+  - uid: 3644
+    components:
+    - type: Transform
+      pos: -56.5,48.5
+      parent: 1
+  - uid: 3645
+    components:
+    - type: Transform
+      pos: -55.5,48.5
+      parent: 1
+  - uid: 3646
+    components:
+    - type: Transform
+      pos: -58.5,48.5
+      parent: 1
+  - uid: 3647
+    components:
+    - type: Transform
+      pos: -57.5,48.5
+      parent: 1
+  - uid: 3648
+    components:
+    - type: Transform
+      pos: -54.5,48.5
+      parent: 1
+  - uid: 3649
+    components:
+    - type: Transform
+      pos: -78.5,-61.5
+      parent: 1
+  - uid: 3650
+    components:
+    - type: Transform
+      pos: -79.5,-61.5
+      parent: 1
+  - uid: 3651
+    components:
+    - type: Transform
+      pos: -81.5,-63.5
+      parent: 1
+  - uid: 3652
+    components:
+    - type: Transform
+      pos: -81.5,-64.5
+      parent: 1
   - uid: 4466
     components:
     - type: Transform
@@ -80343,66 +80388,6 @@ entities:
     - type: Transform
       pos: -103.5,-29.5
       parent: 1
-  - uid: 4503
-    components:
-    - type: Transform
-      pos: -63.5,-59.5
-      parent: 1
-  - uid: 4504
-    components:
-    - type: Transform
-      pos: -62.5,-59.5
-      parent: 1
-  - uid: 4505
-    components:
-    - type: Transform
-      pos: -68.5,-59.5
-      parent: 1
-  - uid: 4506
-    components:
-    - type: Transform
-      pos: -69.5,-59.5
-      parent: 1
-  - uid: 4507
-    components:
-    - type: Transform
-      pos: -69.5,-70.5
-      parent: 1
-  - uid: 4508
-    components:
-    - type: Transform
-      pos: -69.5,-71.5
-      parent: 1
-  - uid: 4509
-    components:
-    - type: Transform
-      pos: -69.5,-74.5
-      parent: 1
-  - uid: 4510
-    components:
-    - type: Transform
-      pos: -69.5,-75.5
-      parent: 1
-  - uid: 4511
-    components:
-    - type: Transform
-      pos: -69.5,-76.5
-      parent: 1
-  - uid: 4512
-    components:
-    - type: Transform
-      pos: -73.5,-63.5
-      parent: 1
-  - uid: 4513
-    components:
-    - type: Transform
-      pos: -73.5,-65.5
-      parent: 1
-  - uid: 4514
-    components:
-    - type: Transform
-      pos: -73.5,-64.5
-      parent: 1
   - uid: 4515
     components:
     - type: Transform
@@ -80474,7 +80459,7 @@ entities:
       pos: -89.5,-19.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -13216.746
+      secondsUntilStateChange: -13483.713
       state: Opening
   - uid: 4529
     components:
@@ -80557,7 +80542,7 @@ entities:
       pos: -114.5,-10.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -6495.3633
+      secondsUntilStateChange: -6762.3296
       state: Opening
   - uid: 4545
     components:
@@ -80673,31 +80658,6 @@ entities:
     components:
     - type: Transform
       pos: -88.5,50.5
-      parent: 1
-  - uid: 4568
-    components:
-    - type: Transform
-      pos: -52.5,40.5
-      parent: 1
-  - uid: 4569
-    components:
-    - type: Transform
-      pos: -52.5,39.5
-      parent: 1
-  - uid: 4570
-    components:
-    - type: Transform
-      pos: -52.5,38.5
-      parent: 1
-  - uid: 4571
-    components:
-    - type: Transform
-      pos: -56.5,36.5
-      parent: 1
-  - uid: 4572
-    components:
-    - type: Transform
-      pos: -55.5,36.5
       parent: 1
   - uid: 4573
     components:
@@ -81068,28 +81028,6 @@ entities:
     - type: Transform
       pos: 78.715164,-35.05125
       parent: 1
-- proto: FoodBoxDonkpocket
-  entities:
-  - uid: 4644
-    components:
-    - type: Transform
-      pos: 46.44492,-53.38582
-      parent: 1
-  - uid: 4645
-    components:
-    - type: Transform
-      pos: 51.272312,-45.624844
-      parent: 1
-  - uid: 4646
-    components:
-    - type: Transform
-      pos: 51.66597,-45.261574
-      parent: 1
-  - uid: 4647
-    components:
-    - type: Transform
-      pos: 9.5,-22.5
-      parent: 1
 - proto: FoodBurgerXeno
   entities:
   - uid: 4649
@@ -81140,28 +81078,6 @@ entities:
     components:
     - type: Transform
       pos: -40.40677,25.12714
-      parent: 1
-- proto: FoodDonkpocket
-  entities:
-  - uid: 4657
-    components:
-    - type: Transform
-      pos: -36.5,-24.5
-      parent: 1
-  - uid: 4658
-    components:
-    - type: Transform
-      pos: -31.5,-29.5
-      parent: 1
-  - uid: 4659
-    components:
-    - type: Transform
-      pos: -43.5,45.5
-      parent: 1
-  - uid: 4660
-    components:
-    - type: Transform
-      pos: -63.5,7.5
       parent: 1
 - proto: FoodDough
   entities:
@@ -85728,6 +85644,28 @@ entities:
     components:
     - type: Transform
       pos: -13.697025,27.892988
+      parent: 1
+- proto: RMCBoxDonkpockets
+  entities:
+  - uid: 4644
+    components:
+    - type: Transform
+      pos: 46.44492,-53.38582
+      parent: 1
+  - uid: 4645
+    components:
+    - type: Transform
+      pos: 51.272312,-45.624844
+      parent: 1
+  - uid: 4646
+    components:
+    - type: Transform
+      pos: 51.66597,-45.261574
+      parent: 1
+  - uid: 4647
+    components:
+    - type: Transform
+      pos: 9.5,-22.5
       parent: 1
 - proto: RMCBoxDonut
   entities:
@@ -91561,71 +91499,6 @@ entities:
     - type: Transform
       pos: -83.5,25.5
       parent: 1
-  - uid: 6453
-    components:
-    - type: Transform
-      pos: -59.5,33.5
-      parent: 1
-  - uid: 6454
-    components:
-    - type: Transform
-      pos: -60.5,33.5
-      parent: 1
-  - uid: 6455
-    components:
-    - type: Transform
-      pos: -61.5,33.5
-      parent: 1
-  - uid: 6456
-    components:
-    - type: Transform
-      pos: -62.5,33.5
-      parent: 1
-  - uid: 6457
-    components:
-    - type: Transform
-      pos: -63.5,33.5
-      parent: 1
-  - uid: 6458
-    components:
-    - type: Transform
-      pos: -64.5,33.5
-      parent: 1
-  - uid: 6459
-    components:
-    - type: Transform
-      pos: -65.5,33.5
-      parent: 1
-  - uid: 6460
-    components:
-    - type: Transform
-      pos: -66.5,33.5
-      parent: 1
-  - uid: 6461
-    components:
-    - type: Transform
-      pos: -67.5,33.5
-      parent: 1
-  - uid: 6462
-    components:
-    - type: Transform
-      pos: -52.5,36.5
-      parent: 1
-  - uid: 6463
-    components:
-    - type: Transform
-      pos: -52.5,37.5
-      parent: 1
-  - uid: 6464
-    components:
-    - type: Transform
-      pos: -51.5,36.5
-      parent: 1
-  - uid: 6465
-    components:
-    - type: Transform
-      pos: -51.5,37.5
-      parent: 1
   - uid: 6466
     components:
     - type: Transform
@@ -91910,6 +91783,28 @@ entities:
     components:
     - type: Transform
       pos: 24.5,63.5
+      parent: 1
+- proto: RMCFoodDonkpocket
+  entities:
+  - uid: 4657
+    components:
+    - type: Transform
+      pos: -36.5,-24.5
+      parent: 1
+  - uid: 4658
+    components:
+    - type: Transform
+      pos: -31.5,-29.5
+      parent: 1
+  - uid: 4659
+    components:
+    - type: Transform
+      pos: -43.5,45.5
+      parent: 1
+  - uid: 4660
+    components:
+    - type: Transform
+      pos: -63.5,7.5
       parent: 1
 - proto: RMCFoodDonut
   entities:
@@ -170810,6 +170705,21 @@ entities:
       parent: 1
 - proto: WallXenoResinImpenetrable
   entities:
+  - uid: 4503
+    components:
+    - type: Transform
+      pos: -81.5,-62.5
+      parent: 1
+  - uid: 4504
+    components:
+    - type: Transform
+      pos: -80.5,-62.5
+      parent: 1
+  - uid: 4505
+    components:
+    - type: Transform
+      pos: -80.5,-61.5
+      parent: 1
   - uid: 21431
     components:
     - type: Transform
