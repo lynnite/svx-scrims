@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.2
   forkId: ""
   forkVersion: ""
-  time: 06/03/2026 06:24:11
-  entityCount: 22436
+  time: 06/07/2026 21:16:53
+  entityCount: 22448
 maps:
 - 1
 grids:
@@ -65857,7 +65857,6 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
-      needsPower: True
     - type: FaxMachine
       name: LV-161 Engineering
   - uid: 1924
@@ -65867,7 +65866,6 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
-      needsPower: True
     - type: FaxMachine
       name: LV-161 Command
   - uid: 1925
@@ -65877,7 +65875,6 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
-      needsPower: True
     - type: FaxMachine
       name: LV-161 Reception
   - uid: 1926
@@ -65887,7 +65884,6 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
-      needsPower: True
     - type: FaxMachine
       name: LV-161 Armory A
   - uid: 1927
@@ -65897,7 +65893,6 @@ entities:
       parent: 1
     - type: ApcPowerReceiver
       powerLoad: 5
-      needsPower: True
     - type: FaxMachine
       name: LV-161 Armory B
 - proto: CMFilingCabinet
@@ -80459,7 +80454,7 @@ entities:
       pos: -89.5,-19.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -13483.713
+      secondsUntilStateChange: -13651.686
       state: Opening
   - uid: 4529
     components:
@@ -80542,7 +80537,7 @@ entities:
       pos: -114.5,-10.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -6762.3296
+      secondsUntilStateChange: -6930.302
       state: Opening
   - uid: 4545
     components:
@@ -91202,7 +91197,7 @@ entities:
     - type: Transform
       pos: -39.5,42.5
       parent: 1
-- proto: RMCFogWallWeed30
+- proto: RMCFogWallWeed
   entities:
   - uid: 6394
     components:
@@ -119856,176 +119851,281 @@ entities:
     - type: Transform
       pos: -55.5,65.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11348
     components:
     - type: Transform
       pos: -55.5,64.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11349
     components:
     - type: Transform
       pos: -55.5,63.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11350
     components:
     - type: Transform
       pos: -51.5,65.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11351
     components:
     - type: Transform
       pos: -51.5,64.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11352
     components:
     - type: Transform
       pos: -51.5,63.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11353
     components:
     - type: Transform
       pos: -47.5,65.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11354
     components:
     - type: Transform
       pos: -47.5,63.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11355
     components:
     - type: Transform
       pos: -55.5,57.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11356
     components:
     - type: Transform
       pos: -55.5,56.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11357
     components:
     - type: Transform
       pos: -55.5,55.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11358
     components:
     - type: Transform
       pos: -51.5,57.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11359
     components:
     - type: Transform
       pos: -51.5,56.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11360
     components:
     - type: Transform
       pos: -51.5,55.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11361
     components:
     - type: Transform
       pos: -47.5,57.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11362
     components:
     - type: Transform
       pos: -47.5,56.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11363
     components:
     - type: Transform
       pos: -47.5,55.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11364
     components:
     - type: Transform
       pos: -43.5,57.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11365
     components:
     - type: Transform
       pos: -35.5,55.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11366
     components:
     - type: Transform
       pos: -54.5,69.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11367
     components:
     - type: Transform
       pos: -39.5,65.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11368
     components:
     - type: Transform
       pos: -39.5,64.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11369
     components:
     - type: Transform
       pos: -39.5,63.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11370
     components:
     - type: Transform
       pos: -43.5,63.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11371
     components:
     - type: Transform
       pos: -35.5,65.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11372
     components:
     - type: Transform
       pos: -35.5,64.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11373
     components:
     - type: Transform
       pos: -35.5,63.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11374
     components:
     - type: Transform
       pos: -52.5,69.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11375
     components:
     - type: Transform
       pos: -50.5,69.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11376
     components:
     - type: Transform
       pos: -48.5,69.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11377
     components:
     - type: Transform
       pos: -46.5,69.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11378
     components:
     - type: Transform
       pos: -44.5,69.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11379
     components:
     - type: Transform
       pos: -86.5,53.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11380
     components:
     - type: Transform
       pos: -82.5,53.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
   - uid: 11381
     components:
     - type: Transform
       pos: -78.5,53.5
       parent: 1
+    missingComponents:
+    - ApcPowerReceiver
+    - RMCPowerReceiver
 - proto: RMCTelephone
   entities:
   - uid: 11382
@@ -138943,6 +139043,66 @@ entities:
       parent: 1
 - proto: RMCWallInvisibleBulletPassible
   entities:
+  - uid: 4506
+    components:
+    - type: Transform
+      pos: -9.5,40.5
+      parent: 1
+  - uid: 4507
+    components:
+    - type: Transform
+      pos: -10.5,40.5
+      parent: 1
+  - uid: 4508
+    components:
+    - type: Transform
+      pos: -11.5,40.5
+      parent: 1
+  - uid: 4509
+    components:
+    - type: Transform
+      pos: -12.5,40.5
+      parent: 1
+  - uid: 4510
+    components:
+    - type: Transform
+      pos: -9.5,46.5
+      parent: 1
+  - uid: 4511
+    components:
+    - type: Transform
+      pos: -10.5,46.5
+      parent: 1
+  - uid: 4512
+    components:
+    - type: Transform
+      pos: -11.5,46.5
+      parent: 1
+  - uid: 4513
+    components:
+    - type: Transform
+      pos: -12.5,46.5
+      parent: 1
+  - uid: 4514
+    components:
+    - type: Transform
+      pos: -9.5,48.5
+      parent: 1
+  - uid: 4568
+    components:
+    - type: Transform
+      pos: -10.5,48.5
+      parent: 1
+  - uid: 4569
+    components:
+    - type: Transform
+      pos: -11.5,48.5
+      parent: 1
+  - uid: 4570
+    components:
+    - type: Transform
+      pos: -12.5,48.5
+      parent: 1
   - uid: 15117
     components:
     - type: Transform
