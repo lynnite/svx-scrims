@@ -16,7 +16,7 @@
   weight: 100
   icon: "RMCJobIconXenoQueen"
   requireAdminNotify: true
-  hidden: false
+  hidden: true
   supervisors: nobody
   jobPreviewEntity: RMCPlayerXenoQueenPreview
   accessGroups:
