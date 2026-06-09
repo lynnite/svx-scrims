@@ -54,6 +54,7 @@
         sprite: /Textures/_RMC14/Interface/map_blips.rsi
         state: engi
     - type: MutinyEligible
+  hidden: true
 
 - type: startingGear
   id: CMGearCombatTech

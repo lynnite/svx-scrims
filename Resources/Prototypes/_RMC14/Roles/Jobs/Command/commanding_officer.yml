@@ -84,6 +84,7 @@
     - type: RMCAwardRecommendation
       maxRecommendations: 4
     - type: SeeNewPlayers
+  hidden: true
 
 - type: startingGear
   id: CMGearCommandingOfficer

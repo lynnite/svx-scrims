@@ -61,6 +61,7 @@
     - type: CMVendorUser
       points: 45
       id: RMCWeYaExecutiveBodyguard
+  hidden: true
 
 - type: playTimeTracker
   id: RMCJobWeYaExecutiveBodyguard

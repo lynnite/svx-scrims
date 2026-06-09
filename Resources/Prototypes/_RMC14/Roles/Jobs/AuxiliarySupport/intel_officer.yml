@@ -61,6 +61,7 @@
     - type: SquadNameOverride
       name: cm-job-name-intel
     - type: MutinyEligible
+  hidden: true
 
 - type: startingGear
   id: CMGearIntelOfficer
