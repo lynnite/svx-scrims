@@ -78,6 +78,7 @@
     - type: MutinyEligible
     - type: RMCAwardRecommendation
     - type: SeeNewPlayers
+  hidden: true
 
 - type: startingGear
   id: CMGearASO
