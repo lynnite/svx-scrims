@@ -59,6 +59,7 @@
         sprite: /Textures/_RMC14/Interface/map_blips.rsi
         state: background_goon
     - type: RMCTrackable
+  hidden: true
 
 - type: startingGear
   id: CMGearLiaison

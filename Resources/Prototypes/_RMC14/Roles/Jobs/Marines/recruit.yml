@@ -28,6 +28,7 @@
         sprite: /Textures/_RMC14/Interface/map_blips.rsi
         state: private
     - type: MutinyEligible
+  hidden: true
 
 - type: playTimeTracker
   id: RMCJobRecruit
