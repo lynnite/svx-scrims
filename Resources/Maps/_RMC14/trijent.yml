@@ -4,7 +4,7 @@ meta:
   engineVersion: 264.0.2
   forkId: ""
   forkVersion: ""
-  time: 06/03/2026 08:16:46
+  time: 06/16/2026 06:32:57
   entityCount: 38817
 maps:
 - 1
@@ -69567,7 +69567,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -54870.797
+      secondsUntilStateChange: -55038.47
       state: Opening
 - proto: CMAnestheticTank
   entities:
@@ -123084,6 +123084,18 @@ entities:
     - type: Transform
       pos: 180.5,-12.5
       parent: 1
+- proto: RMCArcadeSpaceVillain
+  entities:
+  - uid: 38169
+    components:
+    - type: Transform
+      pos: 25.5,-147.5
+      parent: 1
+  - uid: 38170
+    components:
+    - type: Transform
+      pos: 60.5,-195.5
+      parent: 1
 - proto: RMCArmorRiotCivilian
   entities:
   - uid: 9719
@@ -145074,9 +145086,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - ItemSlots
     - ContainerContainer
@@ -145089,9 +145101,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - ItemSlots
     - ContainerContainer
@@ -145104,9 +145116,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - ItemSlots
     - ContainerContainer
@@ -145119,9 +145131,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - ItemSlots
     - ContainerContainer
@@ -145812,7 +145824,7 @@ entities:
     - type: Transform
       pos: 33.5,-0.5
       parent: 1
-- proto: RMCFogWallWeed30
+- proto: RMCFogWallWeed
   entities:
   - uid: 9511
     components:
@@ -172157,6 +172169,30 @@ entities:
     - type: Transform
       pos: 55.594353,-72.409836
       parent: 1
+- proto: RMCIntelDataTerminal
+  entities:
+  - uid: 18364
+    components:
+    - type: Transform
+      pos: 107.5,-196.5
+      parent: 1
+  - uid: 18376
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 176.5,-132.5
+      parent: 1
+  - uid: 18378
+    components:
+    - type: Transform
+      pos: 71.5,-38.5
+      parent: 1
+  - uid: 18829
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 162.5,-29.5
+      parent: 1
 - proto: RMCItemPoolBuckshot
   entities:
   - uid: 17303
@@ -178495,11 +178531,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 148.5,-206.5
       parent: 1
-  - uid: 18364
-    components:
-    - type: Transform
-      pos: 107.5,-196.5
-      parent: 1
   - uid: 18365
     components:
     - type: Transform
@@ -178563,22 +178594,11 @@ entities:
     - type: Transform
       pos: 167.5,-151.5
       parent: 1
-  - uid: 18376
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 176.54993,-132.40639
-      parent: 1
   - uid: 18377
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 140.40462,-125.43038
-      parent: 1
-  - uid: 18378
-    components:
-    - type: Transform
-      pos: 71.5,-38.5
       parent: 1
   - uid: 18379
     components:
@@ -181422,14 +181442,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 111.578064,-75.731705
-      parent: 1
-- proto: RMCPropCommunicationsConsoleAlt
-  entities:
-  - uid: 18829
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 162.5,-29.5
       parent: 1
 - proto: RMCPropTrashFull
   entities:
@@ -280554,18 +280566,6 @@ entities:
     components:
     - type: Transform
       pos: 98.5,-178.5
-      parent: 1
-- proto: SpaceVillainArcade
-  entities:
-  - uid: 38169
-    components:
-    - type: Transform
-      pos: 25.5,-147.5
-      parent: 1
-  - uid: 38170
-    components:
-    - type: Transform
-      pos: 60.5,-195.5
       parent: 1
 - proto: SpaceVillainArcadeFilled
   entities:

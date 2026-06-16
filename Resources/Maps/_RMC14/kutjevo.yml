@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.2
   forkId: ""
   forkVersion: ""
-  time: 05/22/2026 16:12:41
-  entityCount: 26593
+  time: 06/16/2026 05:58:03
+  entityCount: 26596
 maps:
 - 1
 grids:
@@ -60818,7 +60818,7 @@ entities:
     - type: Transform
       pos: 49.5,-164.5
       parent: 1
-- proto: RMCFogWallWeed30
+- proto: RMCFogWallWeed
   entities:
   - uid: 3693
     components:
@@ -64294,6 +64294,26 @@ entities:
     components:
     - type: Transform
       pos: 104.5,-63.5
+      parent: 1
+- proto: RMCIntelDataTerminal
+  entities:
+  - uid: 26594
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 138.5,-112.5
+      parent: 1
+  - uid: 26595
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 132.5,-51.5
+      parent: 1
+  - uid: 26596
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 101.5,-62.5
       parent: 1
 - proto: RMCJumpsuitKutjevoDrysuit
   entities:

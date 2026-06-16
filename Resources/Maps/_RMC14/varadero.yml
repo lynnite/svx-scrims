@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.2
   forkId: ""
   forkVersion: ""
-  time: 05/11/2026 11:56:34
-  entityCount: 27370
+  time: 06/16/2026 06:35:29
+  entityCount: 27372
 maps:
 - 1
 grids:
@@ -86821,6 +86821,8 @@ entities:
     - type: Transform
       pos: 47.5,86.5
       parent: 1
+    - type: CMMedicalSupplyLink
+      connectedPort: True
 - proto: CMMicrowave
   entities:
   - uid: 8838
@@ -151721,6 +151723,9 @@ entities:
     - type: Transform
       pos: 58.5,51.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -22.433485
+      state: Opening
   - uid: 23553
     components:
     - type: Transform
@@ -151920,19 +151925,6 @@ entities:
     components:
     - type: Transform
       pos: 161.5,9.5
-      parent: 1
-- proto: DrinkGlass
-  entities:
-  - uid: 20571
-    components:
-    - type: Transform
-      rot: -6.283185307179586 rad
-      pos: 91.66319,62.54111
-      parent: 1
-  - uid: 20572
-    components:
-    - type: Transform
-      pos: 93.525795,62.435368
       parent: 1
 - proto: DrinkJuiceOrangeCarton
   entities:
@@ -155169,13 +155161,6 @@ entities:
       canCollide: False
     - type: Fixtures
       fixtures: {}
-- proto: RMCBeakerHighCapacity
-  entities:
-  - uid: 21039
-    components:
-    - type: Transform
-      pos: 67.5,96.5
-      parent: 1
 - proto: RMCBedAlt
   entities:
   - uid: 21040
@@ -156854,7 +156839,7 @@ entities:
       pos: 73.5,59.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -82217.63
+      secondsUntilStateChange: -82359.6
       state: Opening
   - uid: 21267
     components:
@@ -157335,6 +157320,19 @@ entities:
     - type: Transform
       pos: 109.28125,152.5
       parent: 1
+- proto: RMCDrinkGlass
+  entities:
+  - uid: 20571
+    components:
+    - type: Transform
+      rot: -6.283185307179586 rad
+      pos: 91.66319,62.54111
+      parent: 1
+  - uid: 20572
+    components:
+    - type: Transform
+      pos: 93.525795,62.435368
+      parent: 1
 - proto: RMCDropshipMaintsComputer
   entities:
   - uid: 27390
@@ -157427,6 +157425,18 @@ entities:
     components:
     - type: Transform
       pos: 17.5,91.5
+      parent: 1
+- proto: RMCFloorSafe
+  entities:
+  - uid: 23687
+    components:
+    - type: Transform
+      pos: 63.5,53.5
+      parent: 1
+  - uid: 23688
+    components:
+    - type: Transform
+      pos: 15.5,85.5
       parent: 1
 - proto: RMCFloraTreePalm01
   entities:
@@ -159329,7 +159339,7 @@ entities:
     - type: Transform
       pos: 218.5,51.5
       parent: 1
-- proto: RMCFogWallWeed30
+- proto: RMCFogWallWeed
   entities:
   - uid: 23528
     components:
@@ -177962,6 +177972,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 53.5,163.5
+      parent: 1
+- proto: RMCReagentJug
+  entities:
+  - uid: 21039
+    components:
+    - type: Transform
+      pos: 67.5,96.5
       parent: 1
 - proto: RMCRecharger
   entities:

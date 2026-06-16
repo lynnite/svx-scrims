@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.2
   forkId: ""
   forkVersion: ""
-  time: 05/01/2026 13:33:46
-  entityCount: 30177
+  time: 06/16/2026 05:40:39
+  entityCount: 30179
 maps:
 - 1
 grids:
@@ -45181,28 +45181,6 @@ entities:
     - type: Transform
       pos: -48.57303,35.565613
       parent: 1
-- proto: BlockGameArcade
-  entities:
-  - uid: 27
-    components:
-    - type: Transform
-      pos: -49.5,-35.5
-      parent: 1
-  - uid: 28
-    components:
-    - type: Transform
-      pos: -42.5,33.5
-      parent: 1
-  - uid: 29
-    components:
-    - type: Transform
-      pos: -43.5,33.5
-      parent: 1
-  - uid: 30
-    components:
-    - type: Transform
-      pos: -44.5,33.5
-      parent: 1
 - proto: Cane
   entities:
   - uid: 31
@@ -46243,7 +46221,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -100016.82
+      secondsUntilStateChange: -100305.305
       state: Opening
 - proto: CMAirlockMedicalLocked
   entities:
@@ -56065,7 +56043,6 @@ entities:
     - type: Transform
       pos: -69.5,-61.5
       parent: 1
-    - type: Appearance
     - type: SpriteSetRenderOrder
       renderOrder: 3000
   - uid: 1969
@@ -56073,7 +56050,6 @@ entities:
     - type: Transform
       pos: 56.5,-79.5
       parent: 1
-    - type: Appearance
     - type: SpriteSetRenderOrder
       renderOrder: 3000
 - proto: CMCrowbar
@@ -56930,7 +56906,7 @@ entities:
     - type: CMDoubleDoor
       lastOpeningAt: 10666.0893339
     - type: Door
-      secondsUntilStateChange: -87595.48
+      secondsUntilStateChange: -87883.96
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -56946,7 +56922,7 @@ entities:
     - type: CMDoubleDoor
       lastOpeningAt: 10666.0893339
     - type: Door
-      secondsUntilStateChange: -87595.48
+      secondsUntilStateChange: -87883.96
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -58283,9 +58259,9 @@ entities:
     - type: ContainerContainer
       containers: {}
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -61671,6 +61647,8 @@ entities:
     - type: Transform
       pos: 44.5,-10.5
       parent: 1
+    - type: CMMedicalSupplyLink
+      connectedPort: True
 - proto: CMMetalFlask
   entities:
   - uid: 2863
@@ -84329,6 +84307,28 @@ entities:
     - type: Transform
       pos: 21.5,2.5
       parent: 1
+- proto: RMCArcadeBlockGame
+  entities:
+  - uid: 27
+    components:
+    - type: Transform
+      pos: -49.5,-35.5
+      parent: 1
+  - uid: 28
+    components:
+    - type: Transform
+      pos: -42.5,33.5
+      parent: 1
+  - uid: 29
+    components:
+    - type: Transform
+      pos: -43.5,33.5
+      parent: 1
+  - uid: 30
+    components:
+    - type: Transform
+      pos: -44.5,33.5
+      parent: 1
 - proto: RMCArmorHelmetM3G4
   entities:
   - uid: 6972
@@ -87292,9 +87292,8 @@ entities:
   - uid: 4
     components:
     - type: Transform
-      parent: 2
-    - type: Physics
-      canCollide: False
+      pos: 0.5,32.5
+      parent: 1
     - type: InsideEntityStorage
   - uid: 7417
     components:
@@ -92093,9 +92092,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - ItemSlots
     - ContainerContainer
@@ -92211,6 +92210,15 @@ entities:
     - type: Transform
       pos: 81.19571,26.60361
       parent: 1
+- proto: RMCFloorSafe
+  entities:
+  - uid: 6613
+    components:
+    - type: Transform
+      pos: 24.5,28.5
+      parent: 1
+    - type: SpriteSetRenderOrder
+      offset: 0,-0.1875
 - proto: RMCFlowerspv1
   entities:
   - uid: 8097
@@ -97158,7 +97166,7 @@ entities:
     - type: Transform
       pos: 45.5,-87.5
       parent: 1
-- proto: RMCFogWallWeed30
+- proto: RMCFogWallWeed
   entities:
   - uid: 30131
     components:
@@ -112015,7 +112023,7 @@ entities:
     - type: Transform
       pos: 17.601679,-55.398907
       parent: 1
-- proto: RMCHeadCapFerret
+- proto: RMCHeadCapGrey
   entities:
   - uid: 29691
     components:
@@ -112167,6 +112175,25 @@ entities:
     components:
     - type: Transform
       pos: -22.5,47.5
+      parent: 1
+- proto: RMCIntelDataTerminal
+  entities:
+  - uid: 10169
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 2.5,14.5
+      parent: 1
+  - uid: 10185
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 64.5,3.5
+      parent: 1
+  - uid: 30179
+    components:
+    - type: Transform
+      pos: -4.5,-27.5
       parent: 1
 - proto: RMCItemPoolBuckshot
   entities:
@@ -116460,30 +116487,17 @@ entities:
   - uid: 2
     components:
     - type: Transform
-      pos: 0.5,32.5
+      pos: 35.5,-39.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 4
-          - 3
-          - 5
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
   - uid: 6612
     components:
     - type: Transform
       pos: 34.5,-39.5
       parent: 1
-  - uid: 6613
+  - uid: 30178
     components:
     - type: Transform
-      pos: 35.5,-39.5
+      pos: 0.5,32.5
       parent: 1
 - proto: RMCM42A2ShotgunCase
   entities:
@@ -118334,12 +118348,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -32.5,15.5
       parent: 1
-  - uid: 10169
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.53555,14.63107
-      parent: 1
   - uid: 10170
     components:
     - type: Transform
@@ -118427,12 +118435,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 64.51183,5.4926167
-      parent: 1
-  - uid: 10185
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 64.474014,3.6091049
       parent: 1
   - uid: 10186
     components:

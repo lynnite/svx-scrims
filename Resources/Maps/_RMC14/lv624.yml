@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.2
   forkId: ""
   forkVersion: ""
-  time: 06/03/2026 06:52:04
-  entityCount: 24022
+  time: 06/16/2026 05:35:19
+  entityCount: 24027
 maps:
 - 1
 grids:
@@ -41611,11 +41611,10 @@ entities:
   - uid: 5
     components:
     - type: Transform
-      parent: 4
+      pos: -23.5,-76.5
+      parent: 1
     - type: HideLayerClothing
       slots: null
-    - type: Physics
-      canCollide: False
     - type: InsideEntityStorage
 - proto: BeachBall
   entities:
@@ -44834,7 +44833,7 @@ entities:
     - type: CMDoubleDoor
       lastOpeningAt: 3891.1294422
     - type: Door
-      secondsUntilStateChange: -33140.867
+      secondsUntilStateChange: -33834.137
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -44852,7 +44851,7 @@ entities:
     - type: CMDoubleDoor
       lastOpeningAt: 3891.1294422
     - type: Door
-      secondsUntilStateChange: -33140.867
+      secondsUntilStateChange: -33834.137
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -55575,6 +55574,8 @@ entities:
     - type: Transform
       pos: -7.5,-33.5
       parent: 1
+    - type: CMMedicalSupplyLink
+      connectedPort: True
 - proto: CMMicrowave
   entities:
   - uid: 2487
@@ -143848,9 +143849,8 @@ entities:
   - uid: 6
     components:
     - type: Transform
-      parent: 4
-    - type: Physics
-      canCollide: False
+      pos: -23.5,-76.5
+      parent: 1
     - type: InsideEntityStorage
 - proto: RMCCigarette
   entities:
@@ -146651,6 +146651,15 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 35.432106,-8.650699
       parent: 1
+- proto: RMCFloorSafe
+  entities:
+  - uid: 21563
+    components:
+    - type: MetaData
+      name: safe
+    - type: Transform
+      pos: 19.5,-90.5
+      parent: 1
 - proto: RMCFloorShallowWaterEntityBelowPipes
   entities:
   - uid: 20224
@@ -147966,7 +147975,7 @@ entities:
     - type: Transform
       pos: 34.5,36.5
       parent: 1
-- proto: RMCFogWallWeed30
+- proto: RMCFogWallWeed
   entities:
   - uid: 20429
     components:
@@ -153526,6 +153535,30 @@ entities:
     - type: Transform
       pos: 36.5,26.5
       parent: 1
+- proto: RMCIntelDataTerminal
+  entities:
+  - uid: 4
+    components:
+    - type: Transform
+      pos: 34.5,32.5
+      parent: 1
+  - uid: 24023
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 19.5,-91.5
+      parent: 1
+  - uid: 24024
+    components:
+    - type: Transform
+      pos: -5.5,-47.5
+      parent: 1
+  - uid: 24026
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -56.5,-96.5
+      parent: 1
 - proto: RMCItemPoolBuckshot
   entities:
   - uid: 21315
@@ -153962,9 +153995,8 @@ entities:
   - uid: 7
     components:
     - type: Transform
-      parent: 4
-    - type: Physics
-      canCollide: False
+      pos: -23.5,-76.5
+      parent: 1
     - type: InsideEntityStorage
 - proto: RMCKitchenKnife
   entities:
@@ -154922,41 +154954,16 @@ entities:
       parent: 1
 - proto: RMCLockerSecureSafe
   entities:
-  - uid: 4
+  - uid: 24025
     components:
     - type: Transform
       pos: -23.5,-76.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 6
-          - 8
-          - 7
-          - 5
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
-  - uid: 21563
+  - uid: 24027
     components:
     - type: Transform
       pos: -56.5,-97.5
       parent: 1
-    - type: ContainerContainer
-      containers:
-        entity_storage: !type:Container
-          showEnts: False
-          occludes: True
-          ents:
-          - 21564
-        paper_label: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
 - proto: RMCM276ShotgunShellLoadingRig
   entities:
   - uid: 21565
@@ -157399,9 +157406,8 @@ entities:
   - uid: 21564
     components:
     - type: Transform
-      parent: 21563
-    - type: Physics
-      canCollide: False
+      pos: -56.5,-97.5
+      parent: 1
     - type: InsideEntityStorage
   - uid: 21920
     components:
@@ -162439,9 +162445,8 @@ entities:
   - uid: 8
     components:
     - type: Transform
-      parent: 4
-    - type: Physics
-      canCollide: False
+      pos: -23.5,-76.5
+      parent: 1
     - type: InsideEntityStorage
 - proto: VoiceTrigger
   entities:

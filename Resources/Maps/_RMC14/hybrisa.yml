@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.2
   forkId: ""
   forkVersion: ""
-  time: 05/01/2026 05:12:24
-  entityCount: 54359
+  time: 06/16/2026 05:54:28
+  entityCount: 54369
 maps:
 - 1
 grids:
@@ -95479,9 +95479,9 @@ entities:
       containers: {}
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95495,10 +95495,10 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - InteractedBlacklist
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95513,9 +95513,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95529,9 +95529,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95545,9 +95545,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95561,9 +95561,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95576,9 +95576,9 @@ entities:
       pos: -121.5,-109.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95592,9 +95592,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95608,9 +95608,9 @@ entities:
       parent: 1
     missingComponents:
     - ApcPowerReceiver
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95623,9 +95623,9 @@ entities:
       pos: -150.5,-48.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95638,9 +95638,9 @@ entities:
       pos: -149.5,-53.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95653,9 +95653,9 @@ entities:
       pos: -155.5,-32.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95668,9 +95668,9 @@ entities:
       pos: -154.5,-32.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95683,9 +95683,9 @@ entities:
       pos: -158.5,-37.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95698,9 +95698,9 @@ entities:
       pos: -200.5,-10.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95713,9 +95713,9 @@ entities:
       pos: -202.5,-12.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95728,9 +95728,9 @@ entities:
       pos: -221.5,-17.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95743,9 +95743,9 @@ entities:
       pos: -188.5,-27.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95758,9 +95758,9 @@ entities:
       pos: -203.5,-188.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -95773,9 +95773,9 @@ entities:
       pos: -202.5,-142.5
       parent: 1
     missingComponents:
+    - ActivatableUIRequiresPower
     - FaxMachine
     - ActivatableUI
-    - ActivatableUIRequiresPower
     - UserInterface
     - Faxecute
     - ItemSlots
@@ -105021,20 +105021,6 @@ entities:
     - type: Transform
       pos: -140.74342,-80.47761
       parent: 1
-- proto: CMPosterRememberIo
-  entities:
-  - uid: 6552
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -208.5,-7.5
-      parent: 1
-  - uid: 6553
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -176.5,-188.5
-      parent: 1
 - proto: CMPosterRocker1
   entities:
   - uid: 6554
@@ -107378,6 +107364,20 @@ entities:
     components:
     - type: Transform
       pos: -177.5,-38.5
+      parent: 1
+- proto: CMRandomPosterAny
+  entities:
+  - uid: 6552
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -208.5,-7.5
+      parent: 1
+  - uid: 6553
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -176.5,-188.5
       parent: 1
 - proto: CMRetractor
   entities:
@@ -135851,91 +135851,6 @@ entities:
     - type: Transform
       pos: -178.54305,-47.683605
       parent: 1
-- proto: FoodBoxDonkpocket
-  entities:
-  - uid: 12189
-    components:
-    - type: Transform
-      pos: -88.68083,-136.52238
-      parent: 1
-  - uid: 12190
-    components:
-    - type: Transform
-      pos: -156.64967,-105.21153
-      parent: 1
-  - uid: 12191
-    components:
-    - type: Transform
-      pos: -156.53009,-105.21153
-      parent: 1
-  - uid: 12192
-    components:
-    - type: Transform
-      pos: -156.36157,-105.19522
-      parent: 1
-  - uid: 12193
-    components:
-    - type: Transform
-      pos: -156.26373,-105.20609
-      parent: 1
-  - uid: 12194
-    components:
-    - type: Transform
-      pos: -156.70404,-105.59204
-      parent: 1
-  - uid: 12195
-    components:
-    - type: Transform
-      pos: -156.49747,-105.60291
-      parent: 1
-  - uid: 12196
-    components:
-    - type: Transform
-      pos: -156.35614,-105.5866
-      parent: 1
-  - uid: 12197
-    components:
-    - type: Transform
-      pos: -156.28548,-105.59747
-      parent: 1
-  - uid: 12198
-    components:
-    - type: Transform
-      pos: -153.50224,-98.44552
-      parent: 1
-    - type: CollisionWake
-      enabled: False
-    - type: Conveyed
-  - uid: 12199
-    components:
-    - type: Transform
-      pos: -140.91556,-32.207058
-      parent: 1
-  - uid: 12200
-    components:
-    - type: Transform
-      pos: -140.75249,-32.299465
-      parent: 1
-  - uid: 12201
-    components:
-    - type: Transform
-      pos: -141.421,-34.576084
-      parent: 1
-  - uid: 12202
-    components:
-    - type: Transform
-      pos: -185.77075,-177.29143
-      parent: 1
-  - uid: 12203
-    components:
-    - type: Transform
-      pos: -185.54158,-177.29143
-      parent: 1
-  - uid: 12204
-    components:
-    - type: Transform
-      pos: -185.47214,-177.4581
-      parent: 1
 - proto: FoodBoxPizza
   entities:
   - uid: 12205
@@ -136089,24 +136004,6 @@ entities:
     components:
     - type: Transform
       pos: -129.50728,-36.094448
-      parent: 1
-- proto: FoodDonkpocket
-  entities:
-  - uid: 12239
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -92.48624,-136.48839
-      parent: 1
-  - uid: 12240
-    components:
-    - type: Transform
-      pos: -187.5,-171.5
-      parent: 1
-  - uid: 12241
-    components:
-    - type: Transform
-      pos: -185.49992,-179.88145
       parent: 1
 - proto: FoodDough
   entities:
@@ -138094,7 +137991,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -51219.457
+      secondsUntilStateChange: -51965.855
       state: Opening
   - uid: 12471
     components:
@@ -138474,6 +138371,38 @@ entities:
     components:
     - type: Transform
       pos: -180.5,-164.5
+      parent: 1
+- proto: RMCArcadeSpaceVillain
+  entities:
+  - uid: 49525
+    components:
+    - type: Transform
+      pos: -104.5,-112.5
+      parent: 1
+  - uid: 49526
+    components:
+    - type: Transform
+      pos: -96.5,-40.5
+      parent: 1
+  - uid: 49527
+    components:
+    - type: Transform
+      pos: -97.5,-40.5
+      parent: 1
+  - uid: 49528
+    components:
+    - type: Transform
+      pos: -97.5,-23.5
+      parent: 1
+  - uid: 49529
+    components:
+    - type: Transform
+      pos: -105.5,-14.5
+      parent: 1
+  - uid: 49530
+    components:
+    - type: Transform
+      pos: -149.5,-70.5
       parent: 1
 - proto: RMCArmorFirefighter
   entities:
@@ -150055,13 +149984,6 @@ entities:
     - type: Transform
       pos: -87.5,-123.5
       parent: 1
-- proto: RMCBeakerHighCapacity
-  entities:
-  - uid: 14439
-    components:
-    - type: Transform
-      pos: -70.5,-50.5
-      parent: 1
 - proto: RMCBedBunkGreen
   entities:
   - uid: 24
@@ -150585,6 +150507,91 @@ entities:
     components:
     - type: Transform
       pos: -81.5,-24.5
+      parent: 1
+- proto: RMCBoxDonkpockets
+  entities:
+  - uid: 12189
+    components:
+    - type: Transform
+      pos: -88.68083,-136.52238
+      parent: 1
+  - uid: 12190
+    components:
+    - type: Transform
+      pos: -156.64967,-105.21153
+      parent: 1
+  - uid: 12191
+    components:
+    - type: Transform
+      pos: -156.53009,-105.21153
+      parent: 1
+  - uid: 12192
+    components:
+    - type: Transform
+      pos: -156.36157,-105.19522
+      parent: 1
+  - uid: 12193
+    components:
+    - type: Transform
+      pos: -156.26373,-105.20609
+      parent: 1
+  - uid: 12194
+    components:
+    - type: Transform
+      pos: -156.70404,-105.59204
+      parent: 1
+  - uid: 12195
+    components:
+    - type: Transform
+      pos: -156.49747,-105.60291
+      parent: 1
+  - uid: 12196
+    components:
+    - type: Transform
+      pos: -156.35614,-105.5866
+      parent: 1
+  - uid: 12197
+    components:
+    - type: Transform
+      pos: -156.28548,-105.59747
+      parent: 1
+  - uid: 12198
+    components:
+    - type: Transform
+      pos: -153.50224,-98.44552
+      parent: 1
+    - type: CollisionWake
+      enabled: False
+    - type: Conveyed
+  - uid: 12199
+    components:
+    - type: Transform
+      pos: -140.91556,-32.207058
+      parent: 1
+  - uid: 12200
+    components:
+    - type: Transform
+      pos: -140.75249,-32.299465
+      parent: 1
+  - uid: 12201
+    components:
+    - type: Transform
+      pos: -141.421,-34.576084
+      parent: 1
+  - uid: 12202
+    components:
+    - type: Transform
+      pos: -185.77075,-177.29143
+      parent: 1
+  - uid: 12203
+    components:
+    - type: Transform
+      pos: -185.54158,-177.29143
+      parent: 1
+  - uid: 12204
+    components:
+    - type: Transform
+      pos: -185.47214,-177.4581
       parent: 1
 - proto: RMCBoxDonut
   entities:
@@ -168335,6 +168342,15 @@ entities:
     - type: Transform
       pos: -197.73143,-185.11307
       parent: 1
+- proto: RMCFloorSafe
+  entities:
+  - uid: 54366
+    components:
+    - type: Transform
+      pos: -117.5,-110.5
+      parent: 1
+    - type: SpriteSetRenderOrder
+      offset: 0,-0.03125
 - proto: RMCFoamedAluminiumMetal
   entities:
   - uid: 17175
@@ -179344,7 +179360,7 @@ entities:
     - type: Transform
       pos: -4.5,-192.5
       parent: 1
-- proto: RMCFogWallWeed30
+- proto: RMCFogWallWeed
   entities:
   - uid: 8241
     components:
@@ -179465,6 +179481,24 @@ entities:
     components:
     - type: Transform
       pos: -219.5,-215.5
+      parent: 1
+- proto: RMCFoodDonkpocket
+  entities:
+  - uid: 12239
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -92.48624,-136.48839
+      parent: 1
+  - uid: 12240
+    components:
+    - type: Transform
+      pos: -187.5,-171.5
+      parent: 1
+  - uid: 12241
+    components:
+    - type: Transform
+      pos: -185.49992,-179.88145
       parent: 1
 - proto: RMCFoodDonut
   entities:
@@ -206915,6 +206949,57 @@ entities:
     - type: Transform
       pos: -112.53281,-192.19246
       parent: 1
+- proto: RMCIntelDataTerminal
+  entities:
+  - uid: 54360
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -203.5,-144.5
+      parent: 1
+  - uid: 54361
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -217.5,-15.5
+      parent: 1
+    - type: SpriteSetRenderOrder
+      offset: 0,0.15625
+  - uid: 54362
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -217.5,-176.5
+      parent: 1
+  - uid: 54363
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -150.5,-39.5
+      parent: 1
+    - type: SpriteSetRenderOrder
+      offset: 0.0625,0.125
+  - uid: 54365
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -137.5,-14.5
+      parent: 1
+    - type: SpriteSetRenderOrder
+      offset: -0.3125,0
+  - uid: 54367
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -92.5,-137.5
+      parent: 1
+    - type: SpriteSetRenderOrder
+      offset: 0,0.1875
+  - uid: 54368
+    components:
+    - type: Transform
+      pos: -59.5,-27.5
+      parent: 1
 - proto: RMCItemPoolBuckshot
   entities:
   - uid: 5383
@@ -215781,6 +215866,16 @@ entities:
     components:
     - type: Transform
       pos: -179.5,-82.5
+      parent: 1
+  - uid: 54364
+    components:
+    - type: Transform
+      pos: -144.5,-53.5
+      parent: 1
+  - uid: 54369
+    components:
+    - type: Transform
+      pos: -8.5,-192.5
       parent: 1
 - proto: RMCLockerTSEPA
   entities:
@@ -252282,6 +252377,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -125.5,-8.5
+      parent: 1
+- proto: RMCReagentJug
+  entities:
+  - uid: 14439
+    components:
+    - type: Transform
+      pos: -70.5,-50.5
       parent: 1
 - proto: RMCRecharger
   entities:
@@ -368112,38 +368214,6 @@ entities:
     components:
     - type: Transform
       pos: -151.5,-78.5
-      parent: 1
-- proto: SpaceVillainArcade
-  entities:
-  - uid: 49525
-    components:
-    - type: Transform
-      pos: -104.5,-112.5
-      parent: 1
-  - uid: 49526
-    components:
-    - type: Transform
-      pos: -96.5,-40.5
-      parent: 1
-  - uid: 49527
-    components:
-    - type: Transform
-      pos: -97.5,-40.5
-      parent: 1
-  - uid: 49528
-    components:
-    - type: Transform
-      pos: -97.5,-23.5
-      parent: 1
-  - uid: 49529
-    components:
-    - type: Transform
-      pos: -105.5,-14.5
-      parent: 1
-  - uid: 49530
-    components:
-    - type: Transform
-      pos: -149.5,-70.5
       parent: 1
 - proto: SprayBottle
   entities:
