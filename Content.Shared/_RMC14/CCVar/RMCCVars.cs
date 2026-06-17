@@ -227,7 +227,7 @@ public sealed partial class RMCCVars : CVars
         CVarDef.Create("rmc.marines_per_survivor", 18, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCSurvivorsMinimum =
-        CVarDef.Create("rmc.survivors_minimum", 2, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.survivors_minimum", 3, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCSurvivorsMaximum =
         CVarDef.Create("rmc.survivors_maximum", 7, CVar.REPLICATED | CVar.SERVER);
@@ -360,7 +360,7 @@ public sealed partial class RMCCVars : CVars
         CVarDef.Create("game.round_end_eorg_popup_time", 5f, CVar.SERVER | CVar.REPLICATED);
 
     public static readonly CVarDef<int> RMCXenoEvolveSameCasteCooldownSeconds =
-        CVarDef.Create("rmc.xeno_evolve_same_caste_cooldown_seconds", 300, CVar.ARCHIVE | CVar.CLIENT | CVar.REPLICATED);
+        CVarDef.Create("rmc.xeno_evolve_same_caste_cooldown_seconds", 1, CVar.ARCHIVE | CVar.CLIENT | CVar.REPLICATED);
 
     /// <summary>
     ///     Whether or not to show a button that opens the guidebook when a player changes their species,
