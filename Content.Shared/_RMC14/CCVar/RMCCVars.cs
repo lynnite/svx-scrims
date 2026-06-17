@@ -119,7 +119,7 @@ public sealed partial class RMCCVars : CVars
         CVarDef.Create("rmc.corrosive_acid_instant", false, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCEvolutionPointsRequireOvipositorMinutes =
-        CVarDef.Create("rmc.evolution_points_require_ovipositor_minutes", 5, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.evolution_points_require_ovipositor_minutes", 15, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCEvolutionPointsAccumulateBeforeMinutes =
         CVarDef.Create("rmc.evolution_points_accumulate_before_minutes", 15, CVar.REPLICATED | CVar.SERVER);
@@ -379,34 +379,34 @@ public sealed partial class RMCCVars : CVars
         CVarDef.Create("rmc.weed_killer_disable_duration_minutes", 8, CVar.SERVER | CVar.REPLICATED);
 
     public static readonly CVarDef<int> RMCIntelPaperScraps =
-        CVarDef.Create("rmc.intel_paper_scraps", 45, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.intel_paper_scraps", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCIntelProgressReports =
-        CVarDef.Create("rmc.intel_progress_reports", 15, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.intel_progress_reports", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCIntelFolders =
-        CVarDef.Create("rmc.intel_folders", 30, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.intel_folders", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCIntelTechnicalManuals =
-        CVarDef.Create("rmc.intel_technical_manuals", 10, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.intel_technical_manuals", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCIntelDisks =
-        CVarDef.Create("rmc.intel_disks", 30, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.intel_disks", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCIntelDataTerminals =
-        CVarDef.Create("rmc.intel_data_terminals", 6, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.intel_data_terminals", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCIntelSafes =
-        CVarDef.Create("rmc.intel_safes", 3, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.intel_safes", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCIntelExperimentalDevices =
-        CVarDef.Create("rmc.intel_experimental_devices", 15, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.intel_experimental_devices", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCIntelResearchPapers =
-        CVarDef.Create("rmc.intel_research_papers", 15, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.intel_research_papers", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCIntelVialBoxes =
-        CVarDef.Create("rmc.intel_vial_boxes", 20, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.intel_vial_boxes", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<float> RMCIntelMaxProcessTimeMilliseconds =
         CVarDef.Create("rmc.intel_max_process_time_milliseconds", 2f, CVar.REPLICATED | CVar.SERVER);
@@ -479,7 +479,7 @@ public sealed partial class RMCCVars : CVars
     CVarDef.Create("rmc.hijack_minimum_burrowed", 5, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCDistressXenosMinimum =
-        CVarDef.Create("rmc.distress_xenos_minimum", 4, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.distress_xenos_minimum", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<float> VolumeGainCassettes =
         CVarDef.Create("rmc.volume_gain_cassettes", 0.33f, CVar.REPLICATED | CVar.CLIENT | CVar.ARCHIVE);
@@ -576,10 +576,10 @@ public sealed partial class RMCCVars : CVars
         CVarDef.Create("rmc.new_resin_prevent_collide_time_seconds", 5, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCLarvaQueueRoundstartDelaySeconds =
-        CVarDef.Create("rmc.larva_queue_roundstart_delay_seconds", 900, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.larva_queue_roundstart_delay_seconds", 1, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCLarvaQueueWaitSeconds =
-        CVarDef.Create("rmc.larva_queue_wait_seconds", 300, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.larva_queue_wait_seconds", 30, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCLarvaQueueOfferTimeoutSeconds =
         CVarDef.Create("rmc.larva_queue_offer_timeout_seconds", 30, CVar.REPLICATED | CVar.SERVER);
