@@ -42,7 +42,6 @@
       background:
         sprite: /Textures/_RMC14/Interface/map_blips.rsi
         state: background_mp
-  hidden: true
 
 - type: startingGear
   parent: CMGearMilitaryPolice
