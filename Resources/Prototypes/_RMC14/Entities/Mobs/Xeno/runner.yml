@@ -72,8 +72,6 @@
     max: 200
     evolvesTo:
     - CMXenoLurker
-    evolvesToWithoutPoints:
-    - CMXenoQueen
   - type: XenoZoom
   - type: MeleeWeapon
     attackRate: 1.4

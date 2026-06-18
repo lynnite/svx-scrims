@@ -96,8 +96,6 @@
     - CMXenoLurker
     - CMXenoSpitter
     - CMXenoWarrior
-    evolvesToWithoutPoints:
-    - CMXenoQueen
   - type: Evasion
     evasion: 20
   - type: XenoInhands
