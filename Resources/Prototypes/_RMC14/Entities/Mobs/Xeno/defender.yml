@@ -42,8 +42,6 @@
     max: 200
     evolvesTo:
     - CMXenoWarrior
-    evolvesToWithoutPoints:
-    - CMXenoQueen
   - type: XenoPlasma
     plasma: 100
     maxPlasma: 100

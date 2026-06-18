@@ -62,8 +62,6 @@
     max: 200
     evolvesTo:
     - CMXenoSpitter
-    evolvesToWithoutPoints:
-    - CMXenoQueen
   - type: XenoAcid
   - type: XenoParalyzingSlash
   - type: XenoSlowingSpit
