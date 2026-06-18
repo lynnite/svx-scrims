@@ -56,7 +56,7 @@
             CMWeaponsSpecialist: [4, 4]
             CMCombatTech: [8, 12]
             CMHospitalCorpsman: [8, 16]
-            CMRifleman: [ -1, -1 ]
+            CMRifleman: [ 0, 0 ]
 
             # Civilians
             CMCorrespondent: [1, 1]
