@@ -15,53 +15,53 @@
         - type: StationJobs
           availableJobs:
             # Command
-            CMCommandingOfficer: [1, 1]
-            CMExecutiveOfficer: [1, 1]
-            CMStaffOfficer: [4, 4]
-            CMSeniorEnlistedAdvisor: [1, 1]
+            CMCommandingOfficer: [0, 0]
+            CMExecutiveOfficer: [0, 0]
+            CMStaffOfficer: [0, 0]
+            CMSeniorEnlistedAdvisor: [0, 0]
 
             # Military Police
-            CMChiefMP: [1, 1]
-            CMMilitaryWarden: [1, 1]
-            CMMilitaryPolice: [5, 8]
-            CMProvostInspector: [1, 1]
+            CMChiefMP: [0, 0]
+            CMMilitaryWarden: [0, 0]
+            CMMilitaryPolice: [0, 0]
+            CMProvostInspector: [0, 0]
 
             # Auxiliary
-            CMAuxiliarySupportOfficer: [1, 1]
-            CMIntelOfficer: [4, 4]
-            CMPilotDropship: [1, 1]
-            CMPilotGunship: [1, 1]
-            CMDropshipCrewChief: [2, 2]
+            CMAuxiliarySupportOfficer: [0, 0]
+            CMIntelOfficer: [0, 0]
+            CMPilotDropship: [0, 0]
+            CMPilotGunship: [0, 0]
+            CMDropshipCrewChief: [0, 0]
 
             # Engineering
-            CMChiefEngineer: [1, 1]
+            CMChiefEngineer: [0, 0]
 #            CMOrdnanceTech: [3, 3]
-            CMMaintTech: [3, 3]
+            CMMaintTech: [0, 0]
 
             # Medical
-            CMCMO: [1, 1]
-            CMDoctor: [4, 6]
-            CMNurse: [4, 6]
+            CMCMO: [0, 0]
+            CMDoctor: [0, 0]
+            CMNurse: [0, 0]
 #            CMResearcher: [2, 2]
 
             # Requisition
-            CMQuartermaster: [1, 1]
-            CMCargoTech: [4, 4]
-            CMMessTech: [1, 1]
+            CMQuartermaster: [0, 0]
+            CMCargoTech: [0, 0]
+            CMMessTech: [0, 0]
 
             # Marines
-            CMSquadLeader: [4, 4]
-            CMFireteamLeader: [4, 8]
-            CMSmartGunOperator: [4, 4]
-            CMWeaponsSpecialist: [4, 4]
-            CMCombatTech: [8, 12]
-            CMHospitalCorpsman: [8, 16]
+            CMSquadLeader: [0, 0]
+            CMFireteamLeader: [0, 0]
+            CMSmartGunOperator: [0, 0]
+            CMWeaponsSpecialist: [0, 0]
+            CMCombatTech: [0, 0]
+            CMHospitalCorpsman: [0, 0]
             CMRifleman: [ 0, 0 ]
 
             # Civilians
-            CMCorrespondent: [1, 1]
-            CMCombatCorrespondent: [1, 1]
+            CMCorrespondent: [0, 0]
+            CMCombatCorrespondent: [0, 0]
 
             # Other
-            CMLiaison: [1, 1]
-            RMCWeYaExecutiveBodyguard: [1, 1]
+            CMLiaison: [0, 0]
+            RMCWeYaExecutiveBodyguard: [0, 0]
