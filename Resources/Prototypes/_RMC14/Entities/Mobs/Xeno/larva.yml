@@ -23,10 +23,15 @@
       70: Dead
   - type: Xeno
     role: CMXenoLarva
+  - type: XenoHeadbutt
+    damage:
+      types:
+        Blunt: 30
     actionIds:
     - ActionXenoRest
     - ActionXenoWatch
     - ActionXenoHide
+    - ActionXenoHeadbutt
     hudOffset: -0.1,0.25
     tier: 0
     unlockAt: 0
