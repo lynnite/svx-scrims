@@ -8,7 +8,7 @@
   startingGear: CMGearCommandingOfficer
   joinNotifyCrew: false
   supervisors: cm-job-supervisors-nobody
-  whitelisted: true
+  whitelisted: false
   spawnMenuRoleName: Survivor CO (Base)
   useLoadoutOfJob: RMCSurvivorCommandingOfficer # for inheritance
   basePlaytimeTracker: true
