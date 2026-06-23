@@ -23,10 +23,6 @@
       70: Dead
   - type: Xeno
     role: CMXenoLarva
-  - type: XenoHeadbutt
-    damage:
-      types:
-        Blunt: 30
     actionIds:
     - ActionXenoRest
     - ActionXenoWatch
@@ -36,6 +32,10 @@
     tier: 0
     unlockAt: 0
     emoteSounds: Larva
+  - type: XenoHeadbutt
+    damage:
+      types:
+        Blunt: 30
   - type: XenoRegen
     healOffWeeds: true
   - type: XenoLight
