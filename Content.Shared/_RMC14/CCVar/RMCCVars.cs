@@ -119,10 +119,10 @@ public sealed partial class RMCCVars : CVars
         CVarDef.Create("rmc.corrosive_acid_instant", false, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCEvolutionPointsRequireOvipositorMinutes =
-        CVarDef.Create("rmc.evolution_points_require_ovipositor_minutes", 15, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.evolution_points_require_ovipositor_minutes", 40, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCEvolutionPointsAccumulateBeforeMinutes =
-        CVarDef.Create("rmc.evolution_points_accumulate_before_minutes", 15, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.evolution_points_accumulate_before_minutes", 40, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<bool> RMCAtmosTileEqualize =
         CVarDef.Create("rmc.atmos_tile_equalize", false, CVar.REPLICATED | CVar.SERVER);
@@ -430,7 +430,7 @@ public sealed partial class RMCCVars : CVars
         CVarDef.Create("rmc.xeno_spawn_initial_mute_duration_seconds", 180f, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCXenoEarlyEvoPointBoostBeforeMinutes =
-        CVarDef.Create("rmc.evolution_early_evo_point_boost_minutes", 15, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.evolution_early_evo_point_boost_minutes", 40, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<bool> RMCDamageYourself =
         CVarDef.Create("rmc.damage_yourself", false, CVar.ARCHIVE | CVar.CLIENT | CVar.REPLICATED);
@@ -579,7 +579,7 @@ public sealed partial class RMCCVars : CVars
         CVarDef.Create("rmc.larva_queue_roundstart_delay_seconds", 1, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCLarvaQueueWaitSeconds =
-        CVarDef.Create("rmc.larva_queue_wait_seconds", 30, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.larva_queue_wait_seconds", 1, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCLarvaQueueOfferTimeoutSeconds =
         CVarDef.Create("rmc.larva_queue_offer_timeout_seconds", 30, CVar.REPLICATED | CVar.SERVER);
