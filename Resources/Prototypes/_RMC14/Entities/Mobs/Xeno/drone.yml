@@ -47,7 +47,7 @@
     canBeDevolvedByOther: false
   - type: XenoDevour
   - type: XenoPheromones
-    pheromonesMultiplier: 2
+    pheromonesMultiplier: 3
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000
@@ -191,6 +191,9 @@
     - ActionXenoResinSurge
     - ActionXenoTransferPlasma
     - ActionXenoDevolve
+  - type: XenoPheromones
+    pheromonesMultiplier: 3
+    pheroSuffix: strong
   - type: XenoRegen
     critHealMultiplier: 0.3465  # 5% increased regeneration
     standHealingMultiplier: 0.42
@@ -268,8 +271,8 @@
       groups:
         Brute: 25
   - type: XenoPheromones
-    pheromonesMultiplier: 3
-    pheroSuffix: strong
+    pheromonesMultiplier: 4
+    pheroSuffix: queen
   - type: XenoStrain
     name: rmc-xeno-healer-name
     description: rmc-xeno-healer-description

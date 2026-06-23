@@ -42,10 +42,12 @@
     max: 200
     evolvesTo:
     - CMXenoWarrior
+  - type: XenoPheromones
+    pheromonesMultiplier: 3
   - type: XenoPlasma
-    plasma: 100
-    maxPlasma: 100
-    plasmaRegenOnWeeds: 5
+    plasma: 300
+    maxPlasma: 300
+    plasmaRegenOnWeeds: 20
   - type: CMArmor
     xenoArmor: 35
     explosionArmor: 70
@@ -126,6 +128,7 @@
     - ActionXenoTailSweep
     - ActionXenoFortify
     - ActionXenoDevolve
+    - ActionXenoPheromones
   - type: XenoTailSweep
     damage:
       types:
