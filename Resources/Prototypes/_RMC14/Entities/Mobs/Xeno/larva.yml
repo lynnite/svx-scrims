@@ -40,8 +40,8 @@
     healOffWeeds: true
   - type: XenoLight
   - type: XenoPlasma
-    plasma: 10
-    maxPlasma: 10
+    plasma: 50
+    maxPlasma: 50
     plasmaRegenOnWeeds: 0.1
   - type: RMCGibOnDeath
     gibChance: 0.25
