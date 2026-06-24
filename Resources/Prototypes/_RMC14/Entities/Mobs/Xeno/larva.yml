@@ -35,7 +35,7 @@
   - type: XenoHeadbutt
     damage:
       types:
-        Blunt: 30
+        Blunt: 15
   - type: XenoRegen
     healOffWeeds: true
   - type: XenoLight
