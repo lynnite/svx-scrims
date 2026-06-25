@@ -323,7 +323,6 @@
     canDraw: false
     liveUpdate: true
     actionId: RMCActionOpenTacticalMapXeno
-    xenos: true
   - type: TacticalMapLiveUpdateOnOvi
     enabled: false
   - type: MotionDetectorTracked
