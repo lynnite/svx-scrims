@@ -51,7 +51,6 @@
         sprite: /Textures/_RMC14/Interface/map_blips.rsi
         state: background_shipside
   hidden: true
-        state: background_shipside
 
 - type: startingGear
   id: CMGearVehicleCrewman
