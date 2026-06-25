@@ -27,8 +27,15 @@
       - Civilian
     - type: IntelRescueSurvivorObjective
     - type: RMCAllowSuitStorage
+    - type: TacticalMapIcon
+      icon:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: icc
+      background:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: background_cmb
   greeting: rmc-job-greeting-survivor
-  hasIcon: false
+  hasIcon: true
   useLoadoutOfJob: CMSurvivor # for inheritance
   basePlaytimeTracker: true
   camouflageStartingGear:
