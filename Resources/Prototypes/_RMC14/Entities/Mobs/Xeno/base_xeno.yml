@@ -318,10 +318,14 @@
   - type: TacticalMapTracked
   - type: TacMapXenoAlert
   - type: TacticalMapUser
+    marines: true
+    xenos: true
+    canDraw: false
+    liveUpdate: true
     actionId: RMCActionOpenTacticalMapXeno
     xenos: true
   - type: TacticalMapLiveUpdateOnOvi
-    enabled: true
+    enabled: false
   - type: MotionDetectorTracked
   - type: TacticalMapIcon
     icon:
