@@ -20,18 +20,13 @@
       - Civilian
     - type: IntelRescueSurvivorObjective
     - type: RMCAllowSuitStorage
-    - type: RMCConditionalMarkings
-      targetCategory: UndergarmentTop
-      markings:
-        Male:
-        - RMCUndershirtNone
-        Female:
-        - RMCUndershirtClassic
-        - RMCUndershirtSports
-        - RMCUndershirtStrapless
-        - RMCUndershirtClassicJungle
-        - RMCUndershirtSportsJungle
-        - RMCUndershirtStraplessJungle
+    - type: TacticalMapIcon
+      icon:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: icc
+      background:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: background_cmb
   useLoadoutOfJob: CMSurvivor # for inheritance
 
 - type: startingGear
