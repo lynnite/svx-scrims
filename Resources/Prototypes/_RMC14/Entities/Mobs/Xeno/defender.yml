@@ -39,7 +39,7 @@
     canBeDevolvedByOther: false
   - type: XenoEvolution
     canEvolveWithoutGranter: true
-    max: 200
+    max: 120
     evolvesTo:
     - CMXenoWarrior
   - type: XenoPheromones
