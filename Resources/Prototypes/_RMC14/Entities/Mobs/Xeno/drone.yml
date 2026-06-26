@@ -47,11 +47,11 @@
     canBeDevolvedByOther: false
   - type: XenoDevour
   - type: XenoPheromones
-    pheromonesMultiplier: 3
+    pheromonesMultiplier: 4
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000
-    plasmaRegenOnWeeds: 4.5
+    plasmaRegenOnWeeds: 8
   - type: Tackle
     max: 4
     stunMin: 3
@@ -87,7 +87,7 @@
     - HivePlasmaTreeXenoConstructionNode
   - type: XenoEvolution
     canEvolveWithoutGranter: true
-    max: 200
+    max: 60
     evolvesTo:
     - CMXenoCarrier
     - CMXenoBurrower
@@ -260,7 +260,7 @@
   - type: XenoPlasma
     plasma: 1000
     maxPlasma: 1000
-    plasmaRegenOnWeeds: 4.5
+    plasmaRegenOnWeeds: 8
     plasmaTransferDelay: 1.5
   - type: MeleeWeapon
     damage:

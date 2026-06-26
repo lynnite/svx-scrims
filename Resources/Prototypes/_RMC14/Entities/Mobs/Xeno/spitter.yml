@@ -42,6 +42,7 @@
     - ActionXenoChargeSpit
     - ActionXenoSprayAcid
     - ActionXenoDevolve
+    - ActionXenoPheromones
     tier: 2
     hudOffset: -0.15,0.025
     unlockAt: 240 # 4 minutes
@@ -51,10 +52,12 @@
     - CMXenoSentinel
   - type: XenoAcid
   - type: XenoDevour
+  - type: XenoPheromones
+    pheromonesMultiplier: 3
   - type: XenoPlasma
     plasma: 600
     maxPlasma: 600
-    plasmaRegenOnWeeds: 4
+    plasmaRegenOnWeeds: 8
   - type: XenoEvolution
     max: 500
     evolvesTo:

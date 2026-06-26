@@ -32,7 +32,7 @@
   - type: XenoAcid
   - type: XenoDevour
   - type: XenoPheromones
-    pheromonesMultiplier: 2.5
+    pheromonesMultiplier: 3
     pheroSuffix: hivelord
   - type: CMArmor
     explosionArmor: 10
