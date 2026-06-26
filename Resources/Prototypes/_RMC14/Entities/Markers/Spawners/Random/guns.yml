@@ -351,29 +351,17 @@
     offset: 0
     chance: 1.0
     prototypes:
-    - RMCAttachmentRailFlashlight
-    - RMCAttachmentRailFlashlight
-    - RMCAttachmentRailFlashlight
     - RMCAttachmentS5RedDotSight
     - RMCAttachmentS5RedDotSight
     - RMCAttachmentS5RedDotSight
-    - RMCAttachmentExtendedBarrel
-    - RMCAttachmentExtendedBarrel
-    - RMCAttachmentExtendedBarrel
     - RMCAttachmentMagneticHarness
     - RMCAttachmentMagneticHarness
     - RMCAttachmentMagneticHarness
     - RMCAttachmentFlashlightGrip
     - RMCAttachmentFlashlightGrip
-    - RMCAttachmentSuppressor
-    - RMCAttachmentSuppressor
     - RMCAttachmentBurstFireAssembly
     - RMCAttachmentBurstFireAssembly
-    - RMCAttachmentRecoilCompensator
-    - RMCAttachmentRecoilCompensator
-    - RMCAttachmentB8SmartScope
     - RMCAttachmentBarrelCharger
-    - RMCAttachmentS42xTelescopicMiniscope
 
 # This exists so we can spawn in a random shotgun shell box for shotguns
 - type: entity
