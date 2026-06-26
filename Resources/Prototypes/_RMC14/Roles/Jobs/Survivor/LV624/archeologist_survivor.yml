@@ -19,6 +19,13 @@
     - type: RMCAllowSuitStorage
     - type: EquipSurvivorPreset
       preset: RMCGearSurvivorPresetLV624Archeologist
+    - type: TacticalMapIcon
+      icon:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: icc
+      background:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: background_cmb
   useLoadoutOfJob: CMSurvivorScientist # for inheritance
 
 - type: startingGear

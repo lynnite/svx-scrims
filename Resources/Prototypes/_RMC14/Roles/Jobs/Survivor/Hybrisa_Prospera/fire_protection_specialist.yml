@@ -21,6 +21,13 @@
     - type: RMCAllowSuitStorage
     - type: JobPrefix
       prefix: rmc-job-prefix-fire-protection-specialist-hybrisa
+    - type: TacticalMapIcon
+      icon:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: icc
+      background:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: background_cmb
   useLoadoutOfJob: CMSurvivor # for inheritance
 
 - type: startingGear
