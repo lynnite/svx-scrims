@@ -63,6 +63,14 @@
           - RMCAttachmentSuppressor
           - RMCAttachmentSuppressorCompact
           - RMCM5Bayonet
+        random:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentRecoilCompensator
+          - RMCAttachmentExtendedCompensator
+          - RMCAttachmentSuppressor
+          - RMCAttachmentSuppressorCompact
+          - RMCM5Bayonet
       rmc-aslot-rail:
         whitelist:
           tags:
@@ -72,9 +80,16 @@
           - RMCAttachmentS5MicroRedDotSight
           - RMCAttachmentS6ReflexSight
           - RMCAttachmentS42xTelescopicMiniscope
+          - RMCAttachmentTerminator
+        random:
+          - RMCAttachmentTerminator
       rmc-aslot-underbarrel:
         whitelist:
           tags:
+          - RMCAttachmentFlashlightGrip
+          - RMCAttachmentGyroscopicStabilizer
+          - RMCAttachmentLaserSight
+        random:
           - RMCAttachmentFlashlightGrip
           - RMCAttachmentGyroscopicStabilizer
           - RMCAttachmentLaserSight

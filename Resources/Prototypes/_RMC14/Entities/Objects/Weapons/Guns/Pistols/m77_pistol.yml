@@ -70,6 +70,9 @@
           - RMCAttachmentS5RedDotSight
           - RMCAttachmentS5MicroRedDotSight
           - RMCAttachmentS6ReflexSight
+          - RMCAttachmentTerminator
+        random:
+          - RMCAttachmentTerminator
       rmc-aslot-underbarrel:
         whitelist:
           tags:

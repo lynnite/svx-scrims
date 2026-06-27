@@ -738,7 +738,7 @@
   parent: RMCRailAttachmentBase
   id: RMCAttachmentTerminator
   name: amt terminator
-  description: The AMT Terminator is a scope-shaped laser that is attached onto where the normal sight should be. It's best used one handed.
+  description: The AMT Terminator is a scope-shaped laser that is attached onto where the normal sight should be. It's best used one handed. It seems like it could only fit on a smg or a pistol.
   components:
   - type: Sprite
     state: aterminator
