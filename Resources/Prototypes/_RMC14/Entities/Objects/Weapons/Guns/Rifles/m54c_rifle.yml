@@ -99,7 +99,6 @@
           - RMCAttachmentM54CStockSolid
           - RMCAttachmentM54CStockCollapsible
       rmc-aslot-underbarrel:
-        startingAttachable: RMCAttachmentU1GrenadeLauncher
         whitelist:
           tags:
           - RMCAttachmentAngledGrip
@@ -113,15 +112,8 @@
           - RMCAttachmentUnderbarrelExtinguisher
           - RMCAttachmentMiniFlamethrower
         random:
-          - RMCAttachmentAngledGrip
           - RMCAttachmentBipod
-          - RMCAttachmentFlashlightGrip
-          - RMCAttachmentGyroscopicStabilizer
-          - RMCAttachmentLaserSight
           - RMCAttachmentU1GrenadeLauncher
-          - RMCAttachmentU7UnderbarrelShotgun
-          - RMCAttachmentVerticalGrip
-          - RMCAttachmentUnderbarrelExtinguisher
           - RMCAttachmentMiniFlamethrower
   - type: AttachableHolderVisuals
     offsets:
