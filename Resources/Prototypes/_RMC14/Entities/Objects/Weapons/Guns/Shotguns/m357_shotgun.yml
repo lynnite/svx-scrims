@@ -62,6 +62,8 @@
           tags:
           - RMCAttachmentGyroscopicStabilizer
           - RMCAttachmentBurstFireAssembly
+        random:
+        - RMCAttachmentBurstFireAssembly
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.81, 0.06
