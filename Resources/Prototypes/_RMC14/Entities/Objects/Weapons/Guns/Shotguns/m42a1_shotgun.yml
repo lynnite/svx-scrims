@@ -40,6 +40,7 @@
           - RMCAttachmentGyroscopicStabilizer
           - RMCAttachmentVerticalGrip
           - RMCAttachmentUnderbarrelExtinguisher
+          - RMCAttachmentMiniFlamethrower
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.81, 0.06

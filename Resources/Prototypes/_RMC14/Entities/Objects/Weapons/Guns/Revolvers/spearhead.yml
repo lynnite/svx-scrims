@@ -69,6 +69,7 @@
           tags:
           - RMCAttachmentLaserSight
           - RMCAttachmentGyroscopicStabilizer
+          - RMCAttachmentBurstFireAssembly
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.75, 0.1
