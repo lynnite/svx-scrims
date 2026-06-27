@@ -37,9 +37,18 @@
           - RMCAttachmentExtendedBarrel
           - RMCAttachmentRecoilCompensator
           - RMCM5Bayonet
+        random:
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentRecoilCompensator
+          - RMCM5Bayonet
       rmc-aslot-rail:
         whitelist:
           tags:
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS6ReflexSight
+        random:
           - RMCAttachmentRailFlashlight
           - RMCAttachmentMagneticHarness
           - RMCAttachmentS5RedDotSight

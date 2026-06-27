@@ -76,9 +76,17 @@
           tags:
           - RMCAttachmentSuppressor
           - RMCM5Bayonet
+        random:
+          - RMCAttachmentSuppressor
+          - RMCM5Bayonet
       rmc-aslot-rail:
         whitelist:
           tags:
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS6ReflexSight
+        random:
           - RMCAttachmentRailFlashlight
           - RMCAttachmentMagneticHarness
           - RMCAttachmentS5RedDotSight
@@ -92,6 +100,10 @@
         startingAttachable: RMCAttachmentMK1GrenadeLauncher
         whitelist:
           tags:
+          - RMCAttachmentMK1GrenadeLauncher
+          - RMCAttachmentU7UnderbarrelShotgun
+          - RMCAttachmentUnderbarrelExtinguisher
+        random:
           - RMCAttachmentMK1GrenadeLauncher
           - RMCAttachmentU7UnderbarrelShotgun
           - RMCAttachmentUnderbarrelExtinguisher

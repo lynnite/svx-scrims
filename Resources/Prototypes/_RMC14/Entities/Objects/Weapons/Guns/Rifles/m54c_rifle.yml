@@ -67,9 +67,22 @@
           - RMCAttachmentExtendedCompensator
           - RMCAttachmentSuppressor
           - RMCM5Bayonet
+        random:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentExtendedCompensator
+          - RMCAttachmentSuppressor
+          - RMCM5Bayonet
       rmc-aslot-rail:
         whitelist:
           tags:
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentS84xTelescopicScope
+          - RMCAttachmentS42xTelescopicMiniscope
+        random:
           - RMCAttachmentRailFlashlight
           - RMCAttachmentMagneticHarness
           - RMCAttachmentS5RedDotSight
@@ -82,10 +95,24 @@
           tags:
           - RMCAttachmentM54CStockSolid
           - RMCAttachmentM54CStockCollapsible
+        random:
+          - RMCAttachmentM54CStockSolid
+          - RMCAttachmentM54CStockCollapsible
       rmc-aslot-underbarrel:
         startingAttachable: RMCAttachmentU1GrenadeLauncher
         whitelist:
           tags:
+          - RMCAttachmentAngledGrip
+          - RMCAttachmentBipod
+          - RMCAttachmentFlashlightGrip
+          - RMCAttachmentGyroscopicStabilizer
+          - RMCAttachmentLaserSight
+          - RMCAttachmentU1GrenadeLauncher
+          - RMCAttachmentU7UnderbarrelShotgun
+          - RMCAttachmentVerticalGrip
+          - RMCAttachmentUnderbarrelExtinguisher
+          - RMCAttachmentMiniFlamethrower
+        random:
           - RMCAttachmentAngledGrip
           - RMCAttachmentBipod
           - RMCAttachmentFlashlightGrip
