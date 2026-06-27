@@ -41,6 +41,7 @@
         whitelist:
           tags:
           - RMCAttachmentGyroscopicStabilizer
+          - RMCAttachmentBurstFireAssembly
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-rail: -0.025, 0.09

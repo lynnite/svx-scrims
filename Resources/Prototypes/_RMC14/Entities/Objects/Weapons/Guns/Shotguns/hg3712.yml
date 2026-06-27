@@ -47,6 +47,8 @@
           tags:
           - RMCAttachmentBarrelCharger
           - RMCAttachmentRecoilCompensator
+        random:
+        - RMCAttachmentBarrelCharger
       rmc-aslot-rail:
         whitelist:
           tags:
