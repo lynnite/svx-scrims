@@ -17,7 +17,7 @@
       types:
         Blunt: 8
   - type: Gun
-    shotsPerBurst: 3
+    shotsPerBurst: 4
     availableModes:
     - SemiAuto
     - Burst
@@ -29,7 +29,7 @@
     - Burst
     scatterWielded: 8
     scatterUnwielded: 8
-    baseFireRate: 4
+    baseFireRate: 4.3
     burstScatterMult: 4
     modifiers:
       Burst:
@@ -51,7 +51,7 @@
           - CMMagazinePistolM77AP
         startingItem: CMMagazinePistolM77AP
   - type: GunDamageModifier
-    multiplier: 1.2
+    multiplier: 1.25
   - type: AttachableHolder
     slots:
       rmc-aslot-barrel:
