@@ -80,6 +80,12 @@
           - RMCAttachmentS5MicroRedDotSight
           - RMCAttachmentS6ReflexSight
           - RMCAttachmentS42xTelescopicMiniscope
+          - RMCAttachmentTerminator
+        random:
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentTerminator
       rmc-aslot-stock:
         startingAttachable: RMCAttachmentM63StockCollapsible
         whitelist:

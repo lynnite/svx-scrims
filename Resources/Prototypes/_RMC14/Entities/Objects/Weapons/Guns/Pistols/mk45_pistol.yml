@@ -59,6 +59,9 @@
           - RMCAttachmentS6ReflexSight
           - RMCAttachmentS84xTelescopicScope
           - RMCAttachmentS42xTelescopicMiniscope
+          - RMCAttachmentTerminator
+        random:
+          - RMCAttachmentTerminator
       rmc-aslot-underbarrel:
         whitelist:
           tags:

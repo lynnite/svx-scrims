@@ -71,9 +71,20 @@
           - RMCAttachmentS5MicroRedDotSight
           - RMCAttachmentS6ReflexSight
           - RMCAttachmentS42xTelescopicMiniscope
+          - RMCAttachmentTerminator
+        random:
+          - RMCAttachmentTerminator
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS5MicroRedDotSight
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentS42xTelescopicMiniscope
       rmc-aslot-underbarrel:
         whitelist:
           tags:
+          - RMCAttachmentBurstFireAssembly
+        random:
           - RMCAttachmentBurstFireAssembly
   - type: AttachableHolderVisuals
     offsets:
