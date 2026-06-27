@@ -734,6 +734,32 @@
     - RMCAttachmentRail
     - RMCAttachmentL89Scope
 
+- type: entity
+  parent: RMCRailAttachmentBase
+  id: RMCAttachmentTerminator
+  name: amt terminator
+  description: The AMT Terminator is a scope-shaped laser that is attached onto where the normal sight should be. It's best used one handed.
+  components:
+  - type: Sprite
+    state: aterminator
+  - type: Tag
+    tags:
+    - RMCAttachmentRail
+    - RMCAttachmentTerminator
+  - type: AttachableVisuals
+  - type: AttachableWeaponRangedMods
+    modifiers:
+    - conditions:
+        wieldedOnly: true
+      accuracyAddMult: 0.15
+      scatterFlat: -2
+      burstScatterAddMult: -1
+    - conditions:
+        unwieldedOnly: true
+      accuracyAddMult: 0.4
+      scatterFlat: -5
+      burstScatterAddMult: -5
+
 - type: Tag
   id: RMCAttachmentRail
 
@@ -799,3 +825,6 @@
 
 - type: Tag
   id: RMCAttachmentL89Scope
+
+- type: Tag
+  id: RMCAttachmentTerminator
