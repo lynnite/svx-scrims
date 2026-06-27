@@ -46,6 +46,11 @@
       rmc-aslot-barrel:
         whitelist:
           tags:
+          - RMCAttachmentBarrelCharger
+      rmc-aslot-underbarrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBurstFireAssembly
   - type: AttachableHolderVisuals #File shows no attachment on the gun in 13 Unless it copies them from the base revolver.
     offsets:
       rmc-aslot-barrel: 0.1, 0.1

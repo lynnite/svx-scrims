@@ -66,8 +66,10 @@
           tags:
           - RMCAttachmentFlashlightGrip
           - RMCAttachmentGyroscopicStabilizer
+          - RMCAttachmentMiniFlamethrower
         random:
         - RMCAttachmentFlashlightGrip
+        - RMCAttachmentMiniFlamethrower
   - type: Tag
     tags:
     - RMCWeaponShotgunM3717
