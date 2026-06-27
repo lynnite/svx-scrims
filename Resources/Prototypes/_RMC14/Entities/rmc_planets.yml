@@ -217,7 +217,6 @@
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/prison.yml
     camouflage: Classic
-    minPlayers: 130
     specialFaxes:
       Liaison: RMCPaperWeYaLiaisonBriefingFiorina
     announcement: "An automated distress signal has been received from maximum-security prison \"Fiorina Orbital Penitentiary\". A response team from the UNS Almayer will be dispatched shortly to investigate."
@@ -268,7 +267,6 @@
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/trijent.yml
     camouflage: Desert
-    minPlayers: 130
     announcement: "We've lost contact with Weston-Yamada's extra-solar colony, \"Trijent Dam\", on the planet \"Raijin.\" The UNS Almayer has been dispatched to assist."
     #smallHostVariants:
       #RMCMobSmallHostStok
@@ -494,7 +492,6 @@
       scenarioProbability: 0.3
     - scenarioName: none
       scenarioProbability: 0.7
-    minPlayers: 130
     survivorJobVariants:
       CMSurvivor:
       - RMCSurvivorHybrisaCivilian: -1
@@ -557,7 +554,6 @@
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/sorokyne.yml
     camouflage: Jungle
-    minPlayers: 130
     specialFaxes:
       Liaison: RMCPaperWeYaLiaisonBriefingSorokyne
     announcement: "An automated distress signal has been recieved from a mining colony on border world LV-976, \"Sorokyne Outpost\". A response team from the UNS Almayer will be dispatched shortly to investigate."

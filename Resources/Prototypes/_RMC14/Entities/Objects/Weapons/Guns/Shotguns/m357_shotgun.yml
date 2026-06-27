@@ -33,7 +33,7 @@
     scatterUnwielded: 20
     baseFireRate: 0.7
   - type: RMCWeaponAccuracy
-    accuracyMultiplier: 1.15
+    accuracyMultiplier: 1.45
     accuracyMultiplierUnwielded: 0.5
   - type: Construction
     graph: M357Sawn

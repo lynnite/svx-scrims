@@ -22,7 +22,7 @@
     baseFireRate: 0.7
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 0.9
-    accuracyMultiplierUnwielded: 0.5
+    accuracyMultiplierUnwielded: 1.45
   - type: AttachableHolder
     slots:
       rmc-aslot-rail:

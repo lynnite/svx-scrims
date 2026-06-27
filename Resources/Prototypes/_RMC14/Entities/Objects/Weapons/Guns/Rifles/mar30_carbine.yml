@@ -54,6 +54,7 @@
         whitelist:
           tags:
           - RMCAttachmentExtendedBarrel
+          - RMCAttachmentBarrelCharger
           - RMCAttachmentSuppressor
           - RMCAttachmentRecoilCompensator
           - RMCAttachmentExtendedCompensator
@@ -62,6 +63,7 @@
           - RMCAttachmentExtendedBarrel
           - RMCAttachmentSuppressor
           - RMCM5Bayonet # Replace with SPP Bayonet when that is added
+          - RMCAttachmentBarrelCharger
       rmc-aslot-rail:
         whitelist:
           tags:
@@ -96,6 +98,7 @@
           - RMCAttachmentU7UnderbarrelShotgun
           - RMCAttachmentUnderbarrelExtinguisher
           - RMCAttachmentBipod
+          - RMCAttachmentBurstFireAssembly
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 0.75, 0.00
