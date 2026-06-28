@@ -62,10 +62,10 @@
   - type: AttachableHolder
     slots:
       rmc-aslot-barrel:
-        startingAttachable: RMCAttachmentSuppressor
+        startingAttachable: RMCAttachmentMK5Suppressor
         whitelist:
           tags:
-          - RMCAttachmentSuppressor
+          - RMCAttachmentMK5Suppressor
       rmc-aslot-rail:
         whitelist:
           tags:
