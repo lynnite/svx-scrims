@@ -4,6 +4,7 @@
   name: cm-job-name-survivor-engineer
   description: cm-job-description-survivor
   playTimeTracker: CMJobSurvivorEngineer
+  weight: 100
   startingGear: RMCGearSurvivorEngineer
   icon: "RMCJobIconGenericColonistEngi"
   accessGroups:

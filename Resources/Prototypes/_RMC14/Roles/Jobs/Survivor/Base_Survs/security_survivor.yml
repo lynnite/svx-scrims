@@ -4,6 +4,7 @@
   name: cm-job-name-survivor-security
   description: cm-job-description-survivor
   playTimeTracker: CMJobSurvivorSecurity
+  weight: 100
   ranks:
     RMCRankCivilianSeniorOfficer:
     - !type:RoleTimeRequirement

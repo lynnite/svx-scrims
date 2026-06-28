@@ -4,6 +4,7 @@
   name: cm-job-name-survivor-scientist
   description: cm-job-description-survivor
   playTimeTracker: CMJobSurvivorScientist
+  weight: 100
   ranks:
     RMCRankCivilianDoctor: []
   startingGear: RMCGearSurvivorScientist
