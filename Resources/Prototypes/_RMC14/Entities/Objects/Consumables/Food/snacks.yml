@@ -48,7 +48,7 @@
   parent: RMCFoodSnackBase
   id: RMCFoodSnackBarcaridineBar
   name: Barcaridine bar
-  description: A classic bar of chocolate that smells like the medical bay. 'Chocolate helps the pain go away.'
+  description: A classic bar of chocolate that smells like the medical bay. 'Chocolate helps the pain go away.' Contains bicaridine and meralyne.
   components:
   - type: FlavorProfile
     flavors:
@@ -67,13 +67,15 @@
         - ReagentId: CocoaPowder
           Quantity: 3
         - ReagentId: CMBicaridine
-          Quantity: 2 # Given that the overdose rate is a lot higher, I doubt this will cause issues, you'd need to eat more than 15 bars.
+          Quantity: 4
+        - ReagentId: CMMeralyne
+          Quantity: 4
 
 - type: entity
   parent: RMCFoodSnackBase
   id: RMCFoodSnackBoonie
-  name: Boonie bars
-  description: Two delicious bars of minty chocolate. 'Sometimes things are just... out of reach.'
+  name: Dermardine bar
+  description: Two delicious bars of minty chocolate. 'Sometimes things are just... out of reach.' Contains dermaline and kelotane.
   components:
   - type: Sprite
     state: boonie
@@ -89,13 +91,14 @@
 - type: entity
   parent: RMCFoodSnackBase
   id: RMCFoodSnackBoonieBar
-  name: Boonie bars
-  description: Two delicious bars of minty chocolate. 'Sometimes things are just... out of reach.'
+  name: Dermardine bar
+  description: Two delicious bars of minty chocolate. 'Sometimes things are just... out of reach.' Contains dermaline and kelotane.
   components:
   - type: FlavorProfile
     flavors:
       - chocolate
       - minty
+      - medicine
   - type: Sprite
     state: boonie-o
   - type: Item
@@ -107,6 +110,10 @@
         - ReagentId: Nutriment
           Quantity: 6
         - ReagentId: CocoaPowder
+          Quantity: 4
+        - ReagentId: CMDermaline
+          Quantity: 4
+        - ReagentId: CMKelotane
           Quantity: 4
 
 - type: entity
