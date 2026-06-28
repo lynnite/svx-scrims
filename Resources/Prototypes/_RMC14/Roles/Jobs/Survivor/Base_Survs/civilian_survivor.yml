@@ -4,6 +4,7 @@
   name: cm-job-name-survivor
   description: cm-job-description-survivor
   playTimeTracker: CMJobSurvivor
+  weight: 100
   ranks:
     RMCRankCivilian: []
   startingGear: RMCGearSurvivorBaseNoBackpack
