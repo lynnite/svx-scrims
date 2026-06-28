@@ -253,7 +253,7 @@
     RMCFoodSnackChipsPepper: 12
     RMCFoodSnackEATBar: 12
     RMCFoodSnackBoonie: 6
-    RMCFoodSnackCHUNK: 6
+    RMCFoodSnackHUNK: 6
     RMCFoodSnackBarcaridine: 6
 
 - type: entity
