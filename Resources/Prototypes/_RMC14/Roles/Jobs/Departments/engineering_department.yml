@@ -4,6 +4,7 @@
   name: department-CMEngineering
   description: cm-department-Engineering-description
   color: "#A66300"
+  hidden: true
   roles:
   - CMChiefEngineer
   - CMOrdnanceTech

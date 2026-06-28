@@ -4,6 +4,7 @@
   name: department-CMOther
   description: cm-department-Other-description
   color: "#595959"
+  hidden: true
   roles:
 #  - CMSilicon # TODO RMC14
 #  - CMAndroid # TODO RMC14
