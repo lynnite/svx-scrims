@@ -38,7 +38,7 @@
   - type: WieldDelay
     baseDelay: 0.05
   - type: WieldableSpeedModifiers
-    base: 0.725
+    base: 1
     light: 1
     medium: 1
     heavy: 1
@@ -259,13 +259,6 @@
           - RMCMagazineRifleM4SPRWP
           - RMCMagazineRifleM4SPRIncendiary
           - RMCMagazineRifleM4SPRHEAP
-  - type: ItemCamouflage
-    camouflageVariations:
-      Jungle: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/jungle.rsi
-      Desert: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/desert.rsi
-      Snow: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/snow.rsi
-      Classic: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/classic.rsi
-      Urban: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/urban.rsi
 
 - type: entity
   parent: CMMagazineRifleBase
