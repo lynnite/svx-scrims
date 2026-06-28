@@ -1,8 +1,8 @@
 ﻿- type: entity
   parent: [ CMBaseWeaponRifle, RMCBaseWeaponMagazineVisuals ]
-  name: M4SPR battle rifle
+  name: MK5-SD battle rifle
   id: WeaponRifleM4SPR
-  description: The M4SPR battle rifle is a designated marksman rifle in service with the Marine Corps. Sporting a bullpup configuration, the M4SPR battle rifle is perfect for reconnaissance and fire support teams.
+  description: The MK5-SD is an extremely lightweight battle rifle. It is optimized for a supressor.
   components:
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/desert.rsi
@@ -10,7 +10,7 @@
     - state: bolt-open
       map: [ "enum.GunVisualLayers.Base" ]
     - sprite: _RMC14/Objects/Weapons/Guns/Attachments/barrel.rsi
-      state: d_m4spr_barrel
+      state: m4spr_barrel
       offset: 0.65, 0
       map: [ "barrel" ]
     - state: mag-0
@@ -18,7 +18,7 @@
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/desert.rsi
   - type: Gun
-    shotsPerBurst: 0
+    shotsPerBurst: 2
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -28,15 +28,15 @@
     baseFireModes:
     - SemiAuto
     recoilUnwielded: 2
-    scatterWielded: 6
-    baseFireRate: 2.86
+    scatterWielded: 8
+    baseFireRate: 3.1
   - type: RMCWeaponAccuracy
-    accuracyMultiplier: 1.25
+    accuracyMultiplier: 1
     accuracyMultiplierUnwielded: 0.6
   - type: RMCWeaponDamageFalloff
     falloffMultiplier: 0
   - type: WieldDelay
-    baseDelay: 0.2
+    baseDelay: 0.05
   - type: WieldableSpeedModifiers
     base: 0.725
     light: 1
@@ -62,19 +62,10 @@
   - type: AttachableHolder
     slots:
       rmc-aslot-barrel:
+        startingAttachable: RMCAttachmentSuppressor
         whitelist:
           tags:
-          - RMCAttachmentExtendedBarrel
-          - RMCAttachmentExtendedCompensator
           - RMCAttachmentSuppressor
-          - RMCM5Bayonet
-          - RMCAttachmentBarrelCharger
-        random:
-          - RMCAttachmentExtendedBarrel
-          - RMCAttachmentExtendedCompensator
-          - RMCAttachmentSuppressor
-          - RMCM5Bayonet
-          - RMCAttachmentBarrelCharger
       rmc-aslot-rail:
         whitelist:
           tags:
@@ -103,6 +94,7 @@
           - RMCAttachmentVerticalGrip
           - RMCAttachmentUnderbarrelExtinguisher
           - RMCAttachmentBurstFireAssembly
+          - RMCAttachmentMiniFlamethrower
         random:
           - RMCAttachmentAngledGrip
           - RMCAttachmentBipod
@@ -111,25 +103,12 @@
           - RMCAttachmentVerticalGrip
           - RMCAttachmentUnderbarrelExtinguisher
           - RMCAttachmentBurstFireAssembly
+          - RMCAttachmentMiniFlamethrower
   - type: AttachableHolderVisuals
     offsets:
       rmc-aslot-barrel: 1.12, 0.0
       rmc-aslot-rail: 0.225, 0.125
       rmc-aslot-underbarrel: 0.62, -0.31
-  - type: ItemCamouflage
-    camouflageVariations:
-      Jungle: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/jungle.rsi
-      Desert: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/desert.rsi
-      Snow: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/snow.rsi
-      Classic: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/classic.rsi
-      Urban: _RMC14/Objects/Weapons/Guns/Rifles/m4spr/urban.rsi
-    layers:
-      barrel:
-        Jungle: m4spr_barrel
-        Desert: d_m4spr_barrel
-        Snow: s_m4spr_barrel
-        Classic: c_m4spr_barrel
-        Urban: u_m4spr_barrel
   - type: Tag
     tags:
     - RMCWeaponRifleM4SPR
@@ -291,8 +270,8 @@
 - type: entity
   parent: CMMagazineRifleBase
   id: CMMagazineRifleM4SPR
-  name: "M4SPR magazine (10x24mm)"
-  description: "A magazine of standard 10x24mm rounds for use in the M4SPR battle rifle."
+  name: "MK5-SD magazine (10x24mm)"
+  description: "A magazine of standard 10x24mm rounds for use in the MK5-SD battle rifle."
   components:
   - type: Tag
     tags:
@@ -341,8 +320,8 @@
 - type: entity
   parent: CMMagazineRifleM4SPR
   id: RMCMagazineRifleM4SPRIncendiary
-  name: M4SPR incendiary magazine (10x24mm)
-  description: "A magazine of Incendiary 10x24mm rounds for use in the M4SPR battle rifle."
+  name: MK5-SD incendiary magazine (10x24mm)
+  description: "A magazine of Incendiary 10x24mm rounds for use in the MK5-SD battle rifle."
   suffix: Incendiary
   components:
   - type: Tag
@@ -369,8 +348,8 @@
 - type: entity
   parent: CMMagazineRifleM4SPR
   id: RMCMagazineRifleM4SPRHEAP
-  name: M4SPR HEAP magazine (10x24mm)
-  description: "A magazine of high-explosive-armor-piercing 10x24mm rounds for use in the M4SPR battle rifle."
+  name: MK5-SD HEAP magazine (10x24mm)
+  description: "A magazine of high-explosive-armor-piercing 10x24mm rounds for use in the MK5-SD battle rifle."
   suffix: HEAP
   components:
   - type: Tag
@@ -397,8 +376,8 @@
 - type: entity
   parent: CMMagazineRifleM4SPR
   id: CMMagazineRifleM4SPRAP
-  name: M4SPR AP magazine (10x24mm)
-  description: "A magazine of armor-piercing 10x24mm rounds for use in the M4SPR battle rifle."
+  name: MK5-SD AP magazine (10x24mm)
+  description: "A magazine of armor-piercing 10x24mm rounds for use in the MK5-SD battle rifle."
   suffix: AP
   components:
   - type: Tag
@@ -432,8 +411,8 @@
 - type: entity
   parent: CMMagazineRifleM4SPR
   id: CMMagazineRifleM4SPRExt
-  name: "M4SPR extended magazine (10x24mm)"
-  description: "An extended magazine of standard 10x24mm rounds for use in the M4SPR battle rifle."
+  name: "MK5-SD extended magazine (10x24mm)"
+  description: "An extended magazine of standard 10x24mm rounds for use in the MK5-SD battle rifle."
   components:
   - type: BallisticAmmoProvider
     capacity: 35
