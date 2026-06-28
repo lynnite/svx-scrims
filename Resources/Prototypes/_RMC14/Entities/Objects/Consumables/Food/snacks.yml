@@ -74,7 +74,7 @@
 - type: entity
   parent: RMCFoodSnackBase
   id: RMCFoodSnackBoonie
-  name: Dermardine bar
+  name: Dermadine bar
   description: Two delicious bars of minty chocolate. 'Sometimes things are just... out of reach.' Contains dermaline and kelotane.
   components:
   - type: Sprite
@@ -91,7 +91,7 @@
 - type: entity
   parent: RMCFoodSnackBase
   id: RMCFoodSnackBoonieBar
-  name: Dermardine bar
+  name: Dermadine bar
   description: Two delicious bars of minty chocolate. 'Sometimes things are just... out of reach.' Contains dermaline and kelotane.
   components:
   - type: FlavorProfile
