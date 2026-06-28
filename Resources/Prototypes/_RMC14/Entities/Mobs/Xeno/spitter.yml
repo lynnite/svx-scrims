@@ -83,6 +83,14 @@
     damage:
       groups:
         Brute: 25
+  - type: XenoAcidSlash
+    acid:
+    - type: UserAcided
+      armorPiercing: 5
+      damage:
+        types:
+          Heat: 1
+      duration: 7
   - type: Tackle
     min: 2
     max: 6

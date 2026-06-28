@@ -60,10 +60,9 @@
     maxPlasma: 600
     plasmaRegenOnWeeds: 8
   - type: XenoEvolution
-    max: 500
+    max: 60
     evolvesTo:
     - RMCXenoCrusher
-    - CMXenoPraetorian
   - type: CMArmor
     xenoArmor: 20
     explosionArmor: 40
