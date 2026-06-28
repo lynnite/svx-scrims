@@ -4,6 +4,7 @@
   name: department-CMSurvivor
   description: cm-department-Survivor-description
   color: "#C38312"
+  weight: 100
   roles:
   - RMCSyntheticColony
   - CMSurvivor

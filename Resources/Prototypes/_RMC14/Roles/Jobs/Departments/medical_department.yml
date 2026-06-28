@@ -4,6 +4,7 @@
   name: department-CMMedbay
   description: cm-department-Medical-description
   color: "#008160"
+  hidden: true
   roles:
   - CMCMO
   - CMDoctor

@@ -4,6 +4,7 @@
   name: department-CMAuxiliarySupport
   description: cm-department-AuxiliarySupport-description
   color: "#C38312"
+  hidden: true
   roles:
   - CMAuxiliarySupportOfficer
   - CMPilotDropship

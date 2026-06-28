@@ -4,6 +4,7 @@
   name: department-CMSquad
   description: cm-department-Marine-description
   color: "#DE3A3A"
+  hidden: true
   roles:
   - CMRifleman
   - CMSquadLeader

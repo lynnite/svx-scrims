@@ -4,6 +4,7 @@
   name: department-CMMilitaryPolice
   description: cm-department-MilitaryPolice-description
   color: "#DE3A3A"
+  hidden: true
   roles:
   - CMProvostInspector
   - CMChiefMP
