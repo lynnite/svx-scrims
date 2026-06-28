@@ -469,6 +469,38 @@
       path: /Audio/_RMC14/Weapons/Guns/Gunshots/gun_shotgun_choke.ogg
     hideMuzzleFlash: false
 
+- type: entity
+  parent: RMCBarrelAttachmentBase
+  id: RMCAttachmentMK5Suppressor
+  name: MK5-SD suppressor
+  description: "A small tube with exhaust ports to expel noise and gas.
+    This one is specifically made for the MK5-SD. It feels heavy, could it be used as a bayonet?"
+  components:
+  - type: Sprite
+    state: mk5suppressor
+  - type: Tag
+    tags:
+    - RMCAttachmentBarrel
+    - RMCAttachmentMK5Suppressor
+  - type: AttachableVisuals
+  - type: AttachableSilencer
+    sound:
+      collection: CMSilencedShoot
+      params:
+        maxDistance: 6
+  - type: AttachableWeaponRangedMods
+    modifiers:
+    - bonusDamage:
+        types:
+          Slash: 20
+    - accuracyAddMult: 0.2
+    - conditions:
+        wieldedOnly: true
+      recoilFlat: 1
+    - conditions:
+        unwieldedOnly: true
+      recoilFlat: 1
+
 - type: Tag
   id: RMCAttachmentBarrel
 
@@ -534,3 +566,6 @@
 
 - type: Tag
   id: RMCAttachmentL49Barrel
+
+- type: Tag
+  id: RMCAttachmentMK5Suppressor
