@@ -297,13 +297,13 @@ public sealed partial class RMCCVars : CVars
     // For the future coder: 2100, 2800, 3600, 4500
 
     public static readonly CVarDef<int> RMCPlaytimeXenoPrefixThreeTimeHours =
-        CVarDef.Create("rmc.playtime_xeno_prefix_three_time_hours", 124, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.playtime_xeno_prefix_three_time_hours", 1, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCPlaytimeXenoPostfixTimeHours =
-        CVarDef.Create("rmc.playtime_xeno_postfix_time_hours", 24, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.playtime_xeno_postfix_time_hours", 1, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCPlaytimeXenoPostfixTwoTimeHours =
-        CVarDef.Create("rmc.playtime_xeno_postfix_two_time_hours", 300, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.playtime_xeno_postfix_two_time_hours", 1, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCDisconnectedXenoGhostRoleTimeSeconds =
         CVarDef.Create("rmc.disconnected_xeno_ghost_role_time_seconds", 300, CVar.REPLICATED | CVar.SERVER);
