@@ -87,7 +87,7 @@
     - HivePlasmaTreeXenoConstructionNode
   - type: XenoEvolution
     canEvolveWithoutGranter: true
-    max: 60
+    max: 30
     evolvesTo:
     - CMXenoCarrier
     - CMXenoBurrower

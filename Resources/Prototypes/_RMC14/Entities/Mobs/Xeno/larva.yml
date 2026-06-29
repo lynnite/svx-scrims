@@ -47,7 +47,7 @@
   - type: XenoEvolution
     canEvolveWithoutGranter: true
     requiresGranter: false
-    max: 60
+    max: 50
     evolvesTo:
     - CMXenoDrone
     - CMXenoDefender
