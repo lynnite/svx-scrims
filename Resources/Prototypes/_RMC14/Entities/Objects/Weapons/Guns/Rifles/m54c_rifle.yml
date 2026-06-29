@@ -262,8 +262,9 @@
 
 - type: entity
   parent: RMCWeaponRifleM54CSemiStripped
+  name: WYPW-54 Assault rifle
   id: RMCWeaponRifleM54CWhiteNoLock
-  description: A M54C Mk2 with a Weston-Yamada logo imprinted on the reciever. Used primarily by Weston-Yamada's corporate security forces, and comes equipped with a drab corporate white paint job.
+  description: A Weston Yamada port weapon. Used primarily by Weston-Yamada's corporate security forces. It fits M54C magazines.
   suffix: Corporate, No UGL, No ID lock
   components:
   - type: Sprite
@@ -296,11 +297,8 @@
           - RMCAttachmentS84xTelescopicScope
           - RMCAttachmentS42xTelescopicMiniscope
       rmc-aslot-stock:
-        startingAttachable: RMCAttachmentM54CStockCollapsibleWhite
         whitelist:
           tags:
-          - RMCAttachmentM54CStockSolid
-          - RMCAttachmentM54CStockCollapsible
       rmc-aslot-underbarrel:
         whitelist:
           tags:
@@ -314,11 +312,18 @@
           - RMCAttachmentVerticalGrip
           - RMCAttachmentUnderbarrelExtinguisher
           - RMCAttachmentMiniFlamethrower
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.875, 0.095
+      rmc-aslot-rail: 0, 0.12
+      rmc-aslot-stock: -0.78, 0.0325
+      rmc-aslot-underbarrel: 0.39, -0.27
 
 - type: entity
   parent: RMCWeaponRifleM54CWhite
+  name: WYPW-54 Assault rifle
   id: RMCWeaponRifleM54CWhiteCommando
-  description: A Weston-Yamada creation, this M54C MK2 comes equipped in corporate white. Uses 10x24mm caseless ammunition.
+  description: A Weston Yamada port weapon. It fits M54C magazines.
   suffix: Commando
   components:
   - type: ItemSlots
@@ -356,11 +361,8 @@
           - RMCAttachmentS84xTelescopicScope
           - RMCAttachmentS42xTelescopicMiniscope
       rmc-aslot-stock:
-        startingAttachable: RMCAttachmentM54CStockCollapsibleWhite
         whitelist:
           tags:
-          - RMCAttachmentM54CStockSolid
-          - RMCAttachmentM54CStockCollapsible
       rmc-aslot-underbarrel:
         startingAttachable: RMCAttachmentLaserSight
         whitelist:
@@ -375,6 +377,12 @@
           - RMCAttachmentVerticalGrip
           - RMCAttachmentUnderbarrelExtinguisher
           - RMCAttachmentMiniFlamethrower
+  - type: AttachableHolderVisuals
+    offsets:
+      rmc-aslot-barrel: 0.875, 0.095
+      rmc-aslot-rail: 0, 0.12
+      rmc-aslot-stock: -0.78, 0.0325
+      rmc-aslot-underbarrel: 0.39, -0.27
 
 - type: entity
   parent: RMCWeaponRifleM54CWhiteNoLock
