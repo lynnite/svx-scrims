@@ -89,7 +89,7 @@
       armorPiercing: 5
       damage:
         types:
-          Heat: 1
+          Heat: 2
       duration: 7
   - type: Tackle
     min: 2
@@ -98,8 +98,8 @@
     stunMin: 4
     stunMax: 5
   - type: MovementSpeedModifier
-    baseWalkSpeed: 2
-    baseSprintSpeed: 3.5
+    baseWalkSpeed: 3
+    baseSprintSpeed: 4.5
   - type: SlowOnPull
     slowdowns:
     - multiplier: 0.6375
