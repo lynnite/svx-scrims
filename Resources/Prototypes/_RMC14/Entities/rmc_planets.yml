@@ -72,7 +72,7 @@
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/solaris.yml
     camouflage: Desert
-    minPlayers: 5
+    minPlayers: 6
     announcement: "Weston-Yamada has lost contact with one of its Biological Storage Facilities, Solaris Ridge, on the planet of LV-1413. The UNS Almayer has been requested to look into the blackout by Weston-Yamada."
     specialFaxes:
       Liaison: RMCPaperWeYaLiaisonBriefingSolaris
@@ -481,7 +481,7 @@
 - type: entity
   id: RMCPlanetHybrisa
   name: LV-759 Hybrisa Prospera
-  minPlayers: 5
+  minPlayers: 6
   components:
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/hybrisa.yml
