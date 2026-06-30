@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.2
   forkId: ""
   forkVersion: ""
-  time: 06/16/2026 11:11:48
-  entityCount: 26682
+  time: 06/30/2026 17:39:49
+  entityCount: 26683
 maps:
 - 1
 grids:
@@ -56287,6 +56287,13 @@ entities:
     components:
     - type: Transform
       pos: 44.5,-58.5
+      parent: 1
+- proto: RMCCoatMilitiaVest
+  entities:
+  - uid: 26683
+    components:
+    - type: Transform
+      pos: 25.530603,-103.55706
       parent: 1
 - proto: RMCCoatRack
   entities:
