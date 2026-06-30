@@ -72,6 +72,7 @@
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/solaris.yml
     camouflage: Desert
+    minPlayers: 5
     announcement: "Weston-Yamada has lost contact with one of its Biological Storage Facilities, Solaris Ridge, on the planet of LV-1413. The UNS Almayer has been requested to look into the blackout by Weston-Yamada."
     specialFaxes:
       Liaison: RMCPaperWeYaLiaisonBriefingSolaris
@@ -362,6 +363,7 @@
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/varadero.yml
     camouflage: Jungle
+    minPlayers: 5
     specialFaxes:
       Liaison: RMCPaperWeYaLiaisonBriefingVaradero
     announcement: "An automated distress signal has been received from UN Outpost New Varadero. A response team from the UNS Almayer will be dispatched shortly to investigate.
@@ -443,6 +445,7 @@
 - type: entity
   id: RMCPlanetChances
   name: LV-522 Chance's Claim
+  minPlayers: 5
   components:
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/chances.yml
@@ -478,6 +481,7 @@
 - type: entity
   id: RMCPlanetHybrisa
   name: LV-759 Hybrisa Prospera
+  minPlayers: 5
   components:
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/hybrisa.yml
