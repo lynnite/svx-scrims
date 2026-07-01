@@ -91,15 +91,9 @@
         types:
           Heat: 2
       duration: 7
-  - type: Tackle
-    min: 2
-    max: 6
-    chance: 0.45
-    stunMin: 4
-    stunMax: 5
   - type: MovementSpeedModifier
     baseWalkSpeed: 3
-    baseSprintSpeed: 4.5
+    baseSprintSpeed: 4
   - type: SlowOnPull
     slowdowns:
     - multiplier: 0.6375

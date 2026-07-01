@@ -61,8 +61,6 @@
     tailDamage:
       groups:
         Brute: 48
-  - type: Tackle
-    chance: 0.45
   - type: Fixtures
     fixtures:
       fix1:

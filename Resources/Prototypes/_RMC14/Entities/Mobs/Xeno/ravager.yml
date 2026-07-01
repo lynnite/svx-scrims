@@ -77,11 +77,6 @@
     tailDamage:
       groups:
         Brute: 54
-  - type: Tackle
-    max: 5
-    chance: 0.35
-    stunMin: 4
-    stunMax: 5
   - type: Fixtures
     fixtures:
       fix1:

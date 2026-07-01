@@ -45,11 +45,6 @@
     tailDamage:
       groups:
         Brute: 30
-  - type: Tackle
-    max: 4
-    chance: 0.45
-    stunMin: 4
-    stunMax: 5
   - type: TunnelRenamer
   - type: MovementSpeedModifier
     baseWalkSpeed: 1.66
@@ -281,11 +276,6 @@
   - type: XenoPheromones
     pheromonesMultiplier: 3.5
     pheroSuffix: designer
-  - type: Tackle
-    max: 4
-    chance: 0.45
-    stunMin: 5
-    stunMax: 6
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.15
     baseSprintSpeed: 3.9

@@ -82,12 +82,6 @@
     tailDamage:
       groups:
         Brute: 30
-  - type: Tackle
-    min: 4
-    max: 5
-    chance: 0.4
-    stunMin: 4
-    stunMax: 4
   - type: SlowOnPull
     slowdowns:
     - multiplier: 0.3825

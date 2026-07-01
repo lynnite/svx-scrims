@@ -68,7 +68,6 @@
     damage:
       groups:
         Brute: 35
-  - type: Tackle
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.7
     baseSprintSpeed: 5

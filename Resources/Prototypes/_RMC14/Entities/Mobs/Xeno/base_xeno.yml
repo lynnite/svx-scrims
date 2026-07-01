@@ -420,7 +420,6 @@
     whitelist:
       components:
       - Xeno
-  - type: Tackle
   - type: XenoClaws
 
 - type: entity
