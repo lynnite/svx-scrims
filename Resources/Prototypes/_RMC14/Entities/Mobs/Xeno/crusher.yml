@@ -70,8 +70,6 @@
         Brute: 48
   - type: XenoMeleeSlow
     slowTime: 2
-  - type: Tackle
-    chance: 0.25
   - type: MovementSpeedModifier
     baseWalkSpeed: 1.66
     baseSprintSpeed: 3

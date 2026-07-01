@@ -75,8 +75,6 @@
         params:
           variation: 0.15
     hitAnimationId: RMCEffectSlam
-  - type: Tackle
-    max: 4
   - type: Fixtures
     fixtures:
       fix1:

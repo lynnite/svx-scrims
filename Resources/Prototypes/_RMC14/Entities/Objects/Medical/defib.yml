@@ -67,7 +67,7 @@
     - RMCMedical
   - type: RequiresSkill
     skills:
-      RMCSkillMedical: 2
+      RMCSkillMedical: 4
   - type: InteractedBlacklist
     blacklist:
       components:

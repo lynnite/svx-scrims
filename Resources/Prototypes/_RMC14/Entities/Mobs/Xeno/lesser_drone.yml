@@ -69,9 +69,6 @@
     tailDamage:
       groups:
         Brute: 24
-  - type: Tackle
-    min: 4
-    max: 5
   - type: AcidBloodSplash
     damage:
       types:

@@ -57,11 +57,6 @@
     tailDamage:
       groups:
         Brute: 42
-  - type: Tackle
-    max: 4
-    chance: 0.5
-    stunMin: 4
-    stunMax: 5
   - type: TunnelRenamer
   - type: MovementSpeedModifier
     baseWalkSpeed: 2
