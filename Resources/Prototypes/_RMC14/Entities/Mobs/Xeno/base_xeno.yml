@@ -420,6 +420,10 @@
     whitelist:
       components:
       - Xeno
+  - type: Tackle
+    chance: 0.25
+    stunMin: 6
+    stunMax: 6
   - type: XenoClaws
 
 - type: entity
