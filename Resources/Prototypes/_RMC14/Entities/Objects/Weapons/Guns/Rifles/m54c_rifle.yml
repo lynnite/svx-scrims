@@ -2,7 +2,7 @@
   parent: [ CMBaseWeaponRifle, RMCBaseWeaponMagazineVisuals ]
   name: FPW-54 Assault Rifle
   id: RMCWeaponRifleM54C
-  description: The FPW-54 is an adapted version of the M54C designed for shooting through firing ports. It cannot fit a stock and is much lighter. It uses M54C magazines.
+  description: The FPW-54 is an adapted version of the M54C designed for shooting through firing ports. It cannot fit a stock and is much lighter. It uses its own maganizes.
   components:
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Rifles/m54c/desert.rsi
@@ -264,7 +264,7 @@
   parent: RMCWeaponRifleM54CSemiStripped
   name: WYPW-54 Assault rifle
   id: RMCWeaponRifleM54CWhiteNoLock
-  description: A Weston Yamada port weapon. Used primarily by Weston-Yamada's corporate security forces. It fits M54C magazines.
+  description: A Weston Yamada port weapon. Used primarily by Weston-Yamada's corporate security forces. It fits FPW-54 magazines.
   suffix: Corporate, No UGL, No ID lock
   components:
   - type: Sprite
@@ -323,7 +323,7 @@
   parent: RMCWeaponRifleM54CWhite
   name: WYPW-54 Assault rifle
   id: RMCWeaponRifleM54CWhiteCommando
-  description: A Weston Yamada port weapon. It fits M54C magazines.
+  description: A Weston Yamada port weapon. It fits FPW-54 magazines.
   suffix: Commando
   components:
   - type: ItemSlots
@@ -394,7 +394,7 @@
 - type: entity
   parent: CMMagazineRifleBase
   id: CMMagazineRifleM54C
-  name: "M54C magazine (10x24mm)"
+  name: "FPW-54 magazine (10x24mm)"
   components:
   - type: Tag
     tags:
@@ -421,7 +421,7 @@
 - type: entity
   parent: CMMagazineRifleM54C
   id: CMMagazineRifleM54CAP
-  name: "M54C AP magazine (10x24mm)"
+  name: "FPW-54 AP magazine (10x24mm)"
   suffix: AP
   components:
   - type: Tag
@@ -450,7 +450,7 @@
 - type: entity
   parent: CMMagazineRifleM54C
   id: RMCMagazineRifleM54CIncendiary
-  name: "M54C Incendiary magazine (10x24mm)"
+  name: "FPW-54 Incendiary magazine (10x24mm)"
   suffix: Incendiary
   components:
   - type: Tag
@@ -477,7 +477,7 @@
 - type: entity
   parent: CMMagazineRifleM54C
   id: RMCMagazineRifleM54CHEAP
-  name: "M54C HEAP magazine (10x24mm)"
+  name: "FPW-54 HEAP magazine (10x24mm)"
   suffix: HEAP
   components:
   - type: Tag
@@ -511,7 +511,7 @@
 - type: entity
   parent: CMMagazineRifleM54C
   id: RMCMagazineRifleM54CWP
-  name: "M54C WP magazine (10x24mm)"
+  name: "FPW-54 WP magazine (10x24mm)"
   suffix: WP
   components:
   - type: Tag
@@ -538,7 +538,7 @@
 - type: entity
   parent: CMMagazineRifleM54C
   id: CMMagazineRifleM54CExt
-  name: "M54C extended magazine (10x24mm)"
+  name: "FPW-54 extended magazine (10x24mm)"
   components:
   - type: Tag
     tags:
