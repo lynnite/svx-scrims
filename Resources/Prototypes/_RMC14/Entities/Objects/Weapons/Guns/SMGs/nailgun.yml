@@ -2,7 +2,7 @@
   parent: CMBaseWeaponSMG
   name: nailgun
   id: WeaponNailgun
-  description: A carpentry tool, used to drive nails into tough surfaces. Of course, if there isn't anything there, that's just a very sharp nail launching at high velocity...
+  description: A carpentry tool, used to drive nails into tough surfaces. This one seems modified. Of course, if there isn't anything there, that's just a very sharp nail launching at high velocity...
   suffix: Filled
   components:
   - type: Sprite
@@ -22,31 +22,28 @@
     size: Normal
   - type: Gun
     shotsPerBurst: 3
+    burstCooldown: 0.75
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - Burst
     soundGunshot:
       path: /Audio/_RMC14/Weapons/Guns/Gunshots/nailgun_fire.ogg
   - type: RMCSelectiveFire
+    scatterWielded: 8
+    scatterUnwielded: 8
+    baseFireRate: 2.4
     baseFireModes:
     - SemiAuto
     - Burst
-    - FullAuto
-    recoilWielded: 1
-    recoilUnwielded: 1
-    scatterWielded: 6
-    scatterUnwielded: 12
-    baseFireRate: 2.4
-    burstScatterMult: 3
+    burstFireRateMultiplier: 5
     modifiers:
       Burst:
-        fireDelay: 0.0999
+        # fireDelay: 0.01
         maxScatterModifier: 10
         useBurstScatterMult: true
         unwieldedScatterMultiplier: 2
         shotsToMaxScatter: 6
-      FullAuto:
-        maxScatterModifier: 3
-        useBurstScatterMult: true
-        unwieldedScatterMultiplier: 2
-        shotsToMaxScatter: 4
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 1.25
     accuracyMultiplierUnwielded: 1.2
@@ -140,6 +137,12 @@
     thresholds:
     - range: 5
       falloff: 10
+  - type: RMCStunOnHit
+    stuns:
+    - whitelist:
+        minMobSize: VerySmallXeno
+      maxRange: 6.5
+      slowTime: 4
 
 - type: Tag
   id: RMCWeaponSMGNailgun
