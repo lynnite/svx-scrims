@@ -21,7 +21,7 @@
   - type: Item
     size: Normal
   - type: Gun
-    shotsPerBurst: 3
+    shotsPerBurst: 2
     burstCooldown: 0.75
     selectedMode: SemiAuto
     availableModes:
@@ -32,7 +32,7 @@
   - type: RMCSelectiveFire
     scatterWielded: 8
     scatterUnwielded: 8
-    baseFireRate: 2.4
+    baseFireRate: 1.5
     baseFireModes:
     - SemiAuto
     - Burst
@@ -143,6 +143,7 @@
         minMobSize: VerySmallXeno
       maxRange: 6.5
       slowTime: 4
+      stunTime: 0
 
 - type: Tag
   id: RMCWeaponSMGNailgun
