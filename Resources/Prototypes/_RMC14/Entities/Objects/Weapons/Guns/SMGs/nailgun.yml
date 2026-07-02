@@ -141,7 +141,7 @@
     stuns:
     - whitelist:
         minMobSize: VerySmallXeno
-      maxRange: 6.5
+      maxRange: 3
       slowTime: 4
       stunTime: 0
 
