@@ -1,8 +1,8 @@
 ﻿- type: entity
   parent: [RMCBaseSlideMagazineVisuals, CMWeaponPistolBase]
   id: RMCWeaponPistolHoldout
-  name: holdout pistol
-  description: A tiny pistol meant for hiding in hard-to-reach areas. Best not ask where it came from.
+  name: PP-3200 holdout pistol
+  description: A small semi-automatic pistol meant for hiding in hard-to-reach areas. Best not ask where it came from.
   suffix: Filled
   components:
   - type: Item
@@ -10,8 +10,12 @@
   - type: RMCSelectiveFire
     scatterWielded: 10
     scatterUnwielded: 10
-    baseFireRate: 4
+    baseFireRate: 6.2
     burstScatterMult: 10
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 2
+  - type: GunDamageModifier
+    multiplier: 1.65
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Pistols/holdout.rsi
   - type: Clothing
@@ -61,8 +65,8 @@
 - type: entity
   parent: CMBaseMagazinePistol
   id: RMCMagazinePistolHoldout
-  name: tiny pistol magazine (.22)
-  description: A surprisingly small magazine, holding .22 bullets. No Kolibri, but it's getting there.
+  name: small pistol box magazine (.22)
+  description: A surprisingly small box magazine.
   components:
   - type: Tag
     tags:
@@ -76,7 +80,7 @@
       tags:
       - CMCartridgePistol22mm
     proto: CMCartridgePistol22mm
-    capacity: 5
+    capacity: 20
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/holdout.rsi
     layers:
