@@ -147,7 +147,7 @@ public sealed partial class CMDistressSignalRuleSystem
         {
             Title = Loc.GetString("rmc-distress-signal-next-map-title"),
             Options = options,
-            Duration = TimeSpan.FromMinutes(2),
+            Duration = TimeSpan.FromMinutes(0.5),
         };
         vote.SetInitiatorOrServer(null);
 
