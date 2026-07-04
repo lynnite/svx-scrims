@@ -1,25 +1,29 @@
 - type: entity
-  parent: [FireAxe, RMCBaseMeleeWeapon]
+  name: small plasma cutter
+  parent: [BaseItem, BaseEngineeringContraband, RMCBaseMeleeWeapon]
   id: RMCFireAxe
-  name: fire axe
+  description: A tiny plasma cutter. placeholder sprite
   suffix: RMC
   components:
+  - type: Tag
+    tags:
+    - FireAxe
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Melee/fireaxe.rsi
-  - type: Clothing
-    sprite: _RMC14/Objects/Weapons/Melee/fireaxe.rsi
+    state: icon
   - type: MeleeWeapon
+    wideAnimationRotation: 90
+    swingLeft: true
+    attackRate: 1
     damage:
       types:
-        Blunt: 15
-        Slash: 10
+        Heat: 30
     soundHit:
       collection: GenericHit
-    wideAnimationRotation: 90
-  - type: IncreaseDamageOnWield
-    damage:
-      types:
-        Slash: 10
-        Blunt: 10
-  - type: Prying
-    speedModifier: 100000
+  - type: Item
+    size: Small
+  - type: Clothing
+    sprite: _RMC14/Objects/Weapons/Melee/fireaxe.rsi
+    quickEquip: false
+    slots:
+    - back
