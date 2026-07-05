@@ -59,10 +59,6 @@
   background: /Textures/_RMC14/Lobby/LiquorCabinetsLastStand.png
 
 - type: lobbyBackground
-  id: APushTooFar
-  background: /Textures/_RMC14/Lobby/APushTooFar.png
-
-- type: lobbyBackground
   id: WEYALobby
   background: /Textures/_RMC14/Lobby/WEYALobby.png
 
@@ -77,10 +73,6 @@
 - type: lobbyBackground
   id: goodhits
   background: /Textures/_RMC14/Lobby/good_hits.png
-
-- type: lobbyBackground
-  id: HisHighness
-  background: /Textures/_RMC14/Lobby/his_highness.png
 
 - type: lobbyBackground
   id: CoveringPrivateVuloss
