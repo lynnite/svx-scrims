@@ -43,8 +43,7 @@
       required: false
     Tail:
       points: 1
-      required: true
-      defaultMarkings: [ FeroxiTailAndDorsal ]
+      required: false
     Legs:
       points: 1
       required: false
@@ -53,12 +52,10 @@
       required: false
     Snout:
       points: 1
-      required: true
-      defaultMarkings: [ FeroxiSnout ]
+      required: false
     HeadTop:
       points: 1
-      required: true
-      defaultMarkings: [ FeroxiEars ]
+      required: false
     Chest:
       points: 1
       required: false
