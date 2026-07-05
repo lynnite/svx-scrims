@@ -227,7 +227,7 @@ public sealed partial class RMCCVars : CVars
         CVarDef.Create("rmc.marines_per_survivor", 2, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCSurvivorsMinimum =
-        CVarDef.Create("rmc.survivors_minimum", 1, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.survivors_minimum", 2, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCSurvivorsMaximum =
         CVarDef.Create("rmc.survivors_maximum", 8, CVar.REPLICATED | CVar.SERVER);
