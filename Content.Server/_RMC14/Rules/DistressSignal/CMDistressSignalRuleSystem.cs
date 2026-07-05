@@ -87,7 +87,7 @@ public sealed partial class CMDistressSignalRuleSystem : GameRuleSystem<CMDistre
     /// <summary>
     /// Minimum number of living xenos required for a minor marine victory when the queen dies.
     /// </summary>
-    private const int QueenDeathXenoThreshold = 4;
+    private const int QueenDeathXenoThreshold = 0;
 
     [Dependency] private readonly FaxSystem _fax = default!;
     [Dependency] private readonly GunIFFSystem _gunIFF = default!;
