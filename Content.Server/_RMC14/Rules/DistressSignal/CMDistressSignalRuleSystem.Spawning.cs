@@ -133,7 +133,7 @@ public sealed partial class CMDistressSignalRuleSystem
         var totalXenos = (int) Math.Round(Math.Max(1, totalPlayers / _marinesPerXeno));
         // TODO RMC14 dont count survivors
         var totalSurvivors = (int) Math.Clamp((int) Math.Round(totalPlayers / _marinesPerSurvivor), _minimumSurvivors, _maximumSurvivors);
-        var marines = totalPlayers - totalXenos - totalSurvivors;
+        var marines = totalPlayers;
         var roundstartTank = _player.Sessions.Count() >= vehicleThreshold;
         var crewmanSlots = roundstartTank ? 2 : 0;
 
