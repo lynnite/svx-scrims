@@ -125,3 +125,4 @@
     ventCrawlIcon: burrower
   - type: RMCActionOrder
     id: CMXenoBurrower
+  - type: XenoEvolutionGranter

@@ -133,6 +133,7 @@
     name: cm-job-name-xeno-ravager
   - type: RMCSurgeryXenoHeart
     item: RMCOrganXenoHeartT3
+  - type: XenoEvolutionGranter
 
 - type: entity
   parent: RMCXenoRavagerBase

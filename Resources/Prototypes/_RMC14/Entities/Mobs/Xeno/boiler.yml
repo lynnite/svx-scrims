@@ -160,6 +160,7 @@
     name: cm-job-name-xeno-boiler
   - type: RMCActionOrder
     id: CMXenoBoiler
+  - type: XenoEvolutionGranter
 
     #CMXenoBoiler
 - type: entity

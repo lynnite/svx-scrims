@@ -94,3 +94,4 @@
     ventCrawlIcon: sentinel
   - type: RMCActionOrder
     id: CMXenoSentinel
+  - type: XenoEvolutionGranter
