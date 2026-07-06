@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿﻿using System.Linq;
 using System.Numerics;
 using Content.Server.GameTicking;
 using Content.Server.Station.Components;
@@ -130,7 +130,7 @@ public sealed partial class CMDistressSignalRuleSystem
     {
         var totalPlayers = ev.PlayerPool.Count;
         var vehicleThreshold = _config.GetCVar(RMCCVars.RMCVehicleRoundstartThresholdPlayers);
-        var totalXenos = (int) Math.Round(Math.Max(1, totalPlayers / _marinesPerXeno));
+        var totalXenos = (int) Math.Round(Math.Max(100, totalPlayers / _marinesPerXeno));
         // TODO RMC14 dont count survivors
         var totalSurvivors = (int) Math.Clamp((int) Math.Round(totalPlayers / _marinesPerSurvivor), _minimumSurvivors, _maximumSurvivors);
         var marines = totalPlayers;
@@ -139,7 +139,7 @@ public sealed partial class CMDistressSignalRuleSystem
 
         // TODO RMC14: Move to component
         var doJobSlotScaling = comp.DoJobSlotScaling &&
-                               marines > 0 &&
+                               marines > 31 &&
                                _config.GetCVar(RMCCVars.RMCJobSlotScaling);
 
         var stations = EntityQueryEnumerator<StationJobsComponent, StationSpawningComponent>();
@@ -248,7 +248,7 @@ public sealed partial class CMDistressSignalRuleSystem
             return playerId;
         }
 
-        var totalXenos = (int) Math.Round(Math.Max(1, ev.PlayerPool.Count / _marinesPerXeno));
+        var totalXenos = (int) Math.Round(Math.Max(100, ev.PlayerPool.Count / _marinesPerXeno));
         var priorities = Enum.GetValues<JobPriority>().Length;
         var xenoCandidates = new List<NetUserId>[priorities];
         for (var i = 0; i < priorities; i++)
