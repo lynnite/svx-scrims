@@ -147,7 +147,6 @@
     ventCrawlIcon: drone
   - type: RMCActionOrder
     id: CMXenoDrone
-  - type: XenoEvolutionGranter
 
 - type: entity
   parent: CMXenoDroneBase

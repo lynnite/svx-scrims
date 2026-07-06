@@ -107,7 +107,6 @@
     ventCrawlIcon: larva
   - type: RMCActionOrder
     id: CMXenoLarva
-  - type: XenoEvolutionGranter
 
 # For surgeries/failed incubations
 - type: entity

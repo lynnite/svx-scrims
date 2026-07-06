@@ -116,7 +116,6 @@
     name: cm-job-name-xeno-praetorian
   - type: RMCSurgeryXenoHeart
     item: RMCOrganXenoHeartT3
-  - type: XenoEvolutionGranter
 
 - type: entity
   parent: CMXenoPraetorianBase
