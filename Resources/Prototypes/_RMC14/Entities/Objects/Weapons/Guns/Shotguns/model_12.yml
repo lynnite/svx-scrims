@@ -1,8 +1,8 @@
 - type: entity
   parent: [ RMCBaseWeaponShotgun, RMCBaseAttachableHolder ]
-  name: Model 12 pump shotgun
+  name: Model 12 gulp shotgun
   id: RMCWeaponShotgunM12
-  description: An eight-round pump action shotgun with four-round capacity dual internal tube magazines allowing for quick reloading and highly accurate fire. Used exclusively by Colony Marshals. # TODO RMC14 : You can switch the active internal magazine by toggling the shotgun tube.
+  description: An eight-round gulp action shotgun with four-round capacity dual internal tube magazines allowing for quick reloading and highly accurate fire. Used exclusively by Colony Marshals. # TODO RMC14 : You can switch the active internal magazine by toggling the shotgun tube.
   components:
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Shotguns/model_12.rsi
@@ -47,8 +47,10 @@
           tags:
           - RMCAttachmentBarrelCharger
           - RMCAttachmentRecoilCompensator
+          - RMCM5Bayonet
         random:
         - RMCAttachmentBarrelCharger
+        - RMCM5Bayonet
       rmc-aslot-rail:
         whitelist:
           tags:
