@@ -230,7 +230,7 @@ public sealed partial class CMDistressSignalRuleComponent : Component
     public TimeSpan? NextCheck;
 
     [DataField]
-    public TimeSpan CheckEvery = TimeSpan.FromSeconds(5);
+    public TimeSpan CheckEvery = TimeSpan.FromSeconds(15);
 
     [DataField]
     public TimeSpan? AbandonedAt;
