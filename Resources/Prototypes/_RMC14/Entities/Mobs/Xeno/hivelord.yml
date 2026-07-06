@@ -91,6 +91,7 @@
     value: 0.2
   - type: RMCSurgeryXenoHeart
     item: RMCOrganXenoHeartT2
+  - type: XenoEvolutionGranter
 
 - type: entity
   parent: CMXenoHivelordBase
