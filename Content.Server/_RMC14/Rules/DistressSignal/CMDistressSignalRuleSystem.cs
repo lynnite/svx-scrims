@@ -398,7 +398,7 @@ public sealed partial class CMDistressSignalRuleSystem : GameRuleSystem<CMDistre
         {
             if (component.Hijack)
                 EndRound(component, DistressSignalRuleResult.MinorXenoVictory);
-            else if (_xenoEvolution.HasLiving<XenoComponent>(4))
+            else if (_xenoEvolution.HasLiving<XenoComponent>(0))
                 EndRound(component, DistressSignalRuleResult.MinorMarineVictory);
             else
                 EndRound(component, DistressSignalRuleResult.MajorMarineVictory, "rmc-distress-signal-majormarinevictory-timeout");

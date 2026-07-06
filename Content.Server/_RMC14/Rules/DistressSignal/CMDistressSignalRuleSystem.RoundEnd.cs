@@ -160,7 +160,7 @@ public sealed partial class CMDistressSignalRuleSystem
             return true;
         }
 
-        if (!xenosAlive && marinesAlive)
+        if (xenosAlive && !marinesAlive)
         {
             EndRound(distress,
                 distress.Hijack
