@@ -120,7 +120,6 @@
     name: cm-job-name-xeno-runner
   - type: RMCSurgeryXenoHeart
     item: RMCOrganXenoHeartT1
-  - type: XenoEvolutionGranter
 
 - type: entity
   parent: CMXenoRunnerBase

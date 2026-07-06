@@ -107,7 +107,6 @@
     name: cm-job-name-xeno-defender
   - type: RMCSurgeryXenoHeart
     item: RMCOrganXenoHeartT1
-  - type: XenoEvolutionGranter
 
 - type: entity
   parent: CMXenoDefenderBase

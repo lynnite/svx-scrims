@@ -101,7 +101,6 @@
     name: cm-job-name-xeno-carrier
   - type: RMCSurgeryXenoHeart
     item: RMCOrganXenoHeartT2
-  - type: XenoEvolutionGranter
 
 - type: entity
   parent: RMCXenoCarrierBase
