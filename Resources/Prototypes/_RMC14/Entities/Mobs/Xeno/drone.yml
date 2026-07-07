@@ -74,7 +74,7 @@
       sprite: /Textures/_RMC14/Interface/map_blips.rsi
       state: drone
   - type: XenoConstruction
-    buildDelay: 2
+    buildDelay: 0.1
     canOrderConstruction:
     - HiveCoreXenoConstructionNode
     - HiveEggMorpherXenoConstructionNode
@@ -143,6 +143,7 @@
     - XenoStickyResin
     - XenoFastResin
     - XenoResinSpikes
+    - HiveAcidPillarXeno
   - type: VentCrawler
     ventCrawlIcon: drone
   - type: RMCActionOrder

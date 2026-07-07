@@ -16,14 +16,14 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 900
+        damage: 500
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: XenoNestSurface
   - type: XenoConstructionMinRange
   - type: XenoConstructionPlasmaCost
-    plasma: 120
+    plasma: 240
     scalingCost: true
   - type: XenoStructureUpgradeable
     to: WallXenoResinThick
@@ -31,7 +31,7 @@
   - type: MeleeReceivedMultiplier
     xenoDamage:
       types:
-        Slash: 225
+        Slash: 250
 
 - type: entity
   parent: WallXenoResinThick
@@ -142,7 +142,7 @@
   - type: MeleeReceivedMultiplier
     xenoDamage:
       types:
-        Slash: 150
+        Slash: 300
 
 - type: entity
   parent: BaseMembraneXeno
