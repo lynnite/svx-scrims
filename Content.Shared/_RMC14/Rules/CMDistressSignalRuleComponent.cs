@@ -281,7 +281,7 @@ public sealed partial class CMDistressSignalRuleComponent : Component
     };
 
     [DataField]
-    public List<ProtoId<JobPrototype>> IgnoreMaximumSurvivorJobs = new() { "RMCSurvivorCommandingOfficer" };
+    public List<ProtoId<JobPrototype>> IgnoreMaximumSurvivorJobs = new() { "" };
 
     [DataField]
     public Dictionary<ProtoId<JobPrototype>, List<(ProtoId<JobPrototype> Variant, int Amount)>>? SurvivorJobVariants;
