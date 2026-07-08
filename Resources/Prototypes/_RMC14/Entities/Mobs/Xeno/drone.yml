@@ -173,6 +173,11 @@
   - type: XenoFruitPlanterVisuals
     rsi: _RMC14/Mobs/Xenonids/Drone/gardener_drone.rsi
     prefix: gardener
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      450: Critical
+      600: Dead
   - type: Xeno
     actionIds:
     - ActionXenoRest
