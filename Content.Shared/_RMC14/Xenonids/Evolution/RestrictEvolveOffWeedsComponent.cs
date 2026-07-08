@@ -7,5 +7,5 @@ namespace Content.Shared._RMC14.Xenonids.Evolution;
 public sealed partial class RestrictEvolveOffWeedsComponent : Component
 {
     [DataField, AutoNetworkedField]
-    public TimeSpan RestrictTime = TimeSpan.FromSeconds(900);
+    public TimeSpan RestrictTime = TimeSpan.FromSeconds(1);
 }
