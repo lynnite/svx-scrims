@@ -195,7 +195,6 @@
   - type: XenoStrain
     name: rmc-xeno-vampire-name
     description: rmc-xeno-vampire-description
-    popup: rmc-xeno-vampire-popup
   - type: CMArmor
     xenoArmor: 20
     explosionArmor: 20

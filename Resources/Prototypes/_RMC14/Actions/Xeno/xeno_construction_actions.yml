@@ -186,18 +186,18 @@
 - type: entity
   id: ActionXenoPlantWeedsHardy
   parent: ActionXenoBase
-  name: Plant Hardy Weeds (125) # TODO RMC14 proper plasma costs
-  description: Plant a weed node that will spread hardier weeds, which grow fruit 25% faster, have slightly more health, and can be spread on some surfaces where normal weeds won't grow.
+  name: Plant Hardy Weeds (800) # TODO RMC14 proper plasma costs
+  description: Plant a weed node that will spread hardier weeds, which grow fruit 1000% faster, have slightly more health, and can be spread on some surfaces where normal weeds won't grow.
   components:
   - type: Action
     itemIconStyle: NoItem
     icon:
       sprite: _RMC14/Actions/xeno_actions.rsi
       state: plant_gardener_weeds
-    useDelay: 120
+    useDelay: 1
   - type: InstantAction
     event: !type:XenoPlantWeedsActionEvent
-      plasmaCost: 125
+      plasmaCost: 800
       prototype: XenoHardyWeedsSource
 
 # For healer drone
