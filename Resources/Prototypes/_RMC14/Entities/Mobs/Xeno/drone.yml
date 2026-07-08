@@ -173,6 +173,11 @@
   - type: XenoFruitPlanterVisuals
     rsi: _RMC14/Mobs/Xenonids/Drone/gardener_drone.rsi
     prefix: gardener
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      450: Critical
+      600: Dead
   - type: Xeno
     actionIds:
     - ActionXenoRest
@@ -198,7 +203,6 @@
   - type: XenoStrain
     name: rmc-xeno-gardener-name
     description: rmc-xeno-gardener-description
-    popup: rmc-xeno-gardener-popup
   - type: XenoFruitPlanter
     canPlant:
     - XenoFruitGreater
@@ -206,9 +210,9 @@
     - XenoFruitSpeed
     - XenoFruitSpore
     - XenoFruitUnstable
-    maxFruitAllowed: 6
-    fruitPickingMultiplier: 0.5
-    fruitFeedingMultiplier: 0.5
+    maxFruitAllowed: 1
+    fruitPickingMultiplier: 0.05
+    fruitFeedingMultiplier: 0.05
   - type: XenoResinSurge
   - type: XenoHidden
   - type: VentCrawler
@@ -273,7 +277,6 @@
   - type: XenoStrain
     name: rmc-xeno-healer-name
     description: rmc-xeno-healer-description
-    popup: rmc-xeno-healer-popup
   - type: XenoFruitPlanter
     fruitChoice: XenoFruitLesser
     canPlant:

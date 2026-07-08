@@ -210,7 +210,6 @@
   - type: XenoStrain
     name: rmc-xeno-trapper-name
     description: rmc-xeno-trapper-description
-    popup: rmc-xeno-trapper-popup
   - type: CMArmor
     xenoArmor: 0
     explosionArmor: 20

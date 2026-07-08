@@ -418,7 +418,7 @@
     level: 2
     spawns: XenoHardyWeeds
     spreadsOnSemiWeedable: true
-    fruitGrowthMultiplier: 0.8
+    fruitGrowthMultiplier: 0.001
     speedMultiplierOutsider: 0.508
     speedMultiplierOutsiderArmor: 0.6177
   - type: XenoWeedsSpreading

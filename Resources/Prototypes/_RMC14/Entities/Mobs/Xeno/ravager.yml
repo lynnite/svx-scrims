@@ -204,7 +204,6 @@
   - type: XenoStrain
     name: rmc-xeno-berserker-name
     description: rmc-xeno-berserker-description
-    popup: rmc-xeno-berserker-popup
   - type: XenoPlasma
     plasma: 0
     maxPlasma: 0

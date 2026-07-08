@@ -192,7 +192,6 @@
   - type: XenoStrain
     name: rmc-xeno-eggsac-name
     description: rmc-xeno-eggsac-description
-    popup: rmc-xeno-eggsac-popup
   - type: XenoPheromones
     pheromonesMultiplier: 3
     pheroSuffix: strong

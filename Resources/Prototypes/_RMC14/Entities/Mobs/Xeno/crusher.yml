@@ -178,7 +178,6 @@
   - type: XenoStrain
     name: rmc-xeno-charger-name
     description: rmc-xeno-charger-description
-    popup: rmc-xeno-charger-popup
   - type: CombatMode
     toggleMouseRotator: false
   - type: XenoTumble
