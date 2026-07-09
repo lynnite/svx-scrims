@@ -224,8 +224,8 @@
     prototypes: # Weighted
     - WeaponSMGMP5: CMMagazineSMGMP5
     - WeaponSMGMP5: CMMagazineSMGMP5
-    - WeaponSMGMP5: CMMagazineSMGMP5
-    - WeaponSMGMP5: CMMagazineSMGMP5
+    - WeaponSMGMP5K: CMMagazineSMGMP5
+    - WeaponSMGMP5K: CMMagazineSMGMP5
     - RMCWeaponSMGMP27: RMCMagazineSMGMP27
     - RMCWeaponSMGMP27: RMCMagazineSMGMP27
     - RMCWeaponSMGMP27: RMCMagazineSMGMP27
