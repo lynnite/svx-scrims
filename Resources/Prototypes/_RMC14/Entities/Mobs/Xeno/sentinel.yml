@@ -44,7 +44,7 @@
     - ActionXenoDevolve
     tier: 1
     hudOffset: -0.15,0.157
-    unlockAt: 300 # 5 minutes
+    unlockAt: 240 # 4 minutes
   - type: XenoLight
   - type: XenoDevolve
     devolvesTo:
@@ -59,7 +59,7 @@
     explosionArmor: 10
   - type: XenoEvolution
     canEvolveWithoutGranter: true
-    max: 200
+    max: 1
     evolvesTo:
     - CMXenoSpitter
   - type: XenoAcid
