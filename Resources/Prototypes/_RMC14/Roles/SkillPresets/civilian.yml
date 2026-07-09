@@ -58,7 +58,7 @@
   components:
   - type: SkillPreset
     skills:
-      RMCSkillLeadership: 1
+      RMCSkillLeadership: 3
 
 - type: entity
   parent: RMCSkillPresetSurvivor
@@ -69,7 +69,7 @@
   - type: SkillPreset
     skills:
       RMCSkillCqc: 2
-      RMCSkillLeadership: 1
+      RMCSkillLeadership: 3
 
 - type: entity
   parent: RMCSkillPresetSurvivor
@@ -126,7 +126,7 @@
   - type: SkillPreset
     skills:
       RMCSkillPilot: 2
-      RMCSkillLeadership: 1
+      RMCSkillLeadership: 3
 
 - type: entity
   parent: RMCSkillPresetSurvivor
