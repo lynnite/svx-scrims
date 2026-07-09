@@ -80,6 +80,7 @@
   - type: EntityPreset
     primaryWeapons:
     - [ RMCBeltMarineMAR, RMCWeaponRifleMAR30 ]
+    - [ CMBeltMarineMP5, WeaponSMGMP5K ]
     - [ CMBeltMarineMP5, WeaponSMGMP5 ]
     - [ CMBeltMarineBuckshot, RMCWeaponShotgunM12 ]
     - [ CMBeltMarineM16, WeaponRifleM16 ]
