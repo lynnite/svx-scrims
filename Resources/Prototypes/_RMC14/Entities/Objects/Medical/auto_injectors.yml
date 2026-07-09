@@ -218,7 +218,7 @@
 - type: entity
   parent: CMAutoInjector
   id: CMBicaridineAutoInjector
-  name: bicaridine autoinjector
+  name: MB autoinjector
   description: An autoinjector loaded with 4 uses of Bicaridine and Meralyne, an advanced brute and circulatory damage medicine mix.
   components:
   - type: SolutionContainerManager
