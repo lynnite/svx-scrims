@@ -98,18 +98,18 @@
   parent: CMAutoInjector
   id: CMTricordrazineAutoInjector
   name: tricordrazine autoinjector
-  description: An autoinjector loaded with 3 uses of Tricordrazine, a weak general use medicine for treating damage.
+  description: An autoinjector loaded with 6 uses of Tricordrazine, a weak general use medicine for treating damage.
   components:
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 45
+        maxVol: 90
         reagents:
         - ReagentId: CMTricordrazine
-          Quantity: 45
+          Quantity: 90
   - type: CMRefillableSolution
     reagents:
-      CMTricordrazine: 45
+      CMTricordrazine: 90
   - type: IconLabel
     labelTextLocId: rmc-tricordazine-container-label-text
 
@@ -147,21 +147,31 @@
 - type: entity
   parent: CMAutoInjector
   id: CMKelotaneAutoInjector
-  name: kelotane autoinjector
-  description: An autoinjector loaded with 3 uses of Kelotane, a common burn medicine.
+  name: KD autoinjector
+  description: An autoinjector loaded with 4 uses of Kelotane and Dermaline, an advanced burn medicine mix.
   components:
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 45
+        maxVol: 40
         reagents:
         - ReagentId: CMKelotane
-          Quantity: 45
+          Quantity: 20
+        - ReagentId: CMDermaline
+          Quantity: 20
   - type: CMRefillableSolution
     reagents:
-      CMKelotane: 45
+      CMKelotane: 20
+      CMDermaline: 20
   - type: IconLabel
     labelTextLocId: rmc-kelotane-container-label-text
+  - type: Hypospray
+    solutionName: pen
+    injectSound: /Audio/_RMC14/Medical/hypospray.ogg
+    transferAmount: 10
+    injectOnly: true
+    onlyAffectsMobs: true
+    canContainerDraw: false
 
 - type: entity
   parent: CMAutoInjector
@@ -209,20 +219,30 @@
   parent: CMAutoInjector
   id: CMBicaridineAutoInjector
   name: bicaridine autoinjector
-  description: An autoinjector loaded with 3 uses of Bicaridine, a common brute and circulatory damage medicine.
+  description: An autoinjector loaded with 4 uses of Bicaridine and Meralyne, an advanced brute and circulatory damage medicine mix.
   components:
   - type: SolutionContainerManager
     solutions:
       pen:
-        maxVol: 45
+        maxVol: 40
         reagents:
         - ReagentId: CMBicaridine
-          Quantity: 45
+          Quantity: 20
+        - ReagentId: CMMeralyne
+          Quantity: 20
   - type: CMRefillableSolution
     reagents:
-      CMBicaridine: 45
+      CMBicaridine: 20
+      CMMeralyne: 20
   - type: IconLabel
     labelTextLocId: rmc-bicaridine-container-label-text
+  - type: Hypospray
+    solutionName: pen
+    injectSound: /Audio/_RMC14/Medical/hypospray.ogg
+    transferAmount: 10
+    injectOnly: true
+    onlyAffectsMobs: true
+    canContainerDraw: false
 
 - type: entity
   parent: CMAutoInjector
