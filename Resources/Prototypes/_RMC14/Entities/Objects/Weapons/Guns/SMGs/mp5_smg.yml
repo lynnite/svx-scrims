@@ -105,6 +105,64 @@
     multiplier: 1.2
 
 - type: entity
+  parent: WeaponSMGMP5
+  name: MP5K submachinegun
+  id: WeaponSMGMP5K
+  description: An ultra-compact, 9x19mm submachine gun developed in the 1970s for close-quarters battle and VIP protection.
+  suffix: Filled
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/SMGs/mp5.rsi
+    layers:
+    - state: mp5kbase
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: _RMC14/Objects/Weapons/Guns/SMGs/mp5.rsi
+  - type: AttachableHolder
+    randomAttachmentChance: 0.1
+    slots:
+      rmc-aslot-barrel:
+        whitelist:
+          tags:
+          - RMCAttachmentBarrelCharger
+          - RMCAttachmentExtendedBarrel
+          - RMCAttachmentRecoilCompensator
+          - RMCAttachmentExtendedCompensator
+          - RMCAttachmentSuppressor
+          - RMCAttachmentSuppressorCompact
+          - RMCM5Bayonet
+      rmc-aslot-rail:
+        whitelist:
+          tags:
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS5MicroRedDotSight
+          - RMCAttachmentS6ReflexSight
+          - RMCAttachmentS42xTelescopicMiniscope
+          - RMCAttachmentTerminator
+        random:
+          - RMCAttachmentTerminator
+          - RMCAttachmentRailFlashlight
+          - RMCAttachmentMagneticHarness
+          - RMCAttachmentS5RedDotSight
+          - RMCAttachmentS5MicroRedDotSight
+          - RMCAttachmentS6ReflexSight
+      rmc-aslot-underbarrel:
+        startingAttachable: RMCAttachmentVerticalGrip
+        whitelist:
+          tags:
+          - RMCAttachmentVerticalGrip
+  - type: Tag
+    tags:
+    - RMCWeaponSMG
+    - WeaponSMGMP5K
+
+- type: entity
   parent: CMMagazineRifleBase
   id: CMMagazineSMGMP5
   name: "MP5 magazine (9mm)"
@@ -160,3 +218,6 @@
 
 - type: Tag
   id: CMCartridge9mmSMG
+
+- type: Tag
+  id: WeaponSMGMP5K
