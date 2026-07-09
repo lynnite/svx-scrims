@@ -40,7 +40,7 @@
     - ActionXenoDevolve
     tier: 2
     hudOffset: -0.15,0.05
-    unlockAt: 300 # 5 minutes
+    unlockAt: 360 # 6 minutes
   - type: XenoRegen
     restHealMultiplier:  1.5
   - type: XenoLight
@@ -55,7 +55,7 @@
   - type: CMArmor
     explosionArmor: 20
   - type: XenoEvolution
-    max: 500
+    max: 1
     evolvesTo:
     - CMXenoRavager
   - type: XenoMeleeSlow

@@ -52,12 +52,22 @@
   - type: XenoEvolution
     canEvolveWithoutGranter: true
     requiresGranter: false
-    max: 50
+    max: 60
     evolvesTo:
     - CMXenoDrone
+    - CMXenoCarrier
+    - CMXenoBurrower
+    - CMXenoHivelord
     - CMXenoDefender
+    - CMXenoSpitter
     - CMXenoSentinel
     - CMXenoRunner
+    - CMXenoLurker
+    - CMXenoWarrior
+    - RMCXenoBoiler
+    - RMCXenoCrusher
+    - CMXenoPraetorian
+    - CMXenoRavager
   - type: XenoHide
   - type: Fixtures
     fixtures:
