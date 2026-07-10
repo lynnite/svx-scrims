@@ -38,10 +38,11 @@
     - ActionXenoWatch
     - ActionXenoTailStab
     - ActionXenoAcidWeak
-    - ActionXenoSlowingSpit
     - ActionXenoScatteredSpit
     - ActionXenoParalyzingSlash
     - ActionXenoDevolve
+    - ActionXenoSpitSentinel
+    - ActionXenoDash
     tier: 1
     hudOffset: -0.15,0.157
     unlockAt: 240 # 4 minutes
@@ -64,7 +65,8 @@
     - CMXenoSpitter
   - type: XenoAcid
   - type: XenoParalyzingSlash
-  - type: XenoSlowingSpit
+  - type: XenoSpit
+    projectileId: XenoSpitProjectileSentinel
   - type: XenoScatteredSpit
   - type: MeleeWeapon
     damage:
@@ -74,6 +76,12 @@
     tailDamage:
       groups:
         Brute: 30
+  - type: XenoLeap
+    plasmaCost: 40
+    delay: 0
+    knockdownTime: 1
+    range: 2
+    moveDelayTime: 0
   - type: RMCXenoDamageVisuals
     prefix: sentinel
   - type: TacticalMapIcon
