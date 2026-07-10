@@ -49,7 +49,7 @@
     - ActionXenoEmpower
     - ActionXenoScissorCut
     - ActionXenoDevolve
-    tier: 3
+    tier: 2
     hudOffset: 0,0.1
     unlockAt: 540 # 9 minutes
   - type: XenoRegen
