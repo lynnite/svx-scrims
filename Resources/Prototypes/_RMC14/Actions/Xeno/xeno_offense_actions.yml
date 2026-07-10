@@ -1649,3 +1649,10 @@
   components:
   - type: Sprite
     state: gas_mine
+
+- type: entity
+  id: ActionXenoSpitSentinel
+  parent: ActionXenoSpit
+  components:
+  - type: Action
+    useDelay: 2

@@ -500,3 +500,23 @@
         - XenoProjectileImpassable
         - BarricadeImpassable
 
+- type: entity
+  parent: XenoAcidBallSpitProjectile
+  id: XenoSpitProjectileSentinel
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Xeno/xeno_projectiles.rsi
+    layers:
+    - state: xeno_acid_strong
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Heat: 15
+  - type: XenoProjectileShieldOnHit
+  - type: PreventCollideWithDead
+  - type: RMCProjectileAccuracy
+    accuracy: 160
+  - type: ProjectileMaxRange
+    max: 4
