@@ -48,6 +48,10 @@
       - PillCanister
       - CMSurgicalCase
       - RMCSyringeCase
+  - type: CMArmor
+    melee: 15
+    bio: 15
+  - type: CMHardArmor
 
 - type: entity
   parent: RMCOuterClothingExternalWebbing
