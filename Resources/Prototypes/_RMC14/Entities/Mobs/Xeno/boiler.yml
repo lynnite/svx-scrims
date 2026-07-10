@@ -60,7 +60,7 @@
     - ActionXenoZoom
     - ActionXenoAcidShroud
     - ActionXenoDevolve
-    tier: 3
+    tier: 2
     hudOffset: -0.15,0.05
     unlockAt: 480 # 8 minutes
   - type: XenoHeavy

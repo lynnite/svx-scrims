@@ -35,7 +35,7 @@
     - ActionXenoTailStab
     - ActionXenoStomp
     - ActionXenoDevolve
-    tier: 3
+    tier: 2
     hudOffset: -0.15,0.1
     unlockAt: 520 # 8.6 minutes
   - type: XenoRegen
