@@ -33,7 +33,7 @@
     - ActionXenoWatch
     - ActionXenoTailStab
     - ActionXenoPunch
-    - ActionXenoLunge
+    - ActionXenoHeadbutt
     - ActionXenoFling
     - ActionXenoDevolve
     - ActionXenoPheromones
@@ -42,6 +42,10 @@
     unlockAt: 300 # 5 minutes
   - type: XenoRegen
     restHealMultiplier:  1.4
+  - type: XenoHeadbutt
+    damage:
+      types:
+        Blunt: 30
   - type: XenoLight
   - type: XenoDevolve
     devolvesTo:
