@@ -51,8 +51,12 @@ public override void Initialize()
         if (!ent.Comp.PowerTogglesDeployable)
             return;
 
+        if (!args.Powered && ent.Comp.IsDeployed)
+        {
+            TryDeploy(ent, false);
+        }
+
         ent.Comp.IsDeployable = args.Powered;
-        
         DirtyField(ent.Owner, ent.Comp, nameof(RMCEquipmentDeployerComponent.IsDeployable));
     }
 
