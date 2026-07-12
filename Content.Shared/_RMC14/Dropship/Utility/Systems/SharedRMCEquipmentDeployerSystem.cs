@@ -16,6 +16,7 @@ using Content.Shared.Popups;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
+using Content.Shared.Power;
 
 namespace Content.Shared._RMC14.Dropship.Utility.Systems;
 
@@ -31,14 +32,28 @@ public abstract partial class SharedRMCEquipmentDeployerSystem : EntitySystem
     [Dependency] private readonly SentrySystem _sentry = default!;
     [Dependency] private readonly SharedWeaponMountSystem _weaponMount = default!;
 
-    public override void Initialize()
+public override void Initialize()
     {
+        base.Initialize();
+
         SubscribeLocalEvent<RMCAlertLevelChangedEvent>(OnAlertLevelChanged);
 
         SubscribeLocalEvent<RMCEquipmentDeployerComponent, MapInitEvent>(OnMapInit);
         SubscribeLocalEvent<RMCEquipmentDeployerComponent, InteractHandEvent>(OnInteract);
         SubscribeLocalEvent<RMCEquipmentDeployerComponent, EntGotInsertedIntoContainerMessage>(OnInserted);
         SubscribeLocalEvent<RMCEquipmentDeployerComponent, EntGotRemovedFromContainerMessage>(OnRemovedFromContainer);
+        
+        SubscribeLocalEvent<RMCEquipmentDeployerComponent, PowerChangedEvent>(OnPowerChanged);
+    }
+
+    private void OnPowerChanged(Entity<RMCEquipmentDeployerComponent> ent, ref PowerChangedEvent args)
+    {
+        if (!ent.Comp.PowerTogglesDeployable)
+            return;
+
+        ent.Comp.IsDeployable = args.Powered;
+        
+        DirtyField(ent.Owner, ent.Comp, nameof(RMCEquipmentDeployerComponent.IsDeployable));
     }
 
     private void OnAlertLevelChanged(ref RMCAlertLevelChangedEvent ev)
@@ -86,6 +101,15 @@ public abstract partial class SharedRMCEquipmentDeployerSystem : EntitySystem
             if (container.ContainedEntities.Count > 0 && TryComp(parent, out DropshipWeaponPointComponent? weaponPoint))
             {
                 TryGetOffset(ent, out deployOffset, out rotationOffset, weaponPoint.Location);
+            }
+            else if (container.ContainedEntities.Count > 0)
+            {
+                var localOffset = ent.Comp.DeployOffset;
+
+                var xform = Transform(ent);
+                var rotation = xform.LocalRotation;
+
+                deployOffset = rotation.RotateVec(localOffset);
             }
             else if (ent.Comp.DeployEntity != null && container.ContainedEntities.Count == 0)
             {
