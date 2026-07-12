@@ -13,11 +13,11 @@
     },
     {
       "name": "floor_sentry_deployed"
-    }
+    },
     {
       "name": "sentry_system_installed",
       "directions": 4
-    }
+    },
     {
       "name": "sentry_system_deployed",
       "directions": 4
