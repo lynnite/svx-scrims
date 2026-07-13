@@ -4,8 +4,8 @@ meta:
   engineVersion: 264.0.2
   forkId: ""
   forkVersion: ""
-  time: 07/13/2026 15:25:28
-  entityCount: 38960
+  time: 07/13/2026 15:40:12
+  entityCount: 38966
 maps:
 - 1
 grids:
@@ -69567,7 +69567,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -55554.246
+      secondsUntilStateChange: -55514.28
       state: Opening
 - proto: CMAnestheticTank
   entities:
@@ -131128,94 +131128,118 @@ entities:
   - uid: 38945
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 85.5,-148.5
+      pos: 74.5,-64.5
       parent: 1
   - uid: 38946
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 90.5,-148.5
-      parent: 1
-  - uid: 38947
-    components:
-    - type: Transform
-      pos: 85.5,-154.5
-      parent: 1
-  - uid: 38948
-    components:
-    - type: Transform
-      pos: 90.5,-154.5
-      parent: 1
-  - uid: 38949
-    components:
-    - type: Transform
-      pos: 74.5,-64.5
-      parent: 1
-  - uid: 38950
-    components:
-    - type: Transform
       pos: 79.5,-64.5
       parent: 1
-  - uid: 38951
+  - uid: 38947
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 74.5,-57.5
       parent: 1
-  - uid: 38952
+  - uid: 38948
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 79.5,-57.5
       parent: 1
-  - uid: 38953
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 123.5,-18.5
-      parent: 1
-  - uid: 38954
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 123.5,-13.5
-      parent: 1
-  - uid: 38955
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 129.5,-13.5
-      parent: 1
-  - uid: 38956
+  - uid: 38949
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 129.5,-18.5
       parent: 1
-  - uid: 38957
+  - uid: 38950
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 129.5,-13.5
+      parent: 1
+  - uid: 38951
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 123.5,-13.5
+      parent: 1
+  - uid: 38952
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 123.5,-18.5
+      parent: 1
+  - uid: 38953
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 139.5,-53.5
       parent: 1
-  - uid: 38958
+  - uid: 38954
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 139.5,-58.5
       parent: 1
-  - uid: 38959
+  - uid: 38955
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 146.5,-53.5
+      parent: 1
+  - uid: 38956
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 146.5,-58.5
       parent: 1
+  - uid: 38957
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 85.5,-110.5
+      parent: 1
+  - uid: 38958
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 85.5,-115.5
+      parent: 1
+  - uid: 38959
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 91.5,-110.5
+      parent: 1
   - uid: 38960
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
-      pos: 146.5,-53.5
+      pos: 91.5,-115.5
+      parent: 1
+  - uid: 38961
+    components:
+    - type: Transform
+      pos: 90.5,-154.5
+      parent: 1
+  - uid: 38962
+    components:
+    - type: Transform
+      pos: 85.5,-154.5
+      parent: 1
+  - uid: 38963
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 85.5,-148.5
+      parent: 1
+  - uid: 38964
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 90.5,-148.5
       parent: 1
 - proto: RMCDigitalClock
   entities:
@@ -191817,6 +191841,16 @@ entities:
     - type: Transform
       pos: 29.5,-222.5
       parent: 1
+- proto: RMCVanWheel
+  entities:
+  - uid: 38965
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 25.521078,-103.56835
+      parent: 1
+    - type: HardpointIntegrity
+      integrity: 250
 - proto: RMCVendorCigsElectro
   entities:
   - uid: 21084
@@ -281396,6 +281430,13 @@ entities:
     components:
     - type: Transform
       pos: 36.5,-211.5
+      parent: 1
+- proto: VehicleVan
+  entities:
+  - uid: 38966
+    components:
+    - type: Transform
+      pos: 20.974203,-103.8496
       parent: 1
 - proto: WallXenoResin
   entities:
