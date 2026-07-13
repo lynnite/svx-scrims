@@ -249,6 +249,7 @@
     - Unconscious
     - TemporaryBlindness
     - Deaf
+    - Electrocution
   - type: ImmuneToClothingRequiredStepTrigger
   - type: IntrinsicRadioReceiver
   - type: IntrinsicRadioTransmitter
