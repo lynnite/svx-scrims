@@ -25,6 +25,11 @@
       map: ["enum.DoorVisualLayers.BaseEmergencyAccess"]
     - state: panel_open
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - state: electrified_ai
+      sprite: Interface/Misc/ai_hud.rsi
+      shader: unshaded
+      visible: false
+      map: ["enum.ElectrifiedLayers.HUD"]
   - type: AnimationPlayer
   - type: Physics
   - type: Fixtures
@@ -173,6 +178,7 @@
     percentageDamage: 0.25
   - type: XenoCrusherChargable
     instantDestroy: true
+  - type: ElectrocutionHUDVisuals
 
 - type: entity
   abstract: true

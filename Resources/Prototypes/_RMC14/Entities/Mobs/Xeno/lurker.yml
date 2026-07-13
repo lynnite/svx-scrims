@@ -11,6 +11,7 @@
   name: Lurker
   description: A beefy, fast alien with sharp claws.
   components:
+  - type: ShowElectrocutionHUD
   - type: Sprite
     sprite: _RMC14/Mobs/Xenonids/Lurker/lurker.rsi
   - type: MobState

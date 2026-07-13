@@ -11,6 +11,7 @@
   name: Praetorian
   description: A huge, looming beast of an alien.
   components:
+  - type: ShowElectrocutionHUD
   - type: Sprite
     sprite: _RMC14/Mobs/Xenonids/Praetorian/praetorian.rsi
   - type: MobState

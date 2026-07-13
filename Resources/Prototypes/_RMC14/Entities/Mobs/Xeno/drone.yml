@@ -12,6 +12,7 @@
   name: Drone
   description: An alien drone.
   components:
+  - type: ShowElectrocutionHUD
   - type: MobState
     allowedStates:
     - Alive

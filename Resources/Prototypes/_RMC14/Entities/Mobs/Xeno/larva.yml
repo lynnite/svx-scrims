@@ -6,6 +6,7 @@
   id: CMXenoLarva
   name: Larva
   components:
+  - type: ShowElectrocutionHUD
   - type: GuideHelp
     guides:
     - RMCGuideRoleDrone

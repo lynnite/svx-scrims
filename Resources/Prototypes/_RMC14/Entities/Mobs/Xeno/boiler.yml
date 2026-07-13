@@ -67,6 +67,7 @@
   - type: XenoDevolve
     devolvesTo:
     - CMXenoSpitter
+  - type: ShowElectrocutionHUD
   - type: XenoPlasma
     plasma: 400
     maxPlasma: 400
