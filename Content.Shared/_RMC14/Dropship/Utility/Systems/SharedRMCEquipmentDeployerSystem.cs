@@ -73,19 +73,25 @@ public override void Initialize()
         }
     }
 
-    private void OnMapInit(Entity<RMCEquipmentDeployerComponent> ent, ref MapInitEvent args)
+private void OnMapInit(Entity<RMCEquipmentDeployerComponent> ent, ref MapInitEvent args)
+{
+    if (ent.Comp.DeployPrototype == null)
+        return;
+
+    var container = _container.EnsureContainer<ContainerSlot>(ent, ent.Comp.DeploySlotId);
+
+    if (container.ContainedEntities.Count <= 0)
     {
-        if (ent.Comp.DeployPrototype == null)
-            return;
-
-        var container = _container.EnsureContainer<ContainerSlot>(ent, ent.Comp.DeploySlotId);
-
-        if (container.ContainedEntities.Count > 0)
-            return;
-
         ent.Comp.DeployEntity = GetNetEntity(SpawnInContainerOrDrop(ent.Comp.DeployPrototype, ent, ent.Comp.DeploySlotId));
         DirtyField(ent.Owner, ent.Comp, nameof(RMCEquipmentDeployerComponent.DeployEntity));
     }
+
+    if (ent.Comp.PowerTogglesDeployable)
+    {
+        ent.Comp.IsDeployable = false;
+        DirtyField(ent.Owner, ent.Comp, nameof(RMCEquipmentDeployerComponent.IsDeployable));
+    }
+}
 
     private void OnInteract(Entity<RMCEquipmentDeployerComponent> ent, ref InteractHandEvent args)
     {
