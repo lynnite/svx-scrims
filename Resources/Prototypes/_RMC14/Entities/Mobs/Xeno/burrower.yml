@@ -12,6 +12,7 @@
   description: A beefy alien with sharp claws.
   components:
   - type: CanBuildThickFromConstructNode
+  - type: ShowElectrocutionHUD
   - type: GuideHelp
     guides:
     - RMCGuideRoleBurrower

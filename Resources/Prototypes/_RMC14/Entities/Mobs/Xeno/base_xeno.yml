@@ -96,8 +96,8 @@
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.2
     baseSprintSpeed: 4
+  - type: ShowElectrocutionHUD
   - type: Climbing
-  - type: Insulated
   - type: Input
     context: "xenonid"
   - type: Clickable
@@ -421,7 +421,7 @@
       components:
       - Xeno
   - type: Tackle
-    chance: 1
+    chance: 0.1
     stunMin: 5
     stunMax: 6
   - type: XenoClaws

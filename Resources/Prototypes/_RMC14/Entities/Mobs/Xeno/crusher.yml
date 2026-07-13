@@ -11,6 +11,7 @@
   name: Crusher
   description: A huge alien with an enormous armored crest.
   components:
+  - type: ShowElectrocutionHUD
   - type: GuideHelp
     guides:
     - RMCGuideRoleCrusher

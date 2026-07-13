@@ -11,6 +11,7 @@
   name: Defender
   description: An alien with an armored crest.
   components:
+  - type: ShowElectrocutionHUD
   - type: Sprite
     sprite: _RMC14/Mobs/Xenonids/Defender/defender.rsi
   - type: MobState
