@@ -1028,6 +1028,33 @@
     - RMCAttachmentUnderbarrel
     - RMCAttachmentL88Grip
 
+- type: entity
+  parent: RMCUnderAttachmentBase
+  id: RMCAttachmentMP5KVerticalGrip
+  name: mp5k vertical grip
+  description: "A vertical foregrip that offers better accuracy, less recoil, and less scatter, especially during burst fire, for the mp5k."
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Attachments/rmc_under.rsi
+    state: verticalgrip
+  - type: AttachableVisuals
+  - type: Tag
+    tags:
+    - RMCAttachmentUnderbarrel
+    - RMCAttachmentMP5KVerticalGrip
+  - type: AttachableWeaponRangedMods
+    modifiers:
+    - conditions:
+        wieldedOnly: true
+      accuracyAddMult: 0.15
+      recoilFlat: -1
+      scatterFlat: -2
+      burstScatterAddMult: -2
+    - conditions:
+        unwieldedOnly: true
+      accuracyAddMult: -0.15
+      scatterFlat: 2
+
 - type: Tag
   id: RMCAttachmentUnderbarrel
 
@@ -1096,3 +1123,6 @@
 
 - type: Tag
   id: RMCAttachmentBipodQYJ
+
+- type: Tag
+  id: RMCAttachmentMP5KVerticalGrip
