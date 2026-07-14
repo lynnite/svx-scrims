@@ -4,7 +4,7 @@
   name: department-CMXeno
   description: cm-department-Xeno-description
   color: "#8b36a6"
-  weight: 0
+  weight: 1
   customName: Xenonid
   roles:
   - CMXenoBoiler
