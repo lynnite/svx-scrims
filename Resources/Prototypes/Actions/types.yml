@@ -96,7 +96,7 @@
     event: !type:OpenStorageImplantEvent
 
 - type: entity
-  parent: [BaseSuicideAction, BaseImplantAction]
+  parent: BaseImplantAction
   id: ActionActivateMicroBomb
   name: Activate Microbomb
   description: Activates your internal microbomb, completely destroying you and your equipment
