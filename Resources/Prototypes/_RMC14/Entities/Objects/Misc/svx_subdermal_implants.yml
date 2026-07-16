@@ -1,0 +1,42 @@
+- type: entity
+  id: SVXBaseSubdermalImplant
+  name: implant
+  description: A microscopic chip that's injected under the skin.
+  abstract: true
+  components:
+  - type: SubdermalImplant
+  - type: Tag
+    tags:
+    - SubdermalImplant
+    - HideContextMenu
+
+- type: entity
+  parent: SVXBaseSubdermalImplant
+  id: SVXBombImplant
+  name: bomb implant
+  description: This implant detonates the user upon activation or upon death.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      permanent: true
+      implantAction: ActionActivateMicroBomb
+    - type: TriggerOnMobstateChange
+      mobState:
+      - Dead
+    - type: TriggerImplantAction
+    - type: ExplodeOnTrigger
+    - type: GibOnTrigger
+      deleteItems: true
+    - type: CMExplosionEffect
+    - type: RMCScorchEffect
+    - type: Explosive
+      maxIntensity: 100 # max 100 brute, 100 burn
+      intensitySlope: 100
+      totalIntensity: 1000
+      canCreateVacuum: false
+      explosionType: RMC
+    - type: Tag
+      tags:
+        - SubdermalImplant
+        - HideContextMenu
+        - MicroBomb
