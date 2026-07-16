@@ -27,7 +27,6 @@
       - SPP
     - type: Skills
       preset: RMCSkillPresetSurvivorSPPPrivate
-    - type: IntelRescueSurvivorObjective
     - type: JobPrefix
       prefix: rmc-job-prefix-soro-sof-soldier
     - type: AssignSquad

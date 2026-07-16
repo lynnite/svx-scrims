@@ -28,7 +28,6 @@
         - type: Skills
           preset: RMCSkillPresetParaCommander
         - type: RMCAllowSuitStorage
-        - type: IntelRescueSurvivorObjective
         - type: MotionDetectorTracked
         - type: MarineOrders
         - type: RMCPointing

@@ -20,7 +20,6 @@
       factions:
       - WeYa
       - Civilian
-    - type: IntelRescueSurvivorObjective
     - type: RMCAllowSuitStorage
     - type: EquipSurvivorPreset
       preset: RMCSurvivorPresetSecurity
