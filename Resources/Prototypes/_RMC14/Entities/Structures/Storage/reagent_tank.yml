@@ -117,12 +117,6 @@
     totalIntensity: 200
     canCreateVacuum: false
     explosionType: RMC
-  - type: DirectionalTileFireOnTrigger
-    range: 3
-    spawn: RMCTileFire
-    sound: /Audio/_RMC14/Effects/hit_on_shattered_glass.ogg
-    intensity: 20
-    duration: 15
   - type: ExplosionResistance
     damageCoefficient: 0
   - type: CMExplosionEffect
