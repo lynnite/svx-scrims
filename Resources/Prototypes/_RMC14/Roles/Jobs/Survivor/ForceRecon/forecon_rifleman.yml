@@ -14,7 +14,6 @@
       icon:
         sprite: /Textures/_RMC14/Interface/map_blips.rsi
         state: private
-    - type: IntelRescueSurvivorObjective
     - type: AssignSquad
       whitelist:
         tags:

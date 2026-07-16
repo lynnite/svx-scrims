@@ -20,7 +20,6 @@
     - type: NpcFactionMember
       factions:
       - Civilian
-    - type: IntelRescueSurvivorObjective
     - type: RMCAllowSuitStorage
     - type: JobPrefix
       prefix: cm-job-prefix-survivor-icb

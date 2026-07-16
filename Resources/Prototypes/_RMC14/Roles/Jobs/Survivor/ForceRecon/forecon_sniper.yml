@@ -15,7 +15,6 @@
       icon:
         sprite: /Textures/_RMC14/Interface/map_blips.rsi
         state: spec_sniper
-    - type: IntelRescueSurvivorObjective
     - type: AssignSquad
       whitelist:
         tags:

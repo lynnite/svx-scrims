@@ -32,7 +32,6 @@
       - Chinese
       currentLanguage: Russian
       defaultLanguage: Russian
-    - type: IntelRescueSurvivorObjective
     - type: AssignSquad
       squad: SquadSPP
     - type: JobPrefix

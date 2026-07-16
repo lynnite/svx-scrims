@@ -25,7 +25,6 @@
         RMCSkillSurgery: 1
         RMCSkillJtac: 1
         RMCSkillEndurance: 2
-    - type: IntelRescueSurvivorObjective
     - type: Language
       spokenLanguages:
       - Russian

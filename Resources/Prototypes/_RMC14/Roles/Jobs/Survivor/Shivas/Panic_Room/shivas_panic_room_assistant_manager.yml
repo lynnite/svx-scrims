@@ -32,7 +32,6 @@
     - type: RMCSurvivor
     - type: MotionDetectorTracked
     - type: RMCAllowSuitStorage
-    - type: IntelRescueSurvivorObjective
     - type: EquipSurvivorPreset
       preset: RMCSurvivorPresetCorporate
     - type: MarineOrders

@@ -26,7 +26,6 @@
       factions:
       - WeYa
       - Civilian
-    - type: IntelRescueSurvivorObjective
     - type: RMCAllowSuitStorage
     - type: MarineOrders
     - type: TacticalMapIcon
