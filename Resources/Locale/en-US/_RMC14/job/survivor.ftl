@@ -1,4 +1,4 @@
-﻿# generic survs
+﻿﻿# generic survs
 cm-job-name-survivor = Civilian Colonist
 cm-job-description-survivor = You are a survivor of the attack on a corporate facility. You worked or lived in the colony/station, and managed to avoid the alien attacks... until now.
 
@@ -13,6 +13,8 @@ cm-job-name-survivor-security = Security Colonist
 cm-job-name-survivor-corporate = Corporate Colonist
 
 cm-job-name-survivor-scientist = Scientist Colonist
+
+svx-job-name-survivor-monkey = Monkey Colonist
 
 rmc-job-name-survivor-co = Survivor Commander
 rmc-job-description-survivor-co = You are a Major of the UNMC.
@@ -237,7 +239,7 @@ rmc-job-name-survivor-infrastructure-engineer = Inzhener Infrastruktury
 
 rmc-job-name-survivor-reactor-technician = Tekhnik Reaktora
 
-rmc-job-name-survivor-civil-gendarmes-officer = Narodnyye Grazhdanskiye Zhandarmy
+rmc-job-name-survivor-armed-police-officer = Narodnyy Vooruzhennyy Politsioner
 
 rmc-job-name-survivor-army-reservist = Armiyskiy Rezervist
 rmc-job-prefix-army-reservist = 202/ARMY

@@ -24,6 +24,7 @@
     survivorJobVariants:
       CMSurvivor:
       - CMSurvivor: -1
+      - SVXSurvivorMonkey: 1
       - RMCSurvivorCivilianUnique: 1
       - RMCSurvivorHybrisaTMCCMiner: -1
       - CMSurvivorPriest: 1
@@ -90,6 +91,7 @@
     - CMSurvivorEngineer: 4
     - CMSurvivorSecurity: 2
     - CMSurvivorScientist: 2
+    - SVXSurvivorMonkey: 1
     survivorJobVariants:
       RMCSurvivorCommandingOfficer:
       - CMSurvivorSolarisCMBMarshal: 1
@@ -187,6 +189,8 @@
       - RMCSurvivorShivasILRCPeacekeeper: -1
       CMSurvivorScientist:
       - RMCSurvivorShivasResearcher: -1
+      SVXSurvivorMonkey:
+      - SVXSurvivorMonkey: 1
     survivorJobScenarios:
       panic_room_hold:
       - CMSurvivorSecurity: 1
@@ -244,6 +248,8 @@
       - CMSurvivorFiorinaRiotOfficer: 2
       CMSurvivorScientist:
       - CMSurvivorFiorinaResearcher: 2
+      SVXSurvivorMonkey:
+      - SVXSurvivorMonkey: 1
     survivorJobScenarios:
       riot_in_progress: # Riot In Progress CMB Team. One as the main CMB RCTL, the rest as supporting officers.
         - CMSurvivor: -1
@@ -297,6 +303,8 @@
       - CMSurvivorCMBDeputy: 1
       CMSurvivorScientist:
       - CMSurvivorTrijentResearcher: 2
+      SVXSurvivorMonkey:
+      - SVXSurvivorMonkey: 1
     survivorJobScenarios:
       spp_bar:
       - CMSurvivorDoctor: 1
@@ -386,6 +394,7 @@
     - CMSurvivorEngineer: 4
     - CMSurvivorSecurity: 2
     - CMSurvivorScientist: 2
+    - SVXSurvivorMonkey: 1
     survivorJobVariants:
       RMCSurvivorCommandingOfficer:
       - RMCSurvivorCommanderNewVaradero: 1
@@ -439,6 +448,8 @@
       - RMCSurvivorKutjevoGoon: 1
       CMSurvivorScientist:
       - RMCSurvivorKutjevoResearcher: 2
+      SVXSurvivorMonkey:
+      - SVXSurvivorMonkey: 1
 
 - type: entity
   id: RMCPlanetChances
@@ -458,6 +469,7 @@
     - RMCSurvivorCommandingOfficer: 1
     - RMCSurvivorForeconSupportTech: 1
     - RMCSurvivorForeconBase: 6 # todo 7 when eight survs
+    - SVXSurvivorMonkey: 1
     survivorJobVariants:
       RMCSurvivorCommandingOfficer:
       - RMCSurvivorForeconCommander: 1
@@ -518,6 +530,8 @@
       CMSurvivorScientist:
       - RMCSurvivorHybrisaXenoarchaeologist: 2
       - RMCSurvivorHybrisaXenobiologist: 2
+      SVXSurvivorMonkey:
+      - SVXSurvivorMonkey: 1
     survivorJobScenarios:
       tse_airbase: # Order of job priority for paramarines. Scientist is overriden into doctor, Corporate into survivor
       - RMCSurvivorCommandingOfficer: 1
@@ -582,6 +596,8 @@
       - CMJobSurvivorArmyReservist: 2
       CMSurvivorScientist:
       - CMJobSurvivorMSCResearcher: 2
+      SVXSurvivorMonkey:
+      - SVXSurvivorMonkey: 1
 #    survivorJobVariantScenarios:
 #      clfcamp:
 #        CMSurvivor:
