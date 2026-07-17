@@ -35,7 +35,6 @@
     - type: RMCSurvivor
     - type: MotionDetectorTracked
     - type: RMCAllowSuitStorage
-    - type: IntelRescueSurvivorObjective
     - type: EquipSurvivorPreset
       preset: RMCSurvivorPresetNoGun
     - type: NpcFactionMember

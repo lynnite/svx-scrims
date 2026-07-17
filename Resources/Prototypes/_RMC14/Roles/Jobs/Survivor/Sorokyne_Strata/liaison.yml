@@ -33,7 +33,6 @@
       - Halcyon
       - SPP
       - Civilian
-    - type: IntelRescueSurvivorObjective
     - type: RMCAllowSuitStorage
     - type: TacticalMapIcon
       icon:

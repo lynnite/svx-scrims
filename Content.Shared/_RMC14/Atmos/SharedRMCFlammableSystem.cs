@@ -132,6 +132,8 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
         SubscribeLocalEvent<RMCImmuneToFireTileDamageComponent, ExaminedEvent>(OnImmuneToTileFireExamined);
 
         SubscribeLocalEvent<RMCFireArmorDebuffModifierComponent, ExaminedEvent>(OnFireArmorDebuffModifierExamined);
+
+        SubscribeLocalEvent<SpawnFireOnDestroyComponent, EntityTerminatingEvent>(OnSpawnFireOnDestroy);
     }
 
     private void OnIgniteOnProjectileHit(Entity<IgniteOnProjectileHitComponent> ent, ref ProjectileHitEvent args)
@@ -141,6 +143,23 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
 
         ChangeBurnColor(args.Target, ent.Comp.BurnColor);
         Ignite(args.Target, ent.Comp.Intensity, ent.Comp.Duration, ent.Comp.Duration, false);
+    }
+
+    private void OnSpawnFireOnDestroy(Entity<SpawnFireOnDestroyComponent> ent, ref EntityTerminatingEvent args)
+    {
+        if (_net.IsClient)
+            return;
+
+        var coords = _transform.GetMoverCoordinates(ent);
+        var tile = coords.SnapToGrid(EntityManager, _map);
+
+        SpawnFireDiamond(
+            ent.Comp.Spawn, 
+            tile, 
+            ent.Comp.Range, 
+            ent.Comp.Intensity, 
+            ent.Comp.Duration
+        );
     }
 
     private void OnTileFireMapInit(Entity<TileFireComponent> ent, ref MapInitEvent args)

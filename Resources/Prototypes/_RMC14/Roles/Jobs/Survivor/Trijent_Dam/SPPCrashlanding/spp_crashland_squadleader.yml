@@ -41,7 +41,6 @@
       currentLanguage: Russian
       defaultLanguage: Russian
     - type: MarineOrders
-    - type: IntelRescueSurvivorObjective
     - type: AssignSquad
       squad: SquadSPP
     - type: JobPrefix

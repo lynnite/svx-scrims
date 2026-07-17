@@ -153,10 +153,10 @@
           - RMCAttachmentS5MicroRedDotSight
           - RMCAttachmentS6ReflexSight
       rmc-aslot-underbarrel:
-        startingAttachable: RMCAttachmentVerticalGrip
+        startingAttachable: RMCAttachmentMP5KVerticalGrip
         whitelist:
           tags:
-          - RMCAttachmentVerticalGrip
+          - RMCAttachmentMP5KVerticalGrip
   - type: Tag
     tags:
     - RMCWeaponSMG

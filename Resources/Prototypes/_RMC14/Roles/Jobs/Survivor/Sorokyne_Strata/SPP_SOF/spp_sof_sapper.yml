@@ -30,7 +30,6 @@
       - SPP
     - type: Skills
       preset: RMCSkillPresetSurvivorSPPSapper
-    - type: IntelRescueSurvivorObjective # TODO RMC14 assign squad
     - type: JobPrefix
       prefix: rmc-job-prefix-soro-sof-sapper
     - type: AssignSquad

@@ -479,7 +479,7 @@ public sealed partial class RMCCVars : CVars
     CVarDef.Create("rmc.hijack_minimum_burrowed", 5, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<int> RMCDistressXenosMinimum =
-        CVarDef.Create("rmc.distress_xenos_minimum", 1, CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("rmc.distress_xenos_minimum", 0, CVar.REPLICATED | CVar.SERVER);
 
     public static readonly CVarDef<float> VolumeGainCassettes =
         CVarDef.Create("rmc.volume_gain_cassettes", 0.33f, CVar.REPLICATED | CVar.CLIENT | CVar.ARCHIVE);

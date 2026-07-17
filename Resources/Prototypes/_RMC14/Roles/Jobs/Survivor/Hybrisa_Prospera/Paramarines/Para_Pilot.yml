@@ -26,7 +26,6 @@
             - TSE
         - type: RMCSurvivor
         - type: RMCAllowSuitStorage
-        - type: IntelRescueSurvivorObjective
         - type: MotionDetectorTracked
         - type: Skills
           preset: RMCSkillPresetParaPilot

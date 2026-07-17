@@ -4,6 +4,7 @@ using Content.Shared._RMC14.Marines;
 using Content.Shared._RMC14.NightVision;
 using Content.Shared._RMC14.Xenonids.Announce;
 using Content.Shared._RMC14.Xenonids.Construction;
+using Content.Shared._RMC14.Xenonids.Construction.Tunnel;
 using Content.Shared._RMC14.Xenonids.Evolution;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
@@ -474,6 +475,7 @@ public abstract class SharedXenoHiveSystem : EntitySystem
 
         if (!TrySpawnAt<HiveCoreComponent>() &&
             !TrySpawnAt<XenoEvolutionGranterComponent>() &&
+            !TrySpawnAt<XenoTunnelComponent>() &&
             !TrySpawnAt<XenoComponent>())
         {
             return false;

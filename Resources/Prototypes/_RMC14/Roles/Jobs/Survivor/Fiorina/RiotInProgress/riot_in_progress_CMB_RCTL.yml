@@ -30,7 +30,6 @@
       factions:
       - Bureau
       - Civilian
-    - type: IntelRescueSurvivorObjective
     - type: RMCAllowSuitStorage
     - type: EquipSurvivorPreset
       preset: RMCSurvivorPresetRiotInProgressCMBRCTL

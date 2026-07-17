@@ -100,6 +100,11 @@
   - type: Sprite
     layers:
     - state: weldtank
+  - type: SpawnFireOnDestroy
+    range: 1
+    intensity: 20
+    duration: 15
+    spawn: RMCTileFire
   - type: SolutionContainerManager
     solutions:
       tank:
@@ -107,8 +112,16 @@
         - ReagentId: WeldingFuel
           Quantity: 1000
   - type: Explosive
-    explosionType: Default
-    totalIntensity: 60
+    maxIntensity: 40 # max 100 brute, 100 burn
+    intensitySlope: 6
+    totalIntensity: 200
+    canCreateVacuum: false
+    explosionType: RMC
+  - type: ExplosionResistance
+    damageCoefficient: 0
+  - type: CMExplosionEffect
+  - type: RMCScorchEffect
+  - type: Ammo
   - type: ReagentTank
     tankType: Fuel
   - type: Destructible

@@ -24,7 +24,6 @@
     - type: NpcFactionMember
       factions:
       - Civilian
-    - type: IntelRescueSurvivorObjective
     - type: RMCAllowSuitStorage
     - type: TacticalMapIcon
       icon:

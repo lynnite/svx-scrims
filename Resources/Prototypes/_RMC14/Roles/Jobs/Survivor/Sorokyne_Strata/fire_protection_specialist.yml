@@ -28,7 +28,6 @@
       factions:
       - SPP
       - Civilian
-    - type: IntelRescueSurvivorObjective
     - type: RMCAllowSuitStorage
     - type: JobPrefix
       prefix: rmc-job-prefix-fire-protection-specialist

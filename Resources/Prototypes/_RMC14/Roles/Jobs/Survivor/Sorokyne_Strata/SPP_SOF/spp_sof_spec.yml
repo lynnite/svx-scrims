@@ -31,7 +31,6 @@
     - type: Skills
       preset: RMCSkillPresetSurvivorSPPSpecialist
     - type: MarineOrders
-    - type: IntelRescueSurvivorObjective
     - type: JobPrefix
       prefix: rmc-job-prefix-soro-sof-spec
     - type: DemoSpecWhitelist
