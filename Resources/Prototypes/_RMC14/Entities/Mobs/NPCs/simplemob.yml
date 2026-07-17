@@ -292,6 +292,9 @@
   - type: Infectable
   - type: Tackleable
   - type: Devourable
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 1.7
+    baseSprintSpeed: 2.5
   - type: XenoNestable
   - type: CanBeFirePatted
   - type: FixedIdentity
