@@ -1,0 +1,70 @@
+- type: job
+  parent: CMSurvivor
+  id: SVXSurvivorMonkey
+  name: svx-job-name-survivor-monkey
+  description: cm-job-description-survivor
+  playTimeTracker: SVXJobMonkey
+  whitelisted: true
+  weight: 100
+  ranks:
+    RMCRankCivilian: []
+  startingGear: RMCGearSurvivorBaseNoBackpack
+  dummyStartingGear: RMCGearSurvivorEquipped
+  icon: "RMCJobIconGenericColonist"
+  joinNotifyCrew: false
+  supervisors: cm-job-supervisors-nobody
+  accessGroups:
+  - Colonist
+  special:
+  - !type:AddComponentSpecial
+    components: #real components in monkeys.yml under SVXMonkey
+    - type: Skills
+      preset: RMCSkillPresetSurvivor
+    - type: EquipSurvivorPreset
+      preset: RMCSurvivorPresetCivilianOutfits
+    - type: RMCSurvivor
+    - type: MotionDetectorTracked
+    - type: NpcFactionMember
+      factions:
+      - Civilian
+    - type: RMCAllowSuitStorage
+    - type: TacticalMapIcon
+      icon:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: icc
+      background:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: background_cmb
+  greeting: rmc-job-greeting-survivor
+  hasIcon: true
+  useLoadoutOfJob: CMSurvivor
+  basePlaytimeTracker: true
+
+- type: entity
+  parent: RMCSurvivorPresetCivilian
+  id: RMCSurvivorPresetMonkey
+  name: monkey colonist preset
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityPreset
+    randomGearOther:
+    -
+      - [ CMBeltUtilityFilled ]
+
+- type: entity
+  parent: CMSpawnPointJobBase
+  id: CMSpawnPointSurvivorMonkey
+  name: survivor monkey spawn point
+  suffix: Job Spawn, Main
+  components:
+  - type: SpawnPoint
+    job_id: CMSurvivor
+  - type: Sprite
+    layers:
+    - sprite: _RMC14/Markers/landmarks.rsi
+      state: surv
+
+- type: playTimeTracker
+  id: SVXJobMonkey
+  name: Monkey
+  isHumanoid: true
