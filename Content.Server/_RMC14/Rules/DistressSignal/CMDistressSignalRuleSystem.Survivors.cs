@@ -233,7 +233,17 @@ public sealed partial class CMDistressSignalRuleSystem
 
         var profile = GameTicker.GetPlayerProfile(player);
         var coordinates = _transform.GetMoverCoordinates(spawner);
-        var survivorMob = _stationSpawning.SpawnPlayerMob(coordinates, spawnAsJob, profile, null);
+
+        EntityUid survivorMob;
+
+        if (spawnAsJob == "SVXSurvivorMonkey")
+        {
+            survivorMob = Spawn("SVXMonkey", coordinates);
+        }
+        else
+        {
+            survivorMob = _stationSpawning.SpawnPlayerMob(coordinates, spawnAsJob, profile, null);
+        }
 
         if (!_mind.TryGetMind(playerId, out var mind))
             mind = _mind.CreateMind(playerId);

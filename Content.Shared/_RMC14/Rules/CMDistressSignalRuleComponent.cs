@@ -277,6 +277,7 @@ public sealed partial class CMDistressSignalRuleComponent : Component
         ("CMSurvivorSecurity", 2),
         ("CMSurvivorCorporate", 2),
         ("CMSurvivorScientist", 2),
+        ("SVXSurvivorMonkey", -1),
         ("CMSurvivor", -1),
     };
 

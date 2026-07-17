@@ -270,7 +270,7 @@
             state: human_acid_enhanced
             visible: true
   - type: Body
-    prototype: Primate
+    prototype: Human
     requiredLegs: 1
   - type: CreamPied
   - type: FireVisuals
