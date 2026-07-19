@@ -190,3 +190,39 @@ chatsan-replacement-66 = something
 
 chatsan-word-67 = allg
 chatsan-replacement-67 = all good
+
+chatsan-word-68 = retard
+chatsan-replacement-67 = person
+
+chatsan-word-68 = retarded
+chatsan-replacement-68 = person
+
+chatsan-word-69 = chink
+chatsan-replacement-69 = person
+
+chatsan-word-70 = nigger
+chatsan-replacement-70 = person
+
+chatsan-word-71 = nigga
+chatsan-replacement-71 = person
+
+chatsan-word-72 = negro
+chatsan-replacement-72 = person
+
+chatsan-word-73 = whigga
+chatsan-replacement-73 = person
+
+chatsan-word-74 = whigger
+chatsan-replacement-74 = person
+
+chatsan-word-75 = wigger 
+chatsan-replacement-75 = person
+
+chatsan-word-75 = spook
+chatsan-replacement-76 = max stirner
+
+chatsan-word-76 = fag
+chatsan-replacement-76 = cig
+
+chatsan-word-77 = faggot
+chatsan-replacement-77 = person
