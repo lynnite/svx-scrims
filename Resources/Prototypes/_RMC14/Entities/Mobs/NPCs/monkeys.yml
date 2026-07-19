@@ -25,6 +25,39 @@
   special:
   - !type:AddComponentSpecial
   components:
+  - type: Sprite
+    drawdepth: Mobs
+    layers:
+    - map: ["enum.DamageStateVisualLayers.Base"]
+      sprite: _RMC14/Mobs/Animals/monkeys/monkey.rsi
+      state: monkey
+    - map: [ "jumpsuit" ]
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "ears" ]
+    - map: [ "id" ]
+    - map: [ "outerClothing" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "eyes" ]
+    - map: [ "belt" ]
+    - map: [ "shoes" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: [ "back" ]
+    - map: [ "neck" ]
+    - map: [ "clownedon" ]
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+    - map: [ "acided" ]
+    - map: [ "hooked" ]
+      sprite: "_RMC14/Effects/xeno_spray_acid.rsi"
+      state: hooked
+      visible: false
   - type: Speech
     speechSounds: Monkey
     speechVerb: Monkey
