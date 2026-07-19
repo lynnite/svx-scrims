@@ -42,6 +42,9 @@
       - SubdermalImplant
       - HideContextMenu
       - Flashlight
+      - CanPilot
+      - FootstepSound
+      - DoorBumpOpener
   - type: UnpoweredFlashlight
   - type: Skills
     preset: RMCSkillPresetSurvivor
@@ -105,11 +108,6 @@
     interactSuccessString: rmc-patting-success-generic
     messagePerceivedByOthers: rmc-patting-success-generic-others
   - type: Blindable
-  - type: Tag
-    tags:
-    - CanPilot
-    - FootstepSound
-    - DoorBumpOpener
   - type: RMCSuitLight
   - type: RMCLastBodyScanResult
   - type: HolocardState
