@@ -30,7 +30,7 @@
         unwieldedScatterMultiplier: 2
         shotsToMaxScatter: 6
   - type: Gun
-    burstCooldown: 0.75
+    burstCooldown: 0.6
     selectedMode: Burst
     shotsPerBurst: 3
     soundGunshot:
