@@ -240,6 +240,13 @@
     - map: [ "outerClothing" ]
     - map: [ "mask" ]
     - map: [ "head" ]
+    - map: [ "eyes" ]
+    - map: [ "belt" ]
+    - map: [ "shoes" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: [ "back" ]
+    - map: [ "neck" ]
     - map: [ "clownedon" ]
       sprite: "Effects/creampie.rsi"
       state: "creampie_human"
