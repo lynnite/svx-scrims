@@ -375,10 +375,6 @@
     xenoVisible: true
   - type: RMCActionOrder
     id: RMCBaseMobSpeciesOrganic
-  - type: OpenStorageOnGearEquip
-    whitelist:
-      tags:
-      - SurvivalPouch
   - type: HumanoidAppearance
     species: Human
     hideLayersOnEquip:
