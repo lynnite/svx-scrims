@@ -21,7 +21,7 @@
         shotsToMaxScatter: 6
   - type: Gun
     shotsPerBurst: 2
-    burstCooldown: 0.75
+    burstCooldown: 0.5
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
