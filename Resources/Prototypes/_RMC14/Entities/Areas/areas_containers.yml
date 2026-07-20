@@ -1,0 +1,44 @@
+﻿- type: entity
+  parent: RMCAreaBase
+  id: SVXAreaContainers
+  suffix: Containers
+  components:
+  - type: Sprite
+    sprite: _RMC14/Areas/areas.rsi
+    state: blank
+  - type: Area
+    buildSpecial: true
+    powerNet: ground
+    minimapColor: '#6C6767D8'
+    weatherEnabled: false
+
+- type: entity
+  parent: SVXAreaContainers
+  id: SVXAreaContainersNorthwest
+  name: Northwest
+  components:
+  - type: Sprite
+    state: engine_smes
+  - type: Area
+    minimapColor: '#C19504E7'
+
+- type: entity
+  parent: SVXAreaContainers
+  id: SVXAreaContainersSouthwest
+  name: Southwest
+  components:
+  - type: Sprite
+    state: security
+  - type: Area
+    minimapColor: '#A22D2DEE'
+
+- type: entity
+  parent: SVXAreaContainers
+  id: SVXAreaContainersEast
+  name: East
+  components:
+  - type: Sprite
+    state: green
+  - type: Area
+    minimapColor: '#3F3C3CEF'
+
