@@ -47,7 +47,7 @@
   parent: RMCGearSyntheticColonistBase
   id: RMCGearSyntheticColonistHybrisaCivilian
   inhand:
-    - RMCFireAxe # todo maintenance jack
+    - SVXPlasmaCutter # todo maintenance jack
 
 - type: entity
   id: RMCSurvivorPresetHybrisaSynthCivilian

@@ -4045,7 +4045,7 @@ entities:
     - type: Transform
       pos: 38.5,5.5
       parent: 1
-- proto: RMCFireAxe
+- proto: SVXPlasmaCutter
   entities:
   - uid: 614
     components:

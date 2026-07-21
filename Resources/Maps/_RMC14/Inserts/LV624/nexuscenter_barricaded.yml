@@ -822,7 +822,7 @@ entities:
       parent: 1
     - type: Fixtures
       fixtures: {}
-- proto: RMCFireAxe
+- proto: SVXPlasmaCutter
   entities:
   - uid: 109
     components:

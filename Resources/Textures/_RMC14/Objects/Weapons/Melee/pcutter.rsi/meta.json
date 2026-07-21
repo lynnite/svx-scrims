@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Taken from tgmc13 at https://github.com/tgstation/TerraGov-Marine-Corps/commit/0cb5f037987f6abcdbd38d521c8413f37e0e71b5, https://github.com/tgstation/TerraGov-Marine-Corps/commit/5889ce22d3f99c5ec637ac9beb3db75f5e0de713",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
+    },
+    {
+      "name": "inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "inhand-right",
+      "directions": 4
+    }
+  ]
+}

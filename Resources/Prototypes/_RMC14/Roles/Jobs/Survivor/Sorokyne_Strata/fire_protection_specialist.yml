@@ -77,7 +77,7 @@
   components:
   - type: EntityPreset
     randomOutfits:
-    - [ RMCFireAxe ]
+    - [ SVXPlasmaCutter ]
     - [ CMFireExtinguisherPortable ]
 
 

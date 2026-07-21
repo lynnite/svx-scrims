@@ -15,4 +15,4 @@
   - type: ContainerFill
     containers:
       ItemCabinet:
-      - RMCFireAxe
+      - SVXPlasmaCutter
