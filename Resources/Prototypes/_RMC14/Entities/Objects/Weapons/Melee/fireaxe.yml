@@ -1,0 +1,5 @@
+- type: entity
+  parent: [FireAxe, RMCBaseMeleeWeapon]
+  id: RMCFireAxe
+  name: fire axe
+  suffix: RMC # to prevent conflicts
