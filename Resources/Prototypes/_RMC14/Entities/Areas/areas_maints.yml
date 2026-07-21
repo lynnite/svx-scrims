@@ -1,0 +1,54 @@
+﻿- type: entity
+  parent: RMCAreaBase
+  id: SVXAreaMaints
+  suffix: Maints
+  components:
+  - type: Sprite
+    sprite: _RMC14/Areas/areas.rsi
+    state: blank
+  - type: Area
+    buildSpecial: true
+    powerNet: ground
+    minimapColor: '#6C6767D8'
+    weatherEnabled: false
+
+- type: entity
+  parent: SVXAreaMaints
+  id: SVXAreaMaintsEngineering
+  name: Engineering
+  components:
+  - type: Sprite
+    state: engine_smes
+  - type: Area
+    minimapColor: '#C19504E7'
+
+- type: entity
+  parent: SVXAreaMaints
+  id: SVXAreaMaintsCargo
+  name: Cargo
+  components:
+  - type: Sprite
+    state: security
+  - type: Area
+    minimapColor: '#A22D2DEE'
+
+- type: entity
+  parent: SVXAreaMaints
+  id: SVXAreaMaintsSouth
+  name: South
+  components:
+  - type: Sprite
+    state: green
+  - type: Area
+    minimapColor: '#3F3C3CEF'
+
+- type: entity
+  parent: SVXAreaMaints
+  id: SVXAreaMaintsNorth
+  name: North
+  components:
+  - type: Sprite
+    state: green
+  - type: Area
+    minimapColor: '#3F3C3CEF'
+
