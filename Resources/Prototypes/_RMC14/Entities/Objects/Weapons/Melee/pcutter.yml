@@ -14,10 +14,11 @@
   - type: MeleeWeapon
     wideAnimationRotation: 180
     swingLeft: true
-    attackRate: 1
+    attackRate: 0.2
     damage:
       types:
         Heat: 60
+        Structural: 2000
     soundHit:
       collection: GenericHit
   - type: Item
