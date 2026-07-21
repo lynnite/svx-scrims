@@ -7,7 +7,7 @@
   components:
   - type: Tag
     tags:
-    - PlasmaCutter
+    - FireAxe
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Melee/pcutter.rsi
     state: icon
