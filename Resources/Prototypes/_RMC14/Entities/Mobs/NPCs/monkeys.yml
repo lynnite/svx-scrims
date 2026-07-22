@@ -230,7 +230,7 @@
   - type: MovementIgnoreGravity
   - type: MovementSpeedModifier
     baseWalkSpeed: 2.7
-    baseSprintSpeed: 5
+    baseSprintSpeed: 6
   - type: SlowOnPull
     slowdowns:
     - multiplier: 0.745
