@@ -686,7 +686,7 @@
 
 - type: entity
   id: SVXCargoContainers
-  name: Cargo Containers
+  name: Shipment
   components:
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/containers.yml
@@ -726,7 +726,7 @@
 
 - type: entity
   id: SVXCargoMaints
-  name: Cargo Maints
+  name: Cargo Carriage
   components:
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/maints.yml
