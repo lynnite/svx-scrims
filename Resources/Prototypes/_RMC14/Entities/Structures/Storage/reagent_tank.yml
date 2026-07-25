@@ -121,7 +121,6 @@
     damageCoefficient: 0
   - type: CMExplosionEffect
   - type: RMCScorchEffect
-  - type: Ammo
   - type: ReagentTank
     tankType: Fuel
   - type: Destructible

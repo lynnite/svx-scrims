@@ -17,16 +17,16 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: RMC
-    maxIntensity: 8 # max 40 brute 40 burn
-    intensitySlope: 4
-    totalIntensity: 110
+    maxIntensity: 40 # max 200 brute, 200 burn
+    intensitySlope: 6
+    totalIntensity: 200
     deleteAfterExplosion: false
   - type: ProjectileGrenade
     fillPrototype: CMProjectileShrapnel
-    capacity: 48
+    capacity: 60
     minVelocity: 0.5
     maxVelocity: 1.5
-    spreadAngle: 90
+    spreadAngle: 45
     evenSpread: true
   - type: ContainerContainer
     containers:
