@@ -105,6 +105,24 @@
     canPry: true
   - type: XenoCrusherChargable
     instantDestroy: true
+  - type: Damageable
+    damageContainer: StructuralMarine
+    damageModifierSet: StructuralMarine
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 300
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: CMArmor
+    bullet: 100
+    bio: 100
+    melee: 100
+    xenoArmor: 100
+    immuneToAP: true
+
 
 - type: entity
   parent: RMCPodDoor
