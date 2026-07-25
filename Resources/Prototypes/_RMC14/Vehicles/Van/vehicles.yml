@@ -103,6 +103,12 @@
     - offset: 0,2
       radius: 0.75
       interiorCoords: 0.25,-1
+  - type: MarineMapTracked
+  - type: TacticalMapTracked
+  - type: TacticalMapIcon
+    icon:
+      sprite: /Textures/_RMC14/Interface/map_blips_large.rsi
+      state: tank
 
 - type: entity
   parent: VehicleVanBase
