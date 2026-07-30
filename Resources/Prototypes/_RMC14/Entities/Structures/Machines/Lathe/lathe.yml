@@ -104,6 +104,7 @@
   recipes:
   - RMCBucket
   - RMCCustomGrenade
+  - SVXChemicalPayloadEmpty
   - CMBucketMop
   - RMCBucketJanitorial
   - RMCFlashlight
