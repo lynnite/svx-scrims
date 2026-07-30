@@ -250,3 +250,17 @@
   materials:
     CMSteel: 75 # 60
     CMGlass: 37 # 30
+
+- type: latheRecipe
+  id: SVXChemicalPayloadEmpty
+  result: SVXChemicalPayloadEmpty
+  completetime: 1
+  materials:
+    CMSteel: 2000
+
+- type: latheRecipe
+  id: RMCCustomGrenade
+  result: RMCCustomGrenade
+  completetime: 3
+  materials:
+    CMSteel: 4250

@@ -211,3 +211,18 @@
 
 - type: Tag
   id: RMCGrenadeMetalFoam
+
+- type: entity
+  parent: RMCChemicalPayloadMetalFoam
+  id: SVXChemicalPayloadEmpty
+  name: chemical payload
+  components:
+  - type: ContainerFill
+    containers:
+      BeakerSlotA:
+      - CMBeaker
+      BeakerSlotB:
+      - CMBeaker
+  - type: PhysicalComposition
+    materialComposition:
+      CMSteel: 2000

@@ -1,0 +1,54 @@
+- type: entity
+  parent: RMCAreaBase
+  id: SVXAreaMedieval
+  suffix: Medieval
+  components:
+  - type: Sprite
+    sprite: _RMC14/Areas/areas.rsi
+    state: blank
+  - type: Area
+    buildSpecial: true
+    powerNet: ground
+    minimapColor: '#6C6767D8'
+    weatherEnabled: false
+
+- type: entity
+  parent: SVXAreaMedieval
+  id: SVXAreaMedievalVillage
+  name: Experiement Area
+  components:
+  - type: Sprite
+    state: engine_smes
+  - type: Area
+    minimapColor: '#C19504E7'
+
+- type: entity
+  parent: SVXAreaMedieval
+  id: SVXAreaMedievalCheckpoint
+  name: Security Checkpoint
+  components:
+  - type: Sprite
+    state: security
+  - type: Area
+    minimapColor: '#A22D2DEE'
+
+- type: entity
+  parent: SVXAreaMedieval
+  id: SVXAreaMedievalNorthResearch
+  name: Northern Research Station
+  components:
+  - type: Sprite
+    state: green
+  - type: Area
+    minimapColor: '#3F3C3CEF'
+
+- type: entity
+  parent: SVXAreaMedieval
+  id: SVXAreaEastResearch
+  name: Eastern Research Station
+  components:
+  - type: Sprite
+    state: green
+  - type: Area
+    minimapColor: '#3F3C3CEF'
+
