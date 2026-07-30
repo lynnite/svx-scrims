@@ -103,6 +103,7 @@
   id: RMCRecipesLathe
   recipes:
   - RMCBucket
+  - RMCCustomGrenade
   - CMBucketMop
   - RMCBucketJanitorial
   - RMCFlashlight
