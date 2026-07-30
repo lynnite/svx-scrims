@@ -257,7 +257,6 @@
   completetime: 1
   materials:
     CMSteel: 2000
-    CMGlass: 2000
 
 - type: latheRecipe
   id: RMCCustomGrenade
@@ -265,4 +264,3 @@
   completetime: 3
   materials:
     CMSteel: 4250
-    CMGlass: 4250
