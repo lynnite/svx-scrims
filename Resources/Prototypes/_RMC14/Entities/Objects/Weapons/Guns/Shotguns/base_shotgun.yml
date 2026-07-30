@@ -46,7 +46,7 @@
     baseFireRate: 1.429
     burstScatterMult: 5
   - type: BallisticAmmoProvider
-    cycleable: false
+    cycleable: true
     whitelist:
       tags:
       - RMCShellShotgun
