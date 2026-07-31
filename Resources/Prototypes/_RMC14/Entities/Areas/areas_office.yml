@@ -1,0 +1,54 @@
+- type: entity
+  parent: RMCAreaBase
+  id: SVXAreaOffices
+  suffix: Offices
+  components:
+  - type: Sprite
+    sprite: _RMC14/Areas/areas.rsi
+    state: blank
+  - type: Area
+    buildSpecial: true
+    powerNet: ground
+    minimapColor: '#6C6767D8'
+    weatherEnabled: false
+
+- type: entity
+  parent: SVXAreaOffices
+  id: SVXAreaOfficesUtility
+  name: Utility Closet
+  components:
+  - type: Sprite
+    state: engine_smes
+  - type: Area
+    minimapColor: '#C19504E7'
+
+- type: entity
+  parent: SVXAreaOffices
+  id: SVXAreaOfficesSecurityCheckpoint
+  name: Sec checkpoint
+  components:
+  - type: Sprite
+    state: security
+  - type: Area
+    minimapColor: '#A22D2DEE'
+
+- type: entity
+  parent: SVXAreaOffices
+  id: SVXAreaOfficesAsteroids
+  name: Asteroids
+  components:
+  - type: Sprite
+    state: green
+  - type: Area
+    minimapColor: '#3F3C3CEF'
+
+- type: entity
+  parent: SVXAreaOffices
+  id: SVXAreaOfficesOffice
+  name: Main Office
+  components:
+  - type: Sprite
+    state: green
+  - type: Area
+    minimapColor: '#3F3C3CEF'
+
