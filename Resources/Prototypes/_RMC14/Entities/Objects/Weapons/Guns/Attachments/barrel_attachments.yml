@@ -496,7 +496,6 @@
     - accuracyAddMult: 0.2
     - conditions:
         wieldedOnly: true
-      recoilFlat: 1
     - conditions:
         unwieldedOnly: true
       recoilFlat: 1
