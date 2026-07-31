@@ -82,6 +82,20 @@ public abstract class SharedChatSystem : EntitySystem
     }
 
     /// <summary>
+    /// Checks if the hivemind channel should be blocked due to a missing/dead granter.
+    /// Returns false (allows chat) if NO granter exists on the map at all.
+    /// </summary>
+    private bool IsHivemindBlocked()
+    {
+        // If no granters exist at all, do not block the hivemind
+        if (!_xenoEvolution.HasLiving<XenoEvolutionGranterComponent>(0))
+            return false;
+
+        // If a granter exists in the world, enforce that at least 0 must be living
+        return !_xenoEvolution.HasLiving<XenoEvolutionGranterComponent>(0);
+    }
+
+    /// <summary>
     ///     Attempts to find an applicable <see cref="SpeechVerbPrototype"/> for a speaking entity's message.
     ///     If one is not found, returns <see cref="DefaultSpeechVerb"/>.
     /// </summary>
@@ -169,8 +183,7 @@ public abstract class SharedChatSystem : EntitySystem
                 : _prototypeManager.Index<RadioChannelPrototype>(CommonChannel);
 
             // RMC14
-            if (channel?.ID == HivemindChannel.Id &&
-                !_xenoEvolution.HasLiving<XenoEvolutionGranterComponent>(1))
+            if (channel?.ID == HivemindChannel.Id && IsHivemindBlocked())
             {
                 if (!quiet)
                     _popup.PopupEntity(Loc.GetString("rmc-no-queen-hivemind-chat"), source, source, PopupType.LargeCaution);
@@ -212,8 +225,7 @@ public abstract class SharedChatSystem : EntitySystem
             var ev = new GetDefaultRadioChannelEvent();
             RaiseLocalEvent(source, ev);
 
-            if (ev.Channel == HivemindChannel.Id &&
-                !_xenoEvolution.HasLiving<XenoEvolutionGranterComponent>(1))
+            if (ev.Channel == HivemindChannel.Id && IsHivemindBlocked())
             {
                 if (!quiet)
                     _popup.PopupEntity(Loc.GetString("rmc-no-queen-hivemind-chat"), source, source, PopupType.LargeCaution);
@@ -234,8 +246,7 @@ public abstract class SharedChatSystem : EntitySystem
         }
 
         // RMC14
-        if (channel?.ID == HivemindChannel.Id &&
-            !_xenoEvolution.HasLiving<XenoEvolutionGranterComponent>(1))
+        if (channel?.ID == HivemindChannel.Id && IsHivemindBlocked())
         {
             if (!quiet)
                 _popup.PopupEntity(Loc.GetString("rmc-no-queen-hivemind-chat"), source, source, PopupType.LargeCaution);
