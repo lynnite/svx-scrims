@@ -81,7 +81,6 @@ public sealed partial class CCVars
     ///     Whether to use details from last connection for ip/hwid in the BanPanel.
     /// </summary>
     public static readonly CVarDef<bool> ServerBanUseLastDetails =
-remote: Resolving deltas: 100% (41/41), completed with 40 local objects.
         CVarDef.Create("admin.server_ban_use_last_details", true, CVar.ARCHIVE | CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
