@@ -170,7 +170,7 @@ public sealed partial class RMCCVars : CVars
         CVarDef.Create("rmc.planet_map_vote", true, CVar.SERVER | CVar.SERVERONLY);
 
     public static readonly CVarDef<int> RMCPlanetMapVoteExcludeLast =
-        CVarDef.Create("rmc.planet_map_vote_exclude_last", 4, CVar.SERVER | CVar.SERVERONLY);
+        CVarDef.Create("rmc.planet_map_vote_exclude_last", 0, CVar.SERVER | CVar.SERVERONLY);
 
     public static readonly CVarDef<bool> RMCUseCarryoverVoting =
         CVarDef.Create("rmc.planet_map_vote_carryover", true, CVar.SERVER | CVar.SERVERONLY);
