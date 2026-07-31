@@ -20,7 +20,7 @@ public sealed partial class CCVars
     ///     Should users be able to see their own notes? Admins will be able to see and set notes regardless
     /// </summary>
     public static readonly CVarDef<bool> SeeOwnNotes =
-        CVarDef.Create("admin.see_own_notes", false, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
+        CVarDef.Create("admin.see_own_notes", true, CVar.ARCHIVE | CVar.REPLICATED | CVar.SERVER);
 
     /// <summary>
     ///     Should the server play a quick sound to the active admins whenever a new player joins?
@@ -81,6 +81,7 @@ public sealed partial class CCVars
     ///     Whether to use details from last connection for ip/hwid in the BanPanel.
     /// </summary>
     public static readonly CVarDef<bool> ServerBanUseLastDetails =
+remote: Resolving deltas: 100% (41/41), completed with 40 local objects.
         CVarDef.Create("admin.server_ban_use_last_details", true, CVar.ARCHIVE | CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
@@ -169,7 +170,7 @@ public sealed partial class CCVars
     /// This is hub advert safe, in case that's a worry.
     /// </summary>
     public static readonly CVarDef<bool> AdminsCountInReportedPlayerCount =
-        CVarDef.Create("admin.admins_count_in_playercount", false, CVar.SERVERONLY);
+        CVarDef.Create("admin.admins_count_in_playercount", true, CVar.SERVERONLY);
 
     /// <summary>
     ///     Determine if custom rank names are used.
