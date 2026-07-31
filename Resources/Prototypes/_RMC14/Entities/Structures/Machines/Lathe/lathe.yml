@@ -105,6 +105,7 @@
   - RMCBucket
   - RMCCustomGrenade
   - SVXChemicalPayloadEmpty
+  - RMCTimerTrigger
   - CMBucketMop
   - RMCBucketJanitorial
   - RMCFlashlight

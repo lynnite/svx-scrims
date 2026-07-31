@@ -159,6 +159,45 @@
 # COLOURS
 
 - type: entity
+  parent: RMCBaseScarfMask
+  id: SVXRippedScarf
+  name: ripped scarf
+  description: scarf
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/ripped.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/ripped.rsi
+    slots:
+      - neck
+
+- type: entity
+  parent: RMCBaseScarfMask
+  id: SVXRedRippedScarf
+  name: red ripped scarf
+  description: scarf
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/redripped.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/redripped.rsi
+    slots:
+      - neck
+
+- type: entity
+  parent: RMCBaseScarfMask
+  id: SVXMaidCosmetic
+  name: maid uniform cosmetic
+  description: fits on the neck, serves no real purpose.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/maid.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/maid.rsi
+    slots:
+      - neck
+
+- type: entity
   parent: RMCMaskScarfAlpha
   id: RMCMaskScarfRed
   name: red tactical wrap

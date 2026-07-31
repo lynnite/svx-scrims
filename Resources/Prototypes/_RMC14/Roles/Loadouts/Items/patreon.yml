@@ -1,0 +1,35 @@
+- type: loadoutEffectGroup
+  id: SVXPatreon
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: SVXJobPatreon
+      time: 1
+
+- type: loadout
+  id: SVXRippedScarf
+  cost: 2
+  equipment:
+    neck: SVXRippedScarf
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SVXPatreon
+
+- type: loadout
+  id: SVXRedRippedScarf
+  cost: 2
+  equipment:
+    neck: SVXRedRippedScarf
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SVXPatreon
+
+- type: loadout
+  id: SVXMaidCosmetic
+  cost: 2
+  equipment:
+    neck: SVXMaidCosmetic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: SVXPatreon
