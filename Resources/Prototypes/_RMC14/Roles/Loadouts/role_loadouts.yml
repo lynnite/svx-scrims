@@ -951,6 +951,7 @@
   - MiscellaneousRMC
   - CivilianOnlyRMC
   - MeleeWeaponsRMC
+  - PatreonSVX
 
 - type: roleLoadout
   id: JobRMCSyntheticColony
@@ -970,6 +971,7 @@
   - MiscellaneousRMC
   - CivilianOnlyRMC
   - MeleeWeaponsRMC
+  - PatreonSVX
 
 - type: roleLoadout
   id: JobCMSurvivorCorporate
@@ -989,6 +991,7 @@
   - MiscellaneousRMC
   - CivilianOnlyRMC
   - MeleeWeaponsRMC
+  - PatreonSVX
 
 - type: roleLoadout
   id: JobCMSurvivorDoctor
@@ -1008,6 +1011,7 @@
   - MiscellaneousRMC
   - CivilianOnlyRMC
   - MeleeWeaponsRMC
+  - PatreonSVX
 
 - type: roleLoadout
   id: JobCMSurvivorEngineer
@@ -1027,6 +1031,7 @@
   - MiscellaneousRMC
   - CivilianOnlyRMC
   - MeleeWeaponsRMC
+  - PatreonSVX
 
 - type: roleLoadout
   id: JobCMSurvivorScientist
@@ -1046,6 +1051,7 @@
   - MiscellaneousRMC
   - CivilianOnlyRMC
   - MeleeWeaponsRMC
+  - PatreonSVX
 
 - type: roleLoadout
   id: JobCMSurvivorSecurity
@@ -1065,6 +1071,7 @@
   - MiscellaneousRMC
   - CivilianOnlyRMC
   - MeleeWeaponsRMC
+  - PatreonSVX
 
 - type: roleLoadout
   id: JobRMCSurvivorCommandingOfficer
@@ -1083,6 +1090,7 @@
   - SmokablesRMC
   - MiscellaneousRMC
   - MeleeWeaponsRMC
+  - PatreonSVX
 
 # PVE - UNMC
 

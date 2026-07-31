@@ -19,8 +19,8 @@
     acceleration: 2
     friction: 2
     frictionNoInput: 6
-    baseWalkSpeed: 4.5
-    baseSprintSpeed: 6
+    baseWalkSpeed: 3.5
+    baseSprintSpeed: 4.5
   - type: Fixtures
     fixtures:
       fix1:
@@ -76,7 +76,7 @@
     thresholds:
     - trigger:
         !type:DamageTrigger
-        damage: 400
+        damage: 200
       behaviors:
       - !type:SolutionExplosionBehavior
         solution: tank

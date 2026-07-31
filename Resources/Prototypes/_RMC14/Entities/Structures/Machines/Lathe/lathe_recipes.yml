@@ -264,3 +264,10 @@
   completetime: 3
   materials:
     CMSteel: 4250
+
+- type: latheRecipe
+  id: RMCTimerTrigger
+  result: RMCTimerTrigger
+  completetime: 1
+  materials:
+    CMSteel: 500

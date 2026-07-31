@@ -996,7 +996,7 @@
   - PatchTSERMC
   - PatchMSCRMC
   - PatchOliveBranch
-  # - PatchCLFRMC # RMC14 - Disabled intentionally to reduce admin burden.
+  - PatchCLFRMC
   - PatchHalcyon
   - PatchNovaris
   - HeadCowboyHatLightRMC
@@ -1010,6 +1010,16 @@
   - ShoesYellowRMC
   - ShoesRedRMC
   - ShoesPurpleRMC
+
+- type: loadoutGroup
+  id: PatreonSVX
+  name: Patreon
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - SVXRippedScarf
+  - SVXRedRippedScarf
+  - SVXMaidCosmetic
 
 # Provost Inspector
 - type: loadoutGroup

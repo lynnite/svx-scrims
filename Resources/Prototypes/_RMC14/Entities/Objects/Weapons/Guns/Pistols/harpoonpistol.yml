@@ -8,7 +8,7 @@
   - type: RMCSelectiveFire
     scatterWielded: 10
     scatterUnwielded: 14
-    baseFireRate: 0.3
+    baseFireRate: 1.5
   - type: GunDamageModifier
     multiplier: 1.4
   - type: RMCWeaponAccuracy
@@ -71,7 +71,7 @@
       tags:
       - SVXCartridgePistolHarpoon
     proto: SVXCartridgePistolHarpoon
-    capacity: 3
+    capacity: 5
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/mk45.rsi
     layers:
@@ -101,7 +101,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 130
+        Piercing: 40
   - type: RMCProjectileDamageFalloff
     thresholds:
     - range: 22
@@ -122,7 +122,7 @@
         minMobSize: VerySmallXeno
       maxRange: 3
       slowTime: 4
-      stunTime: 1
+      stunTime: 0
 
 - type: Tag
   id: SVXMagazinePistolHarpoon
