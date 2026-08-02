@@ -1,9 +1,14 @@
 name: Diff RSIs
 
 on:
-  pull_request_target:
+  pull_request:
     paths:
       - '**.rsi/**.png'
+
+permissions:
+  contents: read
+  issues: write
+  pull-requests: write
 
 jobs:
   diff:
@@ -12,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
 
       - name: Get changed files
         id: files
