@@ -256,8 +256,6 @@
   components:
   - type: AccessReader
     access: [["CMAccessColonyArmory"]]
-  - type: Destructible
-    thresholds: []
   - type: Damageable
     damageContainer: StructuralMarine
     damageModifierSet: StructuralMarine
