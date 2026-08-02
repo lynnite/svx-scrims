@@ -132,7 +132,7 @@
 #Special implanters
 
 - type: entity
-  id: SVXMicroBombImplanter
+  id: SVXMicroBombImplant
   name: bomb implanter
   parent: SVXBaseImplantOnlyImplanterSyndi
   components:
