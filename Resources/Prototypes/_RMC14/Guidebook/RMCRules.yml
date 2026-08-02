@@ -24,7 +24,6 @@
   text: "/ServerInfo/Guidebook/_RMC14/Rules/RMCRulesCore.xml"
   children:
   - RMCLanguage
-  - RMCRulesEscalation
   - RMCKindness
 
 - type: guideEntry
@@ -33,13 +32,6 @@
   name: rmc-guide-entry-rules-language
   priority: 1
   text: "/ServerInfo/Guidebook/_RMC14/Rules/Core/RMCLanguage.xml"
-
-- type: guideEntry
-  parent: RMC
-  id: RMCRulesEscalation
-  name: rmc-guide-entry-rules-escalation
-  priority: 3
-  text: "/ServerInfo/Guidebook/_RMC14/Rules/Core/RMCRulesEscalation.xml"
 
 - type: guideEntry
   parent: RMC
