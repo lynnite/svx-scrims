@@ -66,5 +66,5 @@
 
 - type: playTimeTracker
   id: SVXJobMonkey
-  name: Monkey
+  name: svx-job-name-survivor-monkey
   isHumanoid: true
