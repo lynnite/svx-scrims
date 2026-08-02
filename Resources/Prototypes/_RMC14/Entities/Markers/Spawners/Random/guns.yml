@@ -28,8 +28,8 @@
     - RMCWeaponPistolB92FS: RMCMagazinePistolB92FS
     - RMCWeaponRevolverSpearhead: RMCSpeedLoader357Hollowpoint
     - RMCWeaponRevolverSpearhead: RMCSpeedLoader357Hollowpoint
-    - RMCWeaponRevolverSpearhead: RMCSpeedLoader357Hollowpoint
-    - RMCWeaponPistolMK45: RMCMagazinePistolMK45
+    - SVXWeaponAlienRevolver: SVXMagazinePlasmaSmall
+    - SVXWeaponAlienRevolver: SVXMagazinePlasmaSmall
     - RMCWeaponPistolMK45: RMCMagazinePistolMK45
     - RMCWeaponPistolMK45: RMCMagazinePistolMK45
     - RMCWeaponPistolKT42: RMCMagazinePistolKT42
@@ -298,7 +298,7 @@
     - RMCWeaponFlamer: RMCTankFlamer
     - WeaponShotgunM890: RMCSpawnerRandomShotgunBoxes
     - RMCWeaponLauncherM85A1: RMCSpawnerRandomGrenadePackets
-    - RMCMK80: CMMagazinePistolMK80
+    - SVXWeaponAlienRevolver: SVXMagazinePlasmaSmall
 
 - type: entity
   parent: RMCSpawnerRandomGunSpecial
