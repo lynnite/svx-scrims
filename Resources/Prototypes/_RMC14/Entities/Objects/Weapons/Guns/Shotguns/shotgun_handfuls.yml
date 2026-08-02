@@ -321,6 +321,48 @@
   spawn: RMCShellShotgunL49B
   maxCount: 5
 
+- type: entity
+  parent: CMShellShotgunBase
+  id: SVXShellShotgunBirdshot
+  name: handful of birdshot shells
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi
+    layers:
+    - state: birdshot_shell_1
+      map: [ "base" ]
+  - type: CartridgeAmmo
+    proto: SVXPelletShotgunBirdshot
+  - type: Stack
+    count: 5
+    stackType: SVXShellShotgunBirdshot
+    baseLayer: base
+    layerStates:
+    - birdshot_shell_1
+    - birdshot_shell_1
+    - birdshot_shell_2
+    - birdshot_shell_3
+    - birdshot_shell_4
+    - birdshot_shell_5
+  - type: Tag
+    tags:
+    - RMCHandful
+    - Cartridge
+    - RMCShellShotgun
+    - SVXShellShotgunBirdshot
+
+- type: entity
+  parent: SVXShellShotgunBirdshot
+  id: SVXShellShotgunBirdshot1
+  suffix: 1
+
+- type: stack
+  id: SVXShellShotgunBirdshot
+  name: handful of birdshot shells
+  icon: { sprite: /Textures/_RMC14/Objects/Weapons/Guns/Ammunition/Handfuls/shotgun_handfuls.rsi, state: birdshot_shell_1 }
+  spawn: SVXShellShotgunBirdshot
+  maxCount: 5
+
 - type: Tag
   id: RMCHandful
 
@@ -350,3 +392,6 @@
 
 - type: Tag
   id: RMCShellShotgunL49B
+
+- type: Tag
+  id: SVXShellShotgunBirdshot
