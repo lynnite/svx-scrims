@@ -189,8 +189,6 @@
       - CMSatchel
       - RMCSatchelBlack
       - RMCSatchelBlue
-      - CMBackpack
-      - CMBackpackEngineer
       - RMCSatchelLightpack5Slot
       outerClothing:
       - RMCOuterClothingExternalWebbing
