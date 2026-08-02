@@ -1013,7 +1013,7 @@
 
 - type: loadoutGroup
   id: PatreonSVX
-  name: Patreon
+  name: svx-job-name-patreon
   minLimit: 0
   maxLimit: 1
   loadouts:

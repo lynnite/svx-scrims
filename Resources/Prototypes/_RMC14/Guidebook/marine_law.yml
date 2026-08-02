@@ -5,7 +5,6 @@
   text: "/ServerInfo/Guidebook/_RMC14/Law/RMCMarineLaw.xml"
   priority: 3
   children:
-  - RMCCommandChain
   - RMCMarineLawRanks
   - RMCMarineLawDefinitions
   - RMCMarineLawProcedures
@@ -17,12 +16,6 @@
   - RMCMarineLawCOProvisions
   - RMCMarineSOP
 
-- type: guideEntry
-  parent: RMC
-  id: RMCCommandChain
-  name: rmc-guide-entry-rules-command-chain
-  priority: 0
-  text: "/ServerInfo/Guidebook/_RMC14/Rules/Roleplay/RMCCommandChain.xml"
 
 - type: guideEntry
   parent: RMC

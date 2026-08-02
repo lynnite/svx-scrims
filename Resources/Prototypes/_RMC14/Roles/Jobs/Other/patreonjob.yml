@@ -1,7 +1,7 @@
 - type: job
   parent: RMCJobRibbonBase
   id: SVXJobPatreon
-  name: Patreon perks
+  name: svx-job-name-patreon
   description: Patreon perks
   playTimeTracker: SVXJobPatreon
   basePlaytimeTracker: true
@@ -9,5 +9,5 @@
 
 - type: playTimeTracker
   id: SVXJobPatreon
-  name: Patreon
+  name: svx-job-name-patreon
   isHumanoid: true
