@@ -15,15 +15,6 @@
   id: SVXMonkey
   name: monkey
   suffix: svx, Monkey surv
-  startingGear: RMCGearSurvivorBaseNoBackpack
-  dummyStartingGear: RMCGearSurvivorEquipped
-  icon: "RMCJobIconGenericColonist"
-  joinNotifyCrew: false
-  supervisors: cm-job-supervisors-nobody
-  accessGroups:
-  - Colonist
-  special:
-  - !type:AddComponentSpecial
   components:
   - type: Sprite
     drawdepth: Mobs
@@ -391,10 +382,6 @@
     whitelist:
       tags:
       - SurvivalPouch
-  greeting: rmc-job-greeting-survivor
-  hasIcon: true
-  useLoadoutOfJob: CMSurvivor
-  basePlaytimeTracker: true
 
 - type: entity
   parent: [RMCSmallHost]

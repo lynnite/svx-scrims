@@ -490,9 +490,6 @@
         maxDistance: 6
   - type: AttachableWeaponRangedMods
     modifiers:
-    - bonusDamage:
-        types:
-          Slash: 20
     - accuracyAddMult: 0.2
     - conditions:
         wieldedOnly: true
