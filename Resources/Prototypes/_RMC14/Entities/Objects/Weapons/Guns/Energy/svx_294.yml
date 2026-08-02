@@ -79,7 +79,7 @@
     proto: SVXCartridgeEnergy
     capacity: 40
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/alienrifle.rsi
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/energymagazine.rsi
 
 - type: entity
   parent: CMBaseCartridgeRifle
@@ -115,8 +115,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 34
-        Heat: 6
+        Piercing: 30
+        Heat: 10
   - type: RMCProjectileAccuracy
     accuracy: 100
 
