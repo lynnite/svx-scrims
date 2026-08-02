@@ -1,6 +1,6 @@
 - type: species
   id: svxmonkey
-  name: Monkey
+  name: svx-job-name-survivor-monkey
   roundStart: false
   prototype: SVXMonkey
   sprites: MobSVXMonkeySprites

@@ -16,6 +16,8 @@ cm-job-name-survivor-scientist = Scientist Colonist
 
 svx-job-name-survivor-monkey = Monkey Colonist
 
+svx-job-name-patreon = Patreon
+
 rmc-job-name-survivor-co = Survivor Commander
 rmc-job-description-survivor-co = You are a Major of the UNMC.
 
