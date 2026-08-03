@@ -15,7 +15,7 @@
     sprite: _RMC14/Objects/Weapons/Guns/Energy/energyrifle.rsi
   - type: Gun
     shotsPerBurst: 2
-    burstCooldown: 0.3
+    burstCooldown: 0.45
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -55,6 +55,7 @@
         whitelist:
           tags:
           - SVXMagazinePlasma
+          - SVXMagazinePlasmaExtended
   - type: GunDamageModifier
     multiplier: 1
   - type: Tag
@@ -64,7 +65,7 @@
 - type: entity
   parent: CMMagazineRifleBase
   id: SVXMagazinePlasma
-  name: "Energy rifle magazine"
+  name: "Standard energy magazine"
   description: "A 40-round magazine of standard plasma rounds."
   components:
   - type: Tag
@@ -75,7 +76,7 @@
     mayTransfer: True
     whitelist:
       tags:
-      - SVXProjectileEnergy
+      - SVXCartridgeEnergy
     proto: SVXCartridgeEnergy
     capacity: 40
   - type: Sprite

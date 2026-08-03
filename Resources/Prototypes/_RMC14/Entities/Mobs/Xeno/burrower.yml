@@ -54,6 +54,22 @@
   - type: XenoDevolve
     devolvesTo:
     - CMXenoDrone
+  - type: XenoEvolution
+    canEvolveWithoutGranter: true
+    max: 1
+    evolvesTo:
+    - CMXenoCarrier
+    - CMXenoHivelord
+    - CMXenoDefender
+    - CMXenoSpitter
+    - CMXenoSentinel
+    - CMXenoRunner
+    - CMXenoLurker
+    - CMXenoWarrior
+    - RMCXenoBoiler
+    - RMCXenoCrusher
+    - CMXenoPraetorian
+    - CMXenoRavager
   - type: XenoPlasma
     plasma: 600
     maxPlasma: 600

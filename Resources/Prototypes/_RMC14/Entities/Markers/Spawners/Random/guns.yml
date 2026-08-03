@@ -221,14 +221,14 @@
     layers:
     - state: loot_smg
   - type: GunSpawner
-    minMagazines: 1
-    maxMagazines: 5
+    minMagazines: 2
+    maxMagazines: 6
     prototypes: # Weighted
     - WeaponSMGMP5: CMMagazineSMGMP5
     - WeaponSMGMP5: CMMagazineSMGMP5
     - WeaponSMGMP5K: CMMagazineSMGMP5
-    - WeaponSMGMP5K: CMMagazineSMGMP5
-    - RMCWeaponSMGMP27: RMCMagazineSMGMP27
+    - SVXWeaponEnergySMG: SVXMagazinePlasmaExtended
+    - SVXWeaponEnergySMG: SVXMagazinePlasmaExtended
     - RMCWeaponSMGMP27: RMCMagazineSMGMP27
     - RMCWeaponSMGMP27: RMCMagazineSMGMP27
     - RMCWeaponSMGMP27: RMCMagazineSMGMP27
@@ -454,8 +454,8 @@
     layers:
     - state: loot_shotgun
   - type: GunSpawner
-    minMagazines: 1
-    maxMagazines: 5
+    minMagazines: 5
+    maxMagazines: 6
     prototypes:
     - RMCWeaponShotgunM12: RMCSpawnerRandomShotgunBoxes
     - RMCWeaponShotgunM12: RMCSpawnerRandomShotgunBoxes
