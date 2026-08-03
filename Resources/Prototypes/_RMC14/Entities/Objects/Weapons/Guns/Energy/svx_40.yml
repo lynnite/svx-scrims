@@ -1,20 +1,18 @@
 - type: entity
-  parent: SVXWeaponAlienRifle
-  name: SVX-103 energy revolver
-  id: SVXWeaponAlienRevolver
-  description: An energy revolver of alien origin. It is not known who manufactured it, but it reads SVX on the side of the gun.
+  parent: [ CMBaseWeaponRifle, RMCBaseWeaponMagazineVisuals ]
+  name: SVX-40 energy smg
+  id: SVXWeaponEnergySMG
+  description: An energy submachinegun of alien origin. It is not known who manufactured it, but it reads SVX on the side of the gun.
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Energy/energyrevolver.rsi
+    sprite: _RMC14/Objects/Weapons/Guns/Energy/energysmg.rsi
     layers:
     - state: bolt-open
       map: [ "enum.GunVisualLayers.Base" ]
     - state: mag-0
       map: [ "enum.GunVisualLayers.Mag" ]
   - type: Clothing
-    sprite: _RMC14/Objects/Weapons/Guns/Energy/energyrevolver.rsi
-  - type: Item
-    size: Normal
+    sprite: _RMC14/Objects/Weapons/Guns/Energy/energysmg.rsi
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
@@ -22,18 +20,21 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser.ogg
   - type: RMCSelectiveFire
-    scatterWielded: 4
-    scatterUnwielded: 8
-    baseFireRate: 2
+    scatterWielded: 22
+    scatterUnwielded: 22
+    baseFireRate: 7.4
     baseFireModes:
     - SemiAuto
+    modifiers:
+      Burst:
+        useBurstScatterMult: false
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 1.2
-    accuracyMultiplierUnwielded: 1
+    accuracyMultiplierUnwielded: 0.6
   - type: RMCWeaponDamageFalloff
-    falloffMultiplier: 0
+    falloffMultiplier: 2
   - type: WieldDelay
-    baseDelay: 0.1
+    baseDelay: 0.05
   - type: WieldableSpeedModifiers
     base: 1
     light: 1
@@ -48,37 +49,36 @@
         priority: 2
         whitelist:
           tags:
-          - SVXMagazinePlasmaSmall
+          - SVXMagazinePlasmaExtended
+          - SVXMagazinePlasma
   - type: GunDamageModifier
-    multiplier: 2
+    multiplier: 0.85
   - type: Tag
     tags:
-    - SVXWeaponAlienRevolver
+    - SVXWeaponEnergySMG
 
 - type: entity
   parent: CMMagazineRifleBase
-  id: SVXMagazinePlasmaSmall
-  name: "Small Energy magazine"
-  description: "A 15-round magazine of standard plasma rounds."
+  id: SVXMagazinePlasmaExtended
+  name: "Extended energy magazine"
+  description: "A 64-round magazine of standard plasma rounds."
   components:
   - type: Tag
     tags:
     - CMMagazineRifle
-    - SVXMagazinePlasmaSmall
-  - type: Item
-    size: Small
+    - SVXMagazinePlasmaExtended
   - type: BallisticAmmoProvider
     mayTransfer: True
     whitelist:
       tags:
       - SVXCartridgeEnergy
     proto: SVXCartridgeEnergy
-    capacity: 15
+    capacity: 64
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/energymagazine_small.rsi
+    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/energymagazine.rsi
 
 - type: Tag
-  id: SVXMagazinePlasmaSmall
+  id: SVXMagazinePlasmaExtended
 
 - type: Tag
-  id: SVXWeaponAlienRevolver
+  id: SVXWeaponEnergySMG

@@ -34,6 +34,22 @@
   - type: XenoDevolve
     devolvesTo:
     - CMXenoDrone
+  - type: XenoEvolution
+    canEvolveWithoutGranter: true
+    max: 1
+    evolvesTo:
+    - CMXenoBurrower
+    - CMXenoHivelord
+    - CMXenoDefender
+    - CMXenoSpitter
+    - CMXenoSentinel
+    - CMXenoRunner
+    - CMXenoLurker
+    - CMXenoWarrior
+    - RMCXenoBoiler
+    - RMCXenoCrusher
+    - CMXenoPraetorian
+    - CMXenoRavager
   - type: XenoConstruction
     canOrderConstruction:
     - HiveCoreXenoConstructionNode

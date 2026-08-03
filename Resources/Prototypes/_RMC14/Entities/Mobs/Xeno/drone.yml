@@ -89,10 +89,16 @@
     - CMXenoCarrier
     - CMXenoBurrower
     - CMXenoHivelord
-    earlyEvolvesTo:
-    - CMXenoLurker
+    - CMXenoDefender
     - CMXenoSpitter
+    - CMXenoSentinel
+    - CMXenoRunner
+    - CMXenoLurker
     - CMXenoWarrior
+    - RMCXenoBoiler
+    - RMCXenoCrusher
+    - CMXenoPraetorian
+    - CMXenoRavager
   - type: Evasion
     evasion: 15
   - type: XenoInhands
