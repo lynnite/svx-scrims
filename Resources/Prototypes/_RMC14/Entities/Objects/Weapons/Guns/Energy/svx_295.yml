@@ -58,7 +58,7 @@
           - SVXMagazinePlasmaExtended
           - SVXMagazinePlasmaAdvanced
   - type: GunDamageModifier
-    multiplier: 0.6
+    multiplier: 0.55
   - type: Tag
     tags:
     - SVXWeaponAlienRifleMK2
