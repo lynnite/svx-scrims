@@ -20,6 +20,9 @@
     - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser.ogg
+  - type: Clothing
+    slots:
+    - suitStorage
   - type: RMCSelectiveFire
     scatterWielded: 4
     scatterUnwielded: 4
