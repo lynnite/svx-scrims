@@ -134,10 +134,7 @@
     - ActionXenoSecreteStructure
     - ActionXenoTransferPlasma
     - ActionXenoDevolve
-  - type: XenoEvolution
-    strains:
-    - CMXenoDroneGardener
-    - CMXenoDroneHealer
+    - ActionXenoHealerDroneChannel
   - type: XenoAcid
   - type: AcidTrap
     trapLevel: 1
@@ -263,6 +260,7 @@
     - ActionXenoFruitPlantLesser
     - ActionXenoApplySalve
     - ActionXenoHealerDroneTransferPlasma
+    - ActionXenoHealerDroneChannel
     - ActionXenoSacrifice
     - ActionXenoDevolve
   - type: XenoPlasma
