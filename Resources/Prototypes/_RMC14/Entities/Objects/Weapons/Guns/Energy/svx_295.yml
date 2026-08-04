@@ -13,6 +13,8 @@
       map: [ "enum.GunVisualLayers.Mag" ]
   - type: Clothing
     sprite: _RMC14/Objects/Weapons/Guns/Energy/energyriflemk2.rsi
+    slots:
+    - suitStorage
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
@@ -20,9 +22,6 @@
     - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser.ogg
-  - type: Clothing
-    slots:
-    - suitStorage
   - type: RMCSelectiveFire
     scatterWielded: 4
     scatterUnwielded: 4
