@@ -20,8 +20,8 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser.ogg
   - type: RMCSelectiveFire
-    scatterWielded: 22
-    scatterUnwielded: 22
+    scatterWielded: 26
+    scatterUnwielded: 26
     baseFireRate: 7.4
     baseFireModes:
     - SemiAuto
