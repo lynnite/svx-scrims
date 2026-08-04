@@ -1,39 +1,47 @@
 - type: entity
   parent: [ CMBaseWeaponRifle, RMCBaseWeaponMagazineVisuals ]
-  name: SVX-294 energy rifle
-  id: SVXWeaponAlienRifle
-  description: An energy rifle of alien origin. It is not known who manufactured it, but it reads SVX on the side of the gun.
+  name: SVX-295 smart energy rifle
+  id: SVXWeaponAlienRifleMK2
+  description: An energy rifle of alien origin. It is not known who manufactured it, but it reads SVX on the side of the gun. This one is exceptionally smart.
   components:
   - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Energy/energyrifle.rsi
+    sprite: _RMC14/Objects/Weapons/Guns/Energy/energyriflemk2.rsi
     layers:
     - state: bolt-open
       map: [ "enum.GunVisualLayers.Base" ]
     - state: mag-0
       map: [ "enum.GunVisualLayers.Mag" ]
   - type: Clothing
-    sprite: _RMC14/Objects/Weapons/Guns/Energy/energyrifle.rsi
+    sprite: _RMC14/Objects/Weapons/Guns/Energy/energyriflemk2.rsi
   - type: Gun
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
+    - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser.ogg
   - type: RMCSelectiveFire
     scatterWielded: 4
     scatterUnwielded: 4
-    baseFireRate: 4
+    baseFireRate: 8
     baseFireModes:
     - SemiAuto
+    - Burst
+    burstFireRateMultiplier: 5
+    modifiers:
+      Burst:
+        useBurstScatterMult: false
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 1.2
     accuracyMultiplierUnwielded: 0.6
   - type: RMCWeaponDamageFalloff
     falloffMultiplier: 0
+  - type: GunIFF
+    enabled: true
   - type: WieldDelay
     baseDelay: 0.1
   - type: WieldableSpeedModifiers
-    base: 0.875
+    base: 1
     light: 1
     medium: 1
     heavy: 1
@@ -48,79 +56,36 @@
           tags:
           - SVXMagazinePlasma
           - SVXMagazinePlasmaExtended
+          - SVXMagazinePlasmaAdvanced
   - type: GunDamageModifier
-    multiplier: 1
+    multiplier: 0.6
   - type: Tag
     tags:
-    - SVXWeaponAlienRifle
+    - SVXWeaponAlienRifleMK2
 
 - type: entity
   parent: CMMagazineRifleBase
-  id: SVXMagazinePlasma
-  name: "Standard energy magazine"
-  description: "A 40-round magazine of standard plasma rounds."
+  id: SVXMagazinePlasmaAdvanced
+  name: "Advanced energy magazine"
+  description: "A 110-round magazine of standard plasma rounds. This one is more compact than the standard."
   components:
   - type: Tag
     tags:
     - CMMagazineRifle
-    - SVXMagazinePlasma
+    - SVXMagazinePlasmaAdvanced
   - type: BallisticAmmoProvider
     mayTransfer: True
     whitelist:
       tags:
       - SVXCartridgeEnergy
     proto: SVXCartridgeEnergy
-    capacity: 40
+    capacity: 110
   - type: Sprite
     sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Magazines/energymagazine.rsi
 
-- type: entity
-  parent: CMBaseCartridgeRifle
-  id: SVXCartridgeEnergy
-  name: Cartridge (plasma)
-  components:
-  - type: Tag
-    tags:
-    - Cartridge
-    - SVXCartridgeEnergy
-  - type: CartridgeAmmo
-    proto: SVXProjectileEnergy
-
-- type: entity
-  parent: RMCBaseBullet
-  id: SVXProjectileEnergy
-  categories: [ HideSpawnMenu ]
-  name: energy bolt
-  components:
-  - type: Sprite
-    sprite: _RMC14/Objects/Weapons/Guns/Ammunition/Projectiles/energy_projectiles.rsi
-    layers:
-    - state: plasma
-      shader: unshaded
-  - type: Reflective
-    reflective:
-    - Energy
-  - type: FlyBySound
-    sound:
-      path: /Audio/_RMC14/Bullets/energy_miss1.ogg
-      params:
-        volume: 5
-  - type: Projectile
-    damage:
-      types:
-        Piercing: 30
-        Heat: 10
-  - type: RMCProjectileAccuracy
-    accuracy: 100
 
 - type: Tag
-  id: SVXWeaponAlienRifle
+  id: SVXWeaponAlienRifleMK2
 
 - type: Tag
-  id: SVXCartridgeEnergy
-
-- type: Tag
-  id: SVXProjectileEnergy
-
-- type: Tag
-  id: SVXMagazinePlasma
+  id: SVXMagazinePlasmaAdvanced
