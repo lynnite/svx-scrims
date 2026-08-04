@@ -19,7 +19,6 @@
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
-    - Burst
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser.ogg
   - type: RMCSelectiveFire
@@ -28,11 +27,6 @@
     baseFireRate: 8
     baseFireModes:
     - SemiAuto
-    - Burst
-    burstFireRateMultiplier: 5
-    modifiers:
-      Burst:
-        useBurstScatterMult: false
   - type: RMCWeaponAccuracy
     accuracyMultiplier: 1.2
     accuracyMultiplierUnwielded: 0.6

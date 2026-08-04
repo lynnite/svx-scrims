@@ -304,6 +304,29 @@
 
 - type: entity
   parent: ActionXenoBase
+  id: ActionXenoHealerDroneChannel
+  name: Channel Heal
+  description: Channel a beam of healing to a nearby ally while gaining a short movement speed boost.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: heal_xeno
+    useDelay: 2
+  - type: TargetAction
+    range: 7
+    checkCanAccess: false
+  - type: EntityTargetAction
+    event: !type:XenoHealerDroneChannelActionEvent
+  - type: XenoActionPlasma
+    cost: 120
+  - type: ActionCooldown
+    cooldown: 6
+  - type: ActionBlockIfResting
+
+- type: entity
+  parent: ActionXenoBase
   id: ActionXenoTailFountain
   name: Tail Fountain
   description: Extinguishes fire from a nearby ally or foe. Uses up your melee attack.

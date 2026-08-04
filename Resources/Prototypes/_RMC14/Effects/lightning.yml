@@ -11,3 +11,16 @@
   - type: Tag
     tags:
     - HideContextMenu
+
+- type: entity
+  name: Healer Drone Beam
+  id: SVXHealerDroneBeam
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: /Textures/_RMC14/Effects/beam.rsi
+    drawdepth: Effects
+    state: "lightning12"
+  - type: Tag
+    tags:
+    - HideContextMenu
