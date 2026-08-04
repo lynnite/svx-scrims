@@ -99,7 +99,7 @@
     - WeaponRifleM16: RMCMagazineRifleM16
     - WeaponRifleM16: RMCMagazineRifleM16
     - WeaponRifleM16: RMCMagazineRifleM16
-    - WeaponRifleM16: RMCMagazineRifleM16
+    - SVXWeaponAlienRifleMK2: SVXMagazinePlasmaAdvanced
     - SVXWeaponAlienRifle: SVXMagazinePlasma
     - SVXWeaponAlienRifle: SVXMagazinePlasma
     - WeaponRifleMAR40: RMCMagazineRifleMAR40
@@ -299,6 +299,7 @@
     - WeaponShotgunM890: RMCSpawnerRandomShotgunBoxes
     - RMCWeaponLauncherM85A1: RMCSpawnerRandomGrenadePackets
     - SVXWeaponAlienRevolver: SVXMagazinePlasmaSmall
+    - SVXWeaponAlienRifleMK2: SVXMagazinePlasmaAdvanced
 
 - type: entity
   parent: RMCSpawnerRandomGunSpecial
