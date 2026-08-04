@@ -106,6 +106,42 @@
 
 - type: entity
   parent: RMCTileFire
+  id: SVXTileFireHumanoidOnly
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "base" ]
+      state: purple_4
+  - type: PointLight
+    color: "#8a2be2"
+  - type: SVXXenoIgnitionImmuneFire
+  - type: RMCIgniteOnCollide
+    maxStacks: 20
+    tileDamage: {}
+    armorMultiplier: 0.0
+    armorWhitelist:
+      components:
+      - Xeno
+    burnColor: "#8a2be2"
+  - type: DamageOnCollide
+    damage: {}
+    damageDead: false
+    fire: false
+  - type: TileFire
+    id: SVXTileFireHumanoidOnly
+    duration: 20
+    extinguishInstantly: true
+  - type: GenericVisualizer
+    visuals:
+      enum.TileFireLayers.Base:
+        base:
+          One: { state: purple_1 }
+          Two: { state: purple_2 }
+          Three: { state: purple_3 }
+          Four: { state: purple_4 }
+
+- type: entity
+  parent: RMCTileFire
   id: RMCTileFireBlue
   components:
   - type: Sprite

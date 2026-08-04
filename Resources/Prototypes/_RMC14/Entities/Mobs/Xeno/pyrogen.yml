@@ -1,0 +1,137 @@
+- type: entity
+  abstract: true
+  parent:
+  - CMXenoDeveloped
+  - CMXenoTail
+  - CMXenoFlammable
+  - RMCXenoSpeechSounds
+  - RMCXenoCommendationReceiver
+  - RMCXenoMobCollision
+  id: CMXenoPyrogen
+  name: Pyrogen
+  description: A fire-wreathed xenonid that scorches the battlefield with searing flame.
+  components:
+  - type: GuideHelp
+    guides:
+    - RMCGuideRoleBoiler
+  - type: Sprite
+    sprite: _RMC14/Mobs/Xenonids/Pyrogen/pyrogen.rsi
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 185
+        mask:
+        - MobMask
+        - BarbedBarricade
+        - BarricadeImpassable
+        layer:
+        - MobLayer
+      fix2:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.45
+        density: 185
+        layer:
+        - BulletImpassable
+  - type: MobState
+    allowedStates:
+    - Alive
+    - Critical
+    - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      650: Critical
+      750: Dead
+  - type: Xeno
+    role: CMXenoPyrogen
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoRegurgitate
+    - ActionXenoWatch
+    - ActionXenoPyrogenTailStab
+    - ActionXenoPyrogenFireball
+    - ActionXenoPyrogenFlameCharge
+    - ActionXenoPyrogenDash
+    - ActionXenoDevolve
+    tier: 3
+    hudOffset: -0.15,0.05
+    unlockAt: 300
+  - type: XenoHeavy
+  - type: XenoDevolve
+    devolvesTo:
+    - CMXenoLarva
+  - type: ShowElectrocutionHUD
+  - type: XenoPlasma
+    plasma: 400
+    maxPlasma: 400
+    plasmaRegenOnWeeds: 7
+  - type: CMArmor
+    xenoArmor: 10
+    explosionArmor: 20
+  - type: XenoDevour
+  - type: MovementSpeedModifier
+    baseWalkSpeed: 3
+    baseSprintSpeed: 4.5
+  - type: SlowOnPull
+    slowdowns:
+    - multiplier: 0.6375
+      whitelist:
+        components:
+        - Marine
+    - multiplier: 0.7075
+      whitelist:
+        components:
+        - XenoLight
+    - multiplier: 0.475
+      whitelist:
+        components:
+        - XenoHeavy
+  - type: PointLight
+    enabled: true
+    radius: 1.8
+    softness: 1
+    autoRot: true
+  - type: RMCSize
+    size: Big
+  - type: XenoDeathcloud
+  - type: RMCXenoDamageVisuals
+    prefix: praetorian
+  - type: TacticalMapIcon
+    icon:
+      sprite: /Textures/_RMC14/Interface/map_blips.rsi
+      state: boiler
+  - type: Flammable
+    damage:
+      types:
+        Heat: 3
+  - type: Pyrogen
+    fireSpawn: SVXTileFireHumanoidOnly
+  - type: PyrogenFireball
+  - type: PyrogenFlameCharge
+  - type: PyrogenDash
+  - type: PyrogenTailStab
+  - type: FixedIdentity
+    name: cm-job-name-xeno-pyrogen
+  - type: RMCActionOrder
+    id: CMXenoPyrogen
+
+- type: entity
+  parent: CMXenoPyrogen
+  id: RMCXenoPyrogen
+  components:
+  - type: Xeno
+    actionIds:
+    - ActionXenoRest
+    - ActionXenoRegurgitate
+    - ActionXenoWatch
+    - ActionXenoPyrogenTailStab
+    - ActionXenoPyrogenFireball
+    - ActionXenoPyrogenFlameCharge
+    - ActionXenoPyrogenDash
+    - ActionXenoDevolve
+  - type: RMCActionOrder
+    id: RMCXenoPyrogen

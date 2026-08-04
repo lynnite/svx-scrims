@@ -273,6 +273,7 @@ public sealed class RMCProjectileSystem : EntitySystem
     {
         var maxRange = EnsureComp<ProjectileMaxRangeComponent>(projectile);
 
+        maxRange.Origin = _transform.GetMoverCoordinates(projectile);
         maxRange.Max = max;
         Dirty(projectile, maxRange);
     }

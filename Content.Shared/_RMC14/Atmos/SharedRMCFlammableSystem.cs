@@ -1,4 +1,5 @@
 using System.Linq;
+using System.Numerics;
 using Content.Shared._RMC14.Armor;
 using Content.Shared._RMC14.Chemistry;
 using Content.Shared._RMC14.Chemistry.Reagent;
@@ -8,6 +9,7 @@ using Content.Shared._RMC14.Map;
 using Content.Shared._RMC14.OnCollide;
 using Content.Shared._RMC14.Vehicle;
 using Content.Shared._RMC14.Weapons.Melee;
+using Content.Shared._RMC14.Xenonids;
 using Content.Shared._RMC14.Xenonids.Plasma;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
@@ -148,6 +150,9 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
     private void OnSpawnFireOnDestroy(Entity<SpawnFireOnDestroyComponent> ent, ref EntityTerminatingEvent args)
     {
         if (_net.IsClient)
+            return;
+
+        if (TerminatingOrDeleted(ent.Owner) || EntityManager.IsQueuedForDeletion(ent.Owner))
             return;
 
         var coords = _transform.GetMoverCoordinates(ent);
@@ -477,6 +482,46 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
         SpawnFire(center, spawn, chain, range, intensity, duration, out _);
         SpawnFires(spawn, center, range, chain, intensity, duration);
         _onCollide.CleanupChain(chain);
+    }
+
+    public void SpawnFireSquare(EntProtoId spawn, EntityCoordinates center, int sideLength, int? intensity = null, int? duration = null)
+    {
+        if (_net.IsClient)
+            return;
+
+        var chain = _onCollide.SpawnChain();
+        try
+        {
+            var start = -(sideLength / 2);
+            var end = start + sideLength - 1;
+            for (var x = start; x <= end; x++)
+            {
+                for (var y = start; y <= end; y++)
+                {
+                    SpawnFire(center.Offset(new Vector2(x, y)), spawn, chain, 0, intensity, duration, out _);
+                }
+            }
+        }
+        finally
+        {
+            _onCollide.CleanupChain(chain);
+        }
+    }
+
+    public void SpawnSingleFire(EntProtoId spawn, EntityCoordinates center, int? intensity = null, int? duration = null)
+    {
+        if (_net.IsClient)
+            return;
+
+        var chain = _onCollide.SpawnChain();
+        try
+        {
+            SpawnFire(center, spawn, chain, 0, intensity, duration, out _);
+        }
+        finally
+        {
+            _onCollide.CleanupChain(chain);
+        }
     }
 
     public void SpawnFireLines(EntProtoId spawn, EntityCoordinates center, int cardinalRange, int ordinalRange, int? intensity = null, int? duration = null)
@@ -834,6 +879,9 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
         if (checkIgnited && wasOnFire)
             return;
 
+        if (HasComp<XenoComponent>(other))
+            return;
+
         if (!CanBeIgnited(other, ent, ent.Comp.Intensity))
             return;
 
@@ -976,6 +1024,9 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
         var ev = new GetIgnitionImmunityEvent(intensity, directHit);
         RaiseLocalEvent(target, ref ev);
         RaiseLocalEvent(ref ev);
+
+        if (HasComp<XenoComponent>(target) && HasComp<SVXXenoIgnitionImmuneFireComponent>(fireSource))
+            ev.Ignite = false;
 
         if (_inventoryQuery.TryComp(target, out var inv))
             _inventory.RelayEvent((target, inv), ref ev);
