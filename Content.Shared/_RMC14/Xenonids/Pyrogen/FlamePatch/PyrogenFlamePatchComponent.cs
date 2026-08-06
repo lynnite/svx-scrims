@@ -22,7 +22,7 @@ public sealed partial class PyrogenFlameChargeComponent : Component
     public int FireRange = 6;
 
     [DataField]
-    public TimeSpan LayerDelay = TimeSpan.FromMilliseconds(250);
+    public TimeSpan LayerDelay = TimeSpan.FromMilliseconds(500);
 
     [DataField]
     public int Intensity = 20;

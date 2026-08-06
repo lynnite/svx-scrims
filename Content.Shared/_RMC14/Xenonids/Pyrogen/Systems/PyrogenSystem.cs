@@ -1,6 +1,7 @@
 using System.Numerics;
 using Content.Shared._RMC14.Atmos;
 using Content.Shared._RMC14.CameraShake;
+using Content.Shared._RMC14.Explosion;
 using Content.Shared._RMC14.Projectiles;
 using Content.Shared._RMC14.Slow;
 using Content.Shared._RMC14.Xenonids;
@@ -27,6 +28,7 @@ public sealed class PyrogenSystem : EntitySystem
 {
     [Dependency] private readonly SharedDoAfterSystem _doAfter = default!;
     [Dependency] private readonly SharedRMCFlammableSystem _rmcFlammable = default!;
+    [Dependency] private readonly SharedRMCExplosionSystem _rmcExplosion = default!;
     [Dependency] private readonly XenoPlasmaSystem _xenoPlasma = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedGunSystem _gun = default!;
@@ -46,7 +48,6 @@ public sealed class PyrogenSystem : EntitySystem
         SubscribeLocalEvent<PyrogenFlameChargeComponent, PyrogenFlameChargeActionEvent>(OnFlameChargeAction);
         SubscribeLocalEvent<PyrogenFlameChargeComponent, PyrogenFlameChargeDoAfterEvent>(OnFlameChargeDoAfter);
         SubscribeLocalEvent<PyrogenDashComponent, PyrogenDashActionEvent>(OnDashAction);
-        SubscribeLocalEvent<PyrogenDashComponent, PyrogenDashDoAfterEvent>(OnDashDoAfter);
         SubscribeLocalEvent<PyrogenTailStabComponent, MeleeHitEvent>(OnPyrogenTailStabHit);
     }
 
@@ -132,12 +133,19 @@ public sealed class PyrogenSystem : EntitySystem
 
         args.Handled = true;
 
+        if (_net.IsClient)
+            return;
+
         var layerCount = Math.Max(1, (int)Math.Ceiling(ent.Comp.FireRange / 2f));
-        var rootDuration = ent.Comp.Delay + ent.Comp.LayerDelay * layerCount + TimeSpan.FromMilliseconds(250);
+        var rootDuration = ent.Comp.Delay + ent.Comp.LayerDelay * layerCount + TimeSpan.FromMilliseconds(500);
         _slow.TryRoot(ent.Owner, rootDuration, true);
 
         var ev = new PyrogenFlameChargeDoAfterEvent();
-        var doAfter = new DoAfterArgs(EntityManager, ent, ent.Comp.Delay, ev, ent) { BreakOnMove = true, RootEntity = true };
+        var doAfter = new DoAfterArgs(EntityManager, ent, ent.Comp.Delay, ev, ent)
+        {
+            BreakOnMove = true,
+            RootEntity = true,
+        };
         _doAfter.TryStartDoAfter(doAfter);
     }
 
@@ -161,36 +169,53 @@ public sealed class PyrogenSystem : EntitySystem
         var fireSpawn = ent.Comp.FireSpawn;
         var intensity = ent.Comp.Intensity;
         var duration = ent.Comp.Duration;
+        var layerCount = Math.Max(1, (int)Math.Ceiling(ent.Comp.FireRange / 2f));
         var shakeShakes = ent.Comp.CameraShakeShakes;
         var shakeStrength = ent.Comp.CameraShakeStrength;
-        var layerCount = Math.Max(1, (int)Math.Ceiling(ent.Comp.FireRange / 2f));
         var explosionSound = ent.Comp.ExplosionSound;
 
         for (var layer = 0; layer < layerCount; layer++)
         {
-            var radius = layer;
-            var layerTiles = new List<Vector2>();
-            for (var x = -radius; x <= radius; x++)
+            var explosionOffsets = new List<Vector2>();
+            explosionOffsets.Add(Vector2.Zero);
+            for (var i = 0; i < 8; i++)
             {
-                for (var y = -radius; y <= radius; y++)
-                {
-                    if (Math.Max(Math.Abs(x), Math.Abs(y)) != radius)
-                        continue;
+                var randomOffset = new Vector2(
+                    _random.Next(-3, 4),
+                    _random.Next(-3, 4));
 
-                    layerTiles.Add(new Vector2(x, y));
-                }
+                if (randomOffset == Vector2.Zero)
+                    continue;
+
+                explosionOffsets.Add(randomOffset);
             }
 
             Timer.Spawn(ent.Comp.LayerDelay * layer, () =>
             {
-                if (_net.IsClient || TerminatingOrDeleted(owner) || EntityManager.IsQueuedForDeletion(owner))
+                if (TerminatingOrDeleted(owner) || EntityManager.IsQueuedForDeletion(owner))
                     return;
 
-                foreach (var tile in layerTiles)
+                foreach (var offset in explosionOffsets)
                 {
+                    var explosionCoords = originCoords.Offset(offset);
+                    _rmcExplosion.QueueExplosion(
+                        _transform.ToMapCoordinates(explosionCoords),
+                        "RMC",
+                        1f,
+                        0.5f,
+                        1f,
+                        owner,
+                        canCreateVacuum: false);
+                }
+
+                foreach (var offset in explosionOffsets)
+                {
+                    if (offset == Vector2.Zero)
+                        continue;
+
                     _rmcFlammable.SpawnSingleFire(
                         fireSpawn,
-                        new EntityCoordinates(owner, tile),
+                        originCoords.Offset(offset),
                         intensity,
                         duration);
                 }
@@ -211,6 +236,12 @@ public sealed class PyrogenSystem : EntitySystem
 
         args.Handled = true;
 
+        if (_net.IsClient)
+            return;
+
+        if (!_xenoPlasma.TryRemovePlasmaPopup(ent.Owner, ent.Comp.PlasmaCost))
+            return;
+
         var origin = _transform.GetMapCoordinates(ent);
         var target = _transform.ToMapCoordinates(args.Target);
         if (origin.MapId != target.MapId)
@@ -220,9 +251,28 @@ public sealed class PyrogenSystem : EntitySystem
         if (direction.Length() < 0.1f)
             return;
 
-        var ev = new PyrogenDashDoAfterEvent(GetNetCoordinates(args.Target), GetNetCoordinates(args.Target));
-        var doAfter = new DoAfterArgs(EntityManager, ent, ent.Comp.Delay, ev, ent) { BreakOnMove = true, RootEntity = true };
-        _doAfter.TryStartDoAfter(doAfter);
+        var length = Math.Min(direction.Length(), ent.Comp.Range);
+        if (length < 0.1f)
+            return;
+
+        var normalizedDirection = direction.Normalized();
+        _throwing.TryThrow(ent.Owner, normalizedDirection * length, ent.Comp.ThrowSpeed, animated: false, compensateFriction: true, doSpin: false);
+
+        var originCoords = _transform.GetMoverCoordinates(ent.Owner);
+        var steps = Math.Max(4, (int)MathF.Ceiling(length * 2f));
+        for (var i = 1; i <= steps; i++)
+        {
+            var t = (float) i / steps;
+            var trailOffset = normalizedDirection * (length * t);
+            var trailCoords = originCoords.Offset(trailOffset);
+            if (_random.Next(0, 100) < 35)
+                trailCoords = trailCoords.Offset(new Vector2(_random.Next(-1, 2), _random.Next(-1, 2)));
+
+            _rmcFlammable.SpawnSingleFire("SVXTileFireHumanoidOnly", trailCoords, ent.Comp.Intensity, ent.Comp.Duration);
+        }
+
+        _audio.PlayPvs(new SoundPathSpecifier("/Audio/Effects/explosion_small2.ogg"), originCoords, AudioParams.Default.WithVolume(-4f));
+        _cameraShake.ShakeCamera(Filter.Pvs(originCoords, entityMan: EntityManager), 2, 1);
     }
 
     private void OnPyrogenTailStabHit(Entity<PyrogenTailStabComponent> ent, ref MeleeHitEvent args)
@@ -244,49 +294,4 @@ public sealed class PyrogenSystem : EntitySystem
         }
     }
 
-    private void OnDashDoAfter(Entity<PyrogenDashComponent> ent, ref PyrogenDashDoAfterEvent args)
-    {
-        if (args.Cancelled || args.Handled)
-            return;
-
-        if (TerminatingOrDeleted(ent.Owner) || EntityManager.IsQueuedForDeletion(ent.Owner))
-            return;
-
-        args.Handled = true;
-        if (!_xenoPlasma.TryRemovePlasmaPopup(ent.Owner, ent.Comp.PlasmaCost))
-            return;
-
-        if (_net.IsClient)
-            return;
-
-        var current = _transform.GetMapCoordinates(ent);
-        var target = GetCoordinates(args.Coordinates);
-        var direction = _transform.ToMapCoordinates(target).Position - current.Position;
-        var length = Math.Min(direction.Length(), ent.Comp.Range);
-        if (length < 0.1f)
-            return;
-
-        var normalizedDirection = direction.Normalized();
-        var landingPosition = current.Position + normalizedDirection * length;
-        _transform.SetWorldPosition(ent.Owner, landingPosition);
-
-        for (var x = -1; x <= 2; x++)
-        {
-            for (var y = -1; y <= 2; y++)
-            {
-                var spawnOffset = new Vector2(x, y);
-                if (_random.Next(0, 100) < 65)
-                    continue;
-
-                _rmcFlammable.SpawnSingleFire(
-                    "SVXTileFireHumanoidOnly",
-                    target.Offset(spawnOffset),
-                    ent.Comp.Intensity,
-                    ent.Comp.Duration);
-            }
-        }
-
-        _audio.PlayPvs(new SoundPathSpecifier("/Audio/Effects/explosion_small2.ogg"), target, AudioParams.Default.WithVolume(-4f));
-        _cameraShake.ShakeCamera(Filter.Pvs(target, entityMan: EntityManager), 2, 1);
-    }
 }
