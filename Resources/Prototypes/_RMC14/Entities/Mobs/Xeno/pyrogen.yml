@@ -7,13 +7,10 @@
   - RMCXenoSpeechSounds
   - RMCXenoCommendationReceiver
   - RMCXenoMobCollision
-  id: CMXenoPyrogen
+  id: SVXXenoPyrogen
   name: Pyrogen
   description: A fire-wreathed xenonid that scorches the battlefield with searing flame.
   components:
-  - type: GuideHelp
-    guides:
-    - RMCGuideRoleBoiler
   - type: Sprite
     sprite: _RMC14/Mobs/Xenonids/Pyrogen/pyrogen.rsi
   - type: Fixtures
@@ -47,7 +44,7 @@
       650: Critical
       750: Dead
   - type: Xeno
-    role: CMXenoPyrogen
+    role: SVXXenoPyrogen
     actionIds:
     - ActionXenoRest
     - ActionXenoRegurgitate
@@ -66,8 +63,8 @@
     - CMXenoLarva
   - type: ShowElectrocutionHUD
   - type: XenoPlasma
-    plasma: 400
-    maxPlasma: 400
+    plasma: 800
+    maxPlasma: 800
     plasmaRegenOnWeeds: 7
   - type: CMArmor
     xenoArmor: 10
@@ -97,7 +94,6 @@
     autoRot: true
   - type: RMCSize
     size: Big
-  - type: XenoDeathcloud
   - type: RMCXenoDamageVisuals
     prefix: praetorian
   - type: TacticalMapIcon
@@ -117,11 +113,11 @@
   - type: FixedIdentity
     name: cm-job-name-xeno-pyrogen
   - type: RMCActionOrder
-    id: CMXenoPyrogen
+    id: SVXXenoPyrogen
 
 - type: entity
-  parent: CMXenoPyrogen
-  id: RMCXenoPyrogen
+  parent: SVXXenoPyrogen
+  id: SVXPyrogen
   components:
   - type: Xeno
     actionIds:
@@ -134,4 +130,4 @@
     - ActionXenoPyrogenDash
     - ActionXenoDevolve
   - type: RMCActionOrder
-    id: RMCXenoPyrogen
+    id: SVXPyrogen

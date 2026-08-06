@@ -20,7 +20,7 @@ public sealed partial class PyrogenFireballComponent : Component
     public TimeSpan Delay = TimeSpan.FromSeconds(1.5);
 
     [DataField]
-    public EntProtoId ProjectilePrototype = "ProjectileFireball";
+    public EntProtoId ProjectilePrototype = "SVXProjectilePyrogenFireball";
 
     [DataField]
     public float ProjectileSpeed = 7.5f;

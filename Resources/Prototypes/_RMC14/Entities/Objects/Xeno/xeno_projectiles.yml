@@ -520,3 +520,14 @@
     accuracy: 160
   - type: ProjectileMaxRange
     max: 4
+
+- type: entity
+  id: SVXProjectilePyrogenFireball
+  parent: ProjectileFireball
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Weapons/Guns/Projectiles/magic.rsi
+    layers:
+    - state: fireball
+      shader: unshaded

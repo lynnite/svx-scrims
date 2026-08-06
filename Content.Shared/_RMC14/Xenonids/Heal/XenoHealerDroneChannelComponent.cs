@@ -39,6 +39,9 @@ public sealed partial class XenoHealerDroneChannelComponent : Component
     public FixedPoint2 HealAmount = 12;
 
     [DataField]
+    public FixedPoint2 PlasmaTransferAmount = 5;
+
+    [DataField]
     public EntProtoId BeamPrototype = "SVXHealerDroneBeam";
 
     [DataField]

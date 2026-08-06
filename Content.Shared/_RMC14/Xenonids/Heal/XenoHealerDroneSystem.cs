@@ -24,6 +24,7 @@ public sealed class XenoHealerDroneSystem : EntitySystem
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedXenoHealSystem _xenoHeal = default!;
+    [Dependency] private readonly XenoPlasmaSystem _plasma = default!;
 
     public override void Initialize()
     {
@@ -132,6 +133,14 @@ public sealed class XenoHealerDroneSystem : EntitySystem
 
                 channel.NextHealAt = now + channel.HealInterval;
                 _xenoHeal.CreateHealStacks(target, channel.HealAmount, channel.HealInterval, 1, channel.HealInterval);
+
+                if (TryComp(target, out XenoPlasmaComponent? targetPlasma) &&
+                    targetPlasma.Plasma < targetPlasma.MaxPlasma &&
+                    _plasma.TryRemovePlasmaPopup((uid, plasma), channel.PlasmaTransferAmount, popupOn: Transform(target).Coordinates))
+                {
+                    _plasma.RegenPlasma((target, targetPlasma), channel.PlasmaTransferAmount);
+                }
+
                 Dirty(uid, channel);
             }
 
