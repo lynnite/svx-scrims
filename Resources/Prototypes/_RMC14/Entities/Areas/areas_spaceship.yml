@@ -1,0 +1,63 @@
+- type: entity
+  parent: RMCAreaBase
+  id: SVXAreaSpaceship
+  suffix: Spaceship
+  components:
+  - type: Sprite
+    sprite: _RMC14/Areas/areas.rsi
+    state: blank
+  - type: Area
+    buildSpecial: true
+    powerNet: ground
+    minimapColor: '#6C6767D8'
+    weatherEnabled: false
+
+- type: entity
+  parent: SVXAreaSpaceship
+  id: SVXAreaSpaceshipEngineering
+  name: Engineering
+  components:
+  - type: Sprite
+    state: engine_smes
+  - type: Area
+    minimapColor: '#C19504E7'
+
+- type: entity
+  parent: SVXAreaSpaceship
+  id: SVXAreaSpaceshipSecurity
+  name: Security
+  components:
+  - type: Sprite
+    state: security
+  - type: Area
+    minimapColor: '#A22D2DEE'
+
+- type: entity
+  parent: SVXAreaSpaceship
+  id: SVXAreaSpaceShipSouth
+  name: South wing
+  components:
+  - type: Sprite
+    state: green
+  - type: Area
+    minimapColor: '#3F3C3CEF'
+
+- type: entity
+  parent: SVXAreaSpaceship
+  id: SVXAreaSpaceShipNorth
+  name: North wing
+  components:
+  - type: Sprite
+    state: green
+  - type: Area
+    minimapColor: '#3F3C3CEF'
+
+- type: entity
+  parent: SVXAreaSpaceship
+  id: SVXAreaSpaceShipMedical
+  name: Medical
+  components:
+  - type: Sprite
+    state: medbay
+  - type: Area
+    minimapColor: '#3F3C3CEF'

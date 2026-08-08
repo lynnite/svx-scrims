@@ -847,3 +847,40 @@
       - CMSurvivorSecurity: 2
       CMSurvivorScientist:
       - CMSurvivorScientist: 2
+
+- type: entity
+  id: SVXSpaceship
+  name: Spaceship
+  components:
+  - type: RMCPlanetMapPrototype
+    map: /Maps/_RMC14/spaceship.yml
+    camouflage: Urban
+    nightmareScenarios:
+    - scenarioName: none
+      scenarioProbability: 1
+    survivorJobs:
+    - RMCSurvivorCommandingOfficer: 1
+    - CMSurvivor: -1
+    - CMSurvivorCorporate: 2
+    - CMSurvivorDoctor: 3
+    - CMSurvivorEngineer: 4
+    - CMSurvivorSecurity: 2
+    - CMSurvivorScientist: 2
+    - SVXSurvivorMonkey: 1
+    survivorJobVariants:
+      RMCSurvivorCommandingOfficer:
+      - RMCSurvivorCommanderNewVaradero: 1
+      CMSurvivor:
+      - CMSurvivor: -1
+      - CMSurvivorBeachBum: -1
+      CMSurvivorCorporate:
+      - CMSurvivorVaraderoICB: 2
+      CMSurvivorDoctor:
+      - CMSurvivorMedicalTechnician: 3
+      CMSurvivorEngineer:
+      - CMSurvivorTechnician: 2
+      - CMSurvivorCargoTechnician: 2
+      CMSurvivorSecurity:
+      - CMSurvivorSecurity: 2
+      CMSurvivorScientist:
+      - CMSurvivorScientist: 2
