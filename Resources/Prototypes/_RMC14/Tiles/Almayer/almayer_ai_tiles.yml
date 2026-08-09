@@ -17,7 +17,7 @@
   deconstructTools: [ ]
   blockAnchoring: true
   blockConstruction: true
-  weedsSpreadable: false
+  weedsSpreadable: true
 
 - type: tile
   parent: RMCFloorAIGlowing
@@ -36,7 +36,7 @@
   deconstructTools: [ ]
   blockAnchoring: true
   blockConstruction: true
-  weedsSpreadable: false
+  weedsSpreadable: true
 
 - type: tile
   parent: RMCFloorAINoBuild
