@@ -1,0 +1,59 @@
+- type: job
+  parent: CMSurvivor
+  id: SVXSurvivorPMCBase
+  name: rmc-job-name-pmc-standard
+  description: rmc-job-description-survivor
+  ranks:
+    RMCRankOperator: []
+  supervisors: cm-job-supervisors-we-ya
+  accessGroups:
+  - ColonistPMC
+  startingGear: SVXGearSurvivorPMCBase
+  icon: RMCJobIconPMCGunner # TODO RMC14: minimap icons of diff factions mechanic
+  hasIcon: true
+  hidden: true
+  joinNotifyCrew: false
+  greeting: rmc-job-greeting-solaris-pmc
+  playTimeTracker: RMCJobSurvivorMilitary
+  spawnMenuRoleName: PMC (SVX Special Survivor - Base)
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Skills
+      preset: RMCSkillPresetSurvivorWeYaPMCStandard
+    - type: RMCSurvivor
+    - type: MotionDetectorTracked
+    - type: RMCAllowSuitStorage
+    - type: IntelRescueSurvivorObjective
+    - type: EquipSurvivorPreset
+      preset: SVXGearSurvivorPresetPMCBase
+    - type: NpcFactionMember
+      factions:
+      - SvX
+      - Civilian
+    - type: JobPrefix
+      prefix: rmc-job-prefix-pmc-standard
+  useLoadoutOfJob: CMSurvivor # for inheritance
+
+- type: startingGear
+  parent: RMCGearSurvivorBaseNoBackpack
+  id: SVXGearSurvivorPMCBase
+  equipment:
+    id: RMCIDCardPMC
+
+- type: entity
+  id: SVXSurvivorPresetPMCGun
+  name: pmc survivor weapons preset
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityPreset
+    randomWeapon:
+    - [ RMCWeaponShotgunM12, CMShellShotgunBuckshot, CMShellShotgunBuckshot, CMShellShotgunBuckshot ]
+    - [ WeaponShotgunM890, CMShellShotgunBuckshot, CMShellShotgunBuckshot, CMShellShotgunBuckshot ]
+    tryEquipRandomWeapon: true
+
+- type: entity
+  parent: [ RMCSurvivorPresetNoGun, SVXSurvivorPresetPMCGun ]
+  id: SVXGearSurvivorPresetPMCBase
+  name: svx pmc base survivor preset
+  categories: [ HideSpawnMenu ]
