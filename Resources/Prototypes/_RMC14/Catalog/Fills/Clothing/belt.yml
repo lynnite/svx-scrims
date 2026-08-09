@@ -230,6 +230,16 @@
 
 - type: entity
   parent: CMBeltMarine
+  id: SVXBeltEnergyStandard
+  suffix: Filled, E standard
+  components:
+  - type: StorageFill
+    contents:
+    - id: SVXMagazinePlasma
+      amount: 5
+
+- type: entity
+  parent: CMBeltMarine
   id: CMBeltMarineHunting
   suffix: Filled, Basira Armstrong
   components:
