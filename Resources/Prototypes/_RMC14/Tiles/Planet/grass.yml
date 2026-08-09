@@ -11,7 +11,7 @@
   - 1.0
   - 1.0
   - 1.0
-  weedsSpreadable: false
+  weedsSpreadable: true
   semiWeedable: true
 
 - type: tile
@@ -30,7 +30,7 @@
     North: /Textures/_RMC14/Tiles/planet/grass1/double_edge.png
     West: /Textures/_RMC14/Tiles/planet/grass1/double_edge.png
   baseTurf: CMPlanetDirt
-  weedsSpreadable: false
+  weedsSpreadable: true
   semiWeedable: true
 
 - type: tile
@@ -50,7 +50,7 @@
     West: /Textures/_RMC14/Tiles/planet/grass2/double_edge.png
   footstepSounds:
     collection: FootstepAsteroid
-  weedsSpreadable: false
+  weedsSpreadable: true
   semiWeedable: true
 
 - type: tile
@@ -70,7 +70,7 @@
     West: /Textures/_RMC14/Tiles/planet/grass3/double_edge.png
   footstepSounds:
     collection: FootstepAsteroid
-  weedsSpreadable: false
+  weedsSpreadable: true
   semiWeedable: true
 
 # TODO RMC14 scoched dirt grass
@@ -79,7 +79,7 @@
   id: CMPlanetGrassDirt
   name: grass dirt
   sprite: /Textures/_RMC14/Tiles/planet/grass1/grass.png
-  weedsSpreadable: false
+  weedsSpreadable: true
 
 - type: tile
   parent: CMPlanetGrassDirt
