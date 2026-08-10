@@ -19,7 +19,7 @@ public sealed partial class PyrogenFireballProjectileComponent : Component
     public int FireRange = 1;
 
     [DataField, AutoNetworkedField]
-    public int Intensity = 20;
+    public int Intensity = 30;
 
     [DataField, AutoNetworkedField]
     public int Duration = 20;
