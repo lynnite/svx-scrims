@@ -361,15 +361,6 @@
     drawDepths:
       Dead: BelowMobs
   - type: IVDripTarget
-  - type: FixedIdentity
-    name: rmc-host
-    whitelist:
-      components:
-      - Xeno
-  - type: HiddenAppearance
-    whitelist:
-      components:
-      - Xeno
   - type: RMCHealthIcons
   - type: RMCMesonsNonviewable
     xenoVisible: true

@@ -10,5 +10,3 @@
       Male: RMCMaleHuman
       Unsexed: RMCMaleHuman #sorry fem-leaning enbies
       Female: RMCFemaleHuman
-  - type: FixedIdentity
-    name: cm-chatsan-replacement-human
