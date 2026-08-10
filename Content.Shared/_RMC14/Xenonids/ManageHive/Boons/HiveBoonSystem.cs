@@ -188,15 +188,14 @@ public sealed class HiveBoonSystem : EntitySystem
 
     private void OnGetTileFireImmunity(Entity<XenoComponent> xeno, ref RMCGetFireImmunityEvent ev)
     {
+        ev.Ignite = false;
+        ev.Immune = true;
+
         var query = EntityQueryEnumerator<HiveBoonFireImmunityComponent>();
         while (query.MoveNext(out var uid, out _))
         {
             if (!_hive.FromSameHive(uid, xeno.Owner))
                 continue;
-
-            ev.Ignite = false;
-            ev.Immune = true;
-            return;
         }
     }
 

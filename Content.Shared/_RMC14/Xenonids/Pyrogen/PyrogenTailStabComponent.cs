@@ -9,7 +9,7 @@ public sealed partial class PyrogenTailStabComponent : Component
     public float FireStacksOnHit = 6f;
 
     [DataField, AutoNetworkedField]
-    public int IgnitionIntensity = 20;
+    public int IgnitionIntensity = 30;
 
     [DataField, AutoNetworkedField]
     public int IgnitionDuration = 20;

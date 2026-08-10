@@ -114,6 +114,10 @@
     name: cm-job-name-xeno-pyrogen
   - type: RMCActionOrder
     id: SVXXenoPyrogen
+  - type: MeleeWeapon
+    damage:
+      groups:
+        Brute: 25
 
 - type: entity
   parent: SVXXenoPyrogen

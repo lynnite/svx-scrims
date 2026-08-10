@@ -1,0 +1,9 @@
+- type: job
+  parent: CMJobXenoBase
+  id: SVXXenoPyrogen
+  name: cm-job-name-xeno-pyrogen
+  playTimeTracker: CMJobXenoPyrogen
+
+- type: playTimeTracker
+  id: CMJobXenoPyrogen
+  isXeno: true
