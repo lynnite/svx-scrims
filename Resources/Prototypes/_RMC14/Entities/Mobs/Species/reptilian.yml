@@ -36,5 +36,3 @@
     animation: WeaponArcClaw
   - type: Inventory
     speciesId: reptilian
-  - type: FixedIdentity
-    name: cm-chatsan-replacement-reptilian

@@ -98,5 +98,3 @@
       visible: false
     - map: [ "enum.NewPlayerLayers.Layer" ]
       visible: false
-  - type: FixedIdentity
-    name: cm-chatsan-replacement-arachnid

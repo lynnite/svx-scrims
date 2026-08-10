@@ -39,7 +39,7 @@
     - type: RMCAllowSuitStorage
     - type: IntelRescueSurvivorObjective
     - type: EquipSurvivorPreset
-      preset: SVXGearSurvivorPMCLeader
+      preset: SVXGearSurvivorPresetPMCBase
     - type: NpcFactionMember
       factions:
       - WeYa
@@ -64,10 +64,8 @@
     jumpsuit: RMCJumpsuitVeteranPMCLeaderNoWebbingPatch
     shoes: RMCBootsPMCFilled
     gloves: RMCHandsVeteranPMC
-    mask: RMCMaskCoifPMC # TODO RMC14: M8 pattern armored balaclava
     ears: RMCHeadsetHvHWeYaPMCLeader
-    head: ArmorHelmetPMCOfficer
-    outerClothing: CMArmorM4PMCLeader
+    outerClothing: SVXArmorSVXM24
     back: RMCSatchelPMC
     belt: SVXBeltEnergyStandard
     pocket1: RMCPouchSurvivalBlackFilled

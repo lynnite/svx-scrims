@@ -80,8 +80,6 @@
       Unsexed: RMCMaleRodentia
   - type: Inventory
     speciesId: rodentia
-  - type: FixedIdentity
-    name: cm-chatsan-replacement-rodentia
 
 - type: entity
   save: false

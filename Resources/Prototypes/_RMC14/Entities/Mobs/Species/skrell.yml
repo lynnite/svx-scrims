@@ -22,8 +22,6 @@
         color: "#1d2cbf"
       Burn:
         sprite: Mobs/Effects/burn_damage.rsi
-  - type: FixedIdentity
-    name: cm-chatsan-replacement-skrell
 
 - type: entity
   parent: BaseSpeciesDummy

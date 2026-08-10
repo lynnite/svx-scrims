@@ -56,10 +56,8 @@
     jumpsuit: RMCJumpsuitVeteranPMCNoWebbingPatch
     shoes: RMCBootsPMCFilled
     gloves: RMCHandsVeteran
-    mask: RMCMaskCoifPMC
     ears: RMCHeadsetHvHWeYaPMCMedic
-    head: ArmorHelmetPMC
-    outerClothing: CMArmorM4PMCLight
+    outerClothing: SVXArmorSVXM1
     back: RMCSatchelPMCMedic
     belt: SVXBeltEnergyStandard
     pocket1: RMCPouchSurvivalBlackFilled

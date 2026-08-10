@@ -32,5 +32,3 @@
       Unsexed: UnisexDiona
   - type: BodyEmotes
     soundsId: DionaBodyEmotes
-  - type: FixedIdentity
-    name: cm-chatsan-replacement-diona

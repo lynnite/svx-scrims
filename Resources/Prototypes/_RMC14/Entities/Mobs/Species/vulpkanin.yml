@@ -89,8 +89,6 @@
         sprite: "_RMC14/Effects/xeno_spray_acid.rsi"
         state: hooked
         visible: false
-  - type: FixedIdentity
-    name: cm-chatsan-replacement-vulpkanin
 
 - type: entity
   parent: BaseSpeciesDummy
