@@ -2,6 +2,7 @@ using System.Linq;
 using System.Numerics;
 using Content.Shared._RMC14.Armor;
 using Content.Shared._RMC14.Chemistry;
+using Content.Shared._SVX.Atmos;
 using Content.Shared._RMC14.Chemistry.Reagent;
 using Content.Shared._RMC14.Emote;
 using Content.Shared._RMC14.Explosion;
