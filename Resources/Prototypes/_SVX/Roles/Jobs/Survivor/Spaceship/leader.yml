@@ -88,3 +88,11 @@
     layers:
     - sprite: _RMC14/Markers/landmarks.rsi
       state: surv_wy
+
+- type: jobIcon
+  parent: CMJobIconBase
+  id: SVXJobIconPMCLeader
+  icon:
+    sprite: _RMC14/Interface/job_icons/We-Ya/pmc.rsi
+    state: pmc_tl
+

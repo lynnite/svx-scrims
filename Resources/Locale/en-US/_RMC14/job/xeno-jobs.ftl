@@ -56,6 +56,9 @@ CMJobXenoWarrior = Warrior
 rmc-job-name-xeno-king = King
 RMCJobXenoKing = King
 
+cm-job-name-xeno-pyrogen = Pyrogen
+CMJobXenoPyrogen = Pyrogen
+
 # TODO RMC14
 department-CMXeno = Xenonid
 cm-department-Xeno-description = ""
@@ -68,3 +71,4 @@ cm-job-supervisors-queen = the Queen
 role-timer-xeno-roles = Xenonid
 role-timer-xeno-drones = drone and drone evolutions
 role-timer-xeno-tier-three = tier three castes
+

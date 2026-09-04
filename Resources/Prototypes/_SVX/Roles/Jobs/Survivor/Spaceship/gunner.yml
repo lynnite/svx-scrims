@@ -95,3 +95,11 @@
     - [ SVXArmorSVXM1 ] # todo svx more armor types and helmets
     - [ SVXArmorSVXM1 ]
     - [ SVXWeaponAlienRifle, SVXArmorSVXM1 ] # TODO RMC14: PMC helmet (enclosed)
+
+- type: jobIcon
+  parent: CMJobIconBase
+  id: SVXJobIconPMCGunner
+  icon:
+    sprite: _RMC14/Interface/job_icons/We-Ya/pmc.rsi
+    state: pmc_gun
+
