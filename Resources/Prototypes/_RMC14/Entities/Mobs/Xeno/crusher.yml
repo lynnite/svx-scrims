@@ -70,7 +70,7 @@
       groups:
         Brute: 48
   - type: XenoMeleeSlow
-    slowTime: 2
+    slowTime: 3.5
   - type: MovementSpeedModifier
     baseWalkSpeed: 1.66
     baseSprintSpeed: 3

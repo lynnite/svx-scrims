@@ -1,0 +1,80 @@
+- type: entity
+  id: ActionXenoPyrogenFireball
+  parent: ActionXenoBase
+  name: Fireball
+  description: Charge up a fireball that creates a small diamond of fire.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: fire_cannon
+    checkCanInteract: false
+    useDelay: 2
+  - type: TargetAction
+    range: 12
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:PyrogenFireballActionEvent
+  - type: RMCDazeableAction
+
+- type: entity
+  id: ActionXenoPyrogenFlameCharge
+  parent: ActionXenoBase
+  name: Flame Charge
+  description: Wreathe yourself in flame for a moment and blanket the area around you in fire.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: breathe_fire
+    checkCanInteract: false
+    useDelay: 2
+  - type: InstantAction
+    event: !type:PyrogenFlameChargeActionEvent
+  - type: RMCDazeableAction
+
+- type: entity
+  id: ActionXenoPyrogenDash
+  parent: ActionXenoBase
+  name: Fire Dash
+  description: Dash through the battlefield and leave a burning trail behind you.
+  components:
+  - type: Action
+    itemIconStyle: NoItem
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: pounce
+    checkCanInteract: false
+    useDelay: 2
+  - type: TargetAction
+    range: 10
+    checkCanAccess: false
+  - type: WorldTargetAction
+    event: !type:PyrogenDashActionEvent
+  - type: RMCDazeableAction
+
+- type: entity
+  parent: ActionXenoTailStab
+  id: ActionXenoPyrogenTailStab
+  name: Tail Stab
+  description: Strikes the targeted enemy or barricade. The cooldown is faster if you miss. [color=red]On hit, it applies pyrogen fire stacks and ignites the target.[/color]
+  components:
+  - type: Action
+    icon:
+      sprite: _RMC14/Actions/xeno_actions.rsi
+      state: tail_attack
+  - type: WorldTargetAction
+    event: !type:XenoTailStabEvent
+  - type: XenoTailStabAction
+  - type: RMCDazeableAction
+  - type: ActionInRangeUnobstructed
+    range: 2.5
+
+- type: entity
+  id: ActionXenoSpitSentinel
+  parent: ActionXenoSpit
+  components:
+  - type: Action
+    useDelay: 2

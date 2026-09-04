@@ -1,0 +1,87 @@
+- type: entity
+  parent: [ CMBaseWeaponRifle, RMCBaseWeaponMagazineVisuals ]
+  name: SVX-295 smart energy rifle
+  id: SVXWeaponAlienRifleMK2
+  description: An energy rifle of alien origin. It is not known who manufactured it, but it reads SVX on the side of the gun. This one is exceptionally smart.
+  components:
+  - type: Sprite
+    sprite: _SVX/Objects/Weapons/Guns/Energy/energyriflemk2.rsi
+    layers:
+    - state: bolt-open
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: _SVX/Objects/Weapons/Guns/Energy/energyriflemk2.rsi
+    slots:
+    - suitStorage
+  - type: Gun
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/taser.ogg
+  - type: RMCSelectiveFire
+    scatterWielded: 4
+    scatterUnwielded: 4
+    baseFireRate: 8
+    baseFireModes:
+    - SemiAuto
+  - type: RMCWeaponAccuracy
+    accuracyMultiplier: 1.2
+    accuracyMultiplierUnwielded: 0.6
+  - type: RMCWeaponDamageFalloff
+    falloffMultiplier: 0
+  - type: GunIFF
+    enabled: true
+  - type: WieldDelay
+    baseDelay: 0.1
+  - type: WieldableSpeedModifiers
+    base: 1
+    light: 1
+    medium: 1
+    heavy: 1
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        insertSound: /Audio/_RMC14/Weapons/Guns/Reload/l42_reload.ogg
+        ejectSound: /Audio/_RMC14/Weapons/Guns/Reload/l42_unload.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - SVXMagazinePlasma
+          - SVXMagazinePlasmaExtended
+          - SVXMagazinePlasmaAdvanced
+  - type: GunDamageModifier
+    multiplier: 0.55
+  - type: Tag
+    tags:
+    - SVXWeaponAlienRifleMK2
+
+- type: entity
+  parent: CMMagazineRifleBase
+  id: SVXMagazinePlasmaAdvanced
+  name: "Advanced energy magazine"
+  description: "A 110-round magazine of standard plasma rounds. This one is more compact than the standard."
+  components:
+  - type: Tag
+    tags:
+    - CMMagazineRifle
+    - SVXMagazinePlasmaAdvanced
+  - type: BallisticAmmoProvider
+    mayTransfer: True
+    whitelist:
+      tags:
+      - SVXCartridgeEnergy
+    proto: SVXCartridgeEnergy
+    capacity: 110
+  - type: Sprite
+    sprite: _SVX/Objects/Weapons/Guns/Ammunition/Magazines/energymagazine.rsi
+
+
+- type: Tag
+  id: SVXWeaponAlienRifleMK2
+
+- type: Tag
+  id: SVXMagazinePlasmaAdvanced

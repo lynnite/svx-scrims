@@ -1,0 +1,44 @@
+- type: entity
+  parent: RMCArmorVest
+  id: SVXArmorSVXM1
+  name: svx-m1 light armor
+  description: An advanced armor set designed for high mobility and protection. Primarily used by special forces.
+  components:
+  - type: Sprite
+    sprite: _SVX/Objects/Clothing/OuterClothing/Armor/svx/svxm1.rsi
+  - type: CMArmor
+    melee: 15
+    bullet: 15
+    bio: 15
+    explosionArmor: 15
+  - type: RMCArmorSpeedTier
+    speedTier: light
+  - type: ClothingSpeedModifier
+    walkModifier: 0.925
+    sprintModifier: 0.925
+  - type: ItemCamouflage
+    camouflageVariations: { }
+
+- type: entity
+  parent: RMCArmorVest
+  id: SVXArmorSVXM24
+  name: svx-m24 heavy armor
+  description: A heavy armor set designed for maximum protection. This armor is used by elite units in high-risk operations, providing substantial defense against ballistic and explosive threats. It's hard to put on but easy to take off, in case of emergency.
+  components:
+  - type: Sprite
+    sprite: _SVX/Objects/Clothing/OuterClothing/Armor/svx/svxm24.rsi
+  - type: CMArmor
+    melee: 25
+    bullet: 60
+    bio: 20
+    explosionArmor: 60
+  - type: Clothing
+    equipDelay: 6
+    unequipDelay: 0.5
+  - type: RMCArmorSpeedTier
+    speedTier: heavy
+  - type: ClothingSpeedModifier
+    walkModifier: 0.725
+    sprintModifier: 0.725
+  - type: ItemCamouflage
+    camouflageVariations: { }

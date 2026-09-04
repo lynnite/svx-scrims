@@ -2,6 +2,7 @@ using System.Linq;
 using System.Numerics;
 using Content.Shared._RMC14.Armor;
 using Content.Shared._RMC14.Chemistry;
+using Content.Shared._SVX.Atmos;
 using Content.Shared._RMC14.Chemistry.Reagent;
 using Content.Shared._RMC14.Emote;
 using Content.Shared._RMC14.Explosion;
@@ -1041,6 +1042,16 @@ public abstract class SharedRMCFlammableSystem : EntitySystem
             fireColorComp.Color = color;
             Dirty(target, fireColorComp);
         }
+    }
+
+    public void IgniteOnProjectileHit(EntityUid projectile, Reagent reagent)
+    {
+        AddComp(projectile, new IgniteOnProjectileHitComponent
+        {
+            BurnColor = reagent.SubstanceColor,
+            Duration = reagent.Duration,
+            Intensity = reagent.Intensity,
+        }, true);
     }
 
     private void RunIgniteOnCollide()

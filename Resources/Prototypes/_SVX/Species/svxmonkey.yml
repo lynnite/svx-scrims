@@ -1,0 +1,122 @@
+- type: species
+  id: svxmonkey
+  name: svx-job-name-survivor-monkey
+  roundStart: false
+  prototype: SVXMonkey
+  sprites: MobSVXMonkeySprites
+  skinColoration: Hues
+  dollPrototype: MobFelinidDummy
+  markingLimits: MobSVXMonkeyMarkingLimits
+
+- type: markingPoints
+  id: MobSVXMonkeyMarkingLimits
+  points:
+    Tail:
+      points: 1
+      required: false
+
+- type: speciesBaseSprites
+  id: MobSVXMonkeySprites
+  sprites:
+    Head: MobMonkeyHead
+    Chest: MobMonkeyTorso
+    Eyes: MobHumanoidEyes
+    LArm: MobMonkeyLArm
+    RArm: MobMonkeyRArm
+    LHand: MobMonkeyLHand
+    RHand: MobMonkeyRHand
+    LLeg: MobMonkeyLLeg
+    RLeg: MobMonkeyRLeg
+    LFoot: MobMonkeyLFoot
+    RFoot: MobMonkeyRFoot
+    Tail: MobMonkeyTail
+
+- type: humanoidBaseSprite
+  id: MobMonkeyHead
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobMonkeyHeadMale
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobMonkeyHeadFemale
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: head
+
+- type: humanoidBaseSprite
+  id: MobMonkeyTorso
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobMonkeyTorsoMale
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobMonkeyTorsoFemale
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: torso
+
+- type: humanoidBaseSprite
+  id: MobMonkeyLLeg
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: l_leg
+
+- type: humanoidBaseSprite
+  id: MobMonkeyLHand
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: l_hand
+
+- type: humanoidBaseSprite
+  id: MobMonkeyLArm
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: l_arm
+
+- type: humanoidBaseSprite
+  id: MobMonkeyLFoot
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: l_foot
+
+- type: humanoidBaseSprite
+  id: MobMonkeyRLeg
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: r_leg
+
+- type: humanoidBaseSprite
+  id: MobMonkeyRHand
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: r_hand
+
+- type: humanoidBaseSprite
+  id: MobMonkeyRArm
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: r_arm
+
+- type: humanoidBaseSprite
+  id: MobMonkeyRFoot
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: r_foot
+
+- type: humanoidBaseSprite
+  id: MobMonkeyTail
+  baseSprite:
+    sprite: _SVX/Mobs/svxmonkey.rsi
+    state: tail

@@ -1,0 +1,105 @@
+- type: job
+  parent: RMCSurvivorPMCBase
+  id: SVXSurvivorSpaceshipPMCStandard
+  name: rmc-job-name-pmc-standard
+  description: rmc-job-description-survivor
+  ranks:
+    RMCRankOperator: []
+  supervisors: cm-job-supervisors-we-ya
+  accessGroups:
+  - ColonistPMC
+  startingGear: SVXGearSurvivorPMCGunner
+  icon: SVXJobIconPMCGunner
+  hasIcon: true
+  greeting: rmc-job-greeting-solaris-pmc
+  playTimeTracker: RMCJobSurvivorMilitary
+  spawnMenuRoleName: PMC Standard (Solaris Special Survivor)
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Language
+      spokenLanguages:
+      - Japanese
+      - English
+      understoodLanguages:
+      - Japanese
+      - English
+      currentLanguage: English
+      defaultLanguage: English
+    - type: Skills
+      preset: RMCSkillPresetSurvivorWeYaPMCStandard
+    - type: RMCSurvivor
+    - type: MotionDetectorTracked
+    - type: RMCAllowSuitStorage
+    - type: IntelRescueSurvivorObjective
+    - type: EquipSurvivorPreset
+      preset: SVXGearSurvivorPMCPresetGunner
+    - type: NpcFactionMember
+      factions:
+      - SvX
+      - Civilian
+    - type: AssignSquad
+      squad: SquadPMC
+    - type: TacticalMapIcon
+      icon:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: pmc_gun
+      background:
+        sprite: /Textures/_RMC14/Interface/map_blips.rsi
+        state: background_pmc
+  useLoadoutOfJob: CMSurvivor # for inheritance
+
+- type: startingGear
+  parent: RMCGearSurvivorPMCBase
+  id: SVXGearSurvivorPMCGunner
+  equipment:
+    jumpsuit: RMCJumpsuitVeteranPMCNoWebbingPatch
+    shoes: RMCBootsPMCFilled
+    gloves: RMCHandsVeteran
+    mask: RMCMaskCoifPMC
+    ears: RMCHeadsetHvHWeYaPMC
+    back: RMCSatchelPMC
+    belt: SVXBeltEnergyStandard
+    pocket1: RMCPouchSurvivalBlackFilled
+    pocket2: RMCPouchFirstAidPMCFill
+  storage:
+    back:
+    - CMSheetMetal20
+    outerClothing:
+    - RMCMREWeYa
+
+- type: entity
+  parent: CMSpawnPointJobBase
+  id: SVXSpawnPointSurvivorSolarisPMCGunner
+  name: special survivor crashlanding offices pmc gunner spawn point
+  components:
+  - type: SpawnPoint
+    job_id: SVXSurvivorSpaceshipPMCStandard
+  - type: Sprite
+    layers:
+    - sprite: _RMC14/Markers/landmarks.rsi
+      state: surv_wy
+
+- type: entity
+  parent: [ RMCSurvivorPresetNoGun, SVXSurvivorPresetPMCGun ]
+  id: SVXGearSurvivorPMCPresetGunner
+  name: pmc standard survivor preset
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityPreset
+    randomStartingGear:
+      jumpsuit:
+      - RMCJumpsuitVeteranPMCNoWebbingPatch
+      - RMCJumpsuitVeteranPMCNoWebbingPatchFolded
+    randomOutfits:
+    - [ SVXArmorSVXM1 ] # todo svx more armor types and helmets
+    - [ SVXArmorSVXM1 ]
+    - [ SVXWeaponAlienRifle, SVXArmorSVXM1 ] # TODO RMC14: PMC helmet (enclosed)
+
+- type: jobIcon
+  parent: CMJobIconBase
+  id: SVXJobIconPMCGunner
+  icon:
+    sprite: _RMC14/Interface/job_icons/We-Ya/pmc.rsi
+    state: pmc_gun
+
