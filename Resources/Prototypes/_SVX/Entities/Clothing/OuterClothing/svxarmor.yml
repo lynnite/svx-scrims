@@ -1,5 +1,5 @@
 - type: entity
-  parent: RMCArmorVest
+  parent: [ RMCArmorVest, RMCBaseMarineArmorLightNoAccessory ]
   id: SVXArmorSVXM1
   name: svx-m1 light armor
   description: An advanced armor set designed for high mobility and protection. Primarily used by special forces.
@@ -18,9 +18,11 @@
     sprintModifier: 0.925
   - type: ItemCamouflage
     camouflageVariations: { }
+  - type: PointLight
+    color: "#c51ce4"
 
 - type: entity
-  parent: RMCArmorVest
+  parent: [ RMCArmorVest, RMCBaseMarineArmorLightNoAccessory ]
   id: SVXArmorSVXM24
   name: svx-m24 heavy armor
   description: A heavy armor set designed for maximum protection. This armor is used by elite units in high-risk operations, providing substantial defense against ballistic and explosive threats. It's hard to put on but easy to take off, in case of emergency.
@@ -42,3 +44,5 @@
     sprintModifier: 0.725
   - type: ItemCamouflage
     camouflageVariations: { }
+  - type: PointLight
+    color: "#c51ce4"
