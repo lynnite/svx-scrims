@@ -16,7 +16,7 @@ public sealed partial class PyrogenFlameChargeComponent : Component
     public int PlasmaCost = 90;
 
     [DataField]
-    public TimeSpan Delay = TimeSpan.FromSeconds(0.5);
+    public TimeSpan Delay = TimeSpan.FromSeconds(1.5);
 
     [DataField]
     public int FireRange = 6;
@@ -25,7 +25,7 @@ public sealed partial class PyrogenFlameChargeComponent : Component
     public TimeSpan LayerDelay = TimeSpan.FromMilliseconds(500);
 
     [DataField]
-    public int Intensity = 30;
+    public int Intensity = 15;
 
     [DataField]
     public int Duration = 20;
