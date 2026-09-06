@@ -5,7 +5,6 @@
   - type: RMCPlanetMapPrototype
     map: /Maps/_RMC14/lv624.yml
     camouflage: Jungle
-    monkey: true # example: monkey game-mode only map
     specialFaxes:
       Liaison: RMCPaperWeYaLiaisonBriefingLV624
     announcement: "An automated distress signal has been received from the archaeological site of Lazarus Landing, on the border world of LV-624. A response team from the UNS Almayer will be dispatched shortly to investigate."
@@ -884,3 +883,74 @@
       - SVXSurvivorSpaceshipPMCLeader: 1
       CMSurvivorScientist:
       - SVXSurvivorSpaceshipPMCMedic: 2
+
+- type: entity
+  id: SVXPlanetApes
+  name: Apes Archaeological Site
+  components:
+  - type: RMCPlanetMapPrototype
+    map: /Maps/_RMC14/apes.yml
+    camouflage: Jungle
+    monkey: true # example: monkey game-mode only map
+    specialFaxes:
+      Liaison: RMCPaperWeYaLiaisonBriefingLV624
+    announcement: "An automated distress signal has been received from the archaeological site of Lazarus Landing, on the border world of LV-624. A response team from the UNS Almayer will be dispatched shortly to investigate."
+    #smallHostVariants:
+      #- RMCMobSmallHostFarwa
+      #- CMMobSmallHostMonkey
+      #- CMMobSmallHostKobold
+      #- RMCMobSmallHostNeaera
+      #- RMCMobSmallHostStok
+    nightmareScenarios:
+#   - scenarioName: clf_ship
+#     scenarioProbability: 0.1
+    - scenarioName: asset_protection
+      scenarioProbability: 0.1
+    - scenarioName: none
+      scenarioProbability: 0.9
+    survivorJobVariants:
+      RMCSurvivorCommandingOfficer:
+      - RMCSurvivorCommanderNewVaradero: 1
+      CMSurvivor:
+      - CMSurvivor: -1
+      - SVXSurvivorMonkey: 1
+      - RMCSurvivorCivilianUnique: 1
+      - RMCSurvivorHybrisaTMCCMiner: -1
+      - CMSurvivorPriest: 1
+      CMSurvivorCorporate:
+      - CMSurvivorLV624CorporateLiaison: 2
+      CMSurvivorDoctor:
+      - CMSurvivorLV624MedicalTechnician: 3
+      CMSurvivorEngineer:
+      - CMSurvivorLV624Engineer: 2
+      - CMSurvivorLV624CargoTechnician: 2
+      CMSurvivorSecurity:
+      - CMSurvivorGoon: 2
+      - CMSurvivorCMBDeputy: 2
+      - CMSurvivorLV624SecurityGuard: 2
+      CMSurvivorScientist:
+      - CMSurvivorLV624Archeologist: 2
+    survivorJobScenarios:
+      asset_protection: # Corporate Dome Goons, order of job priority for goons. Scientist is overriden into doctor.
+      - CMSurvivorCorporate: 1
+      - CMSurvivorEngineer: 1
+      - CMSurvivorDoctor: 1
+      - CMSurvivorSecurity: 1
+      - CMSurvivor: -1
+    survivorJobVariantScenarios:
+      asset_protection: # Corporate Dome Goons
+        CMSurvivor:
+        - CMSurvivorLV624CorporateDomeGoon: -1
+        CMSurvivorCorporate:
+        - CMSurvivorLV624CorporateDomeCL: 1
+        CMSurvivorDoctor:
+        - CMSurvivorLV624CorporateDomeGoonMedic: 1
+        CMSurvivorEngineer:
+        - CMSurvivorLV624CorporateDomeGoonEngineer: 1
+        CMSurvivorSecurity:
+        - CMSurvivorLV624CorporateDomeGoonLead: 1
+        CMSurvivorScientist:
+        - CMSurvivor: 0
+    survivorJobOverrideScenarios:
+      asset_protection: # Corporate Dome Goons
+        CMSurvivorScientist: CMSurvivorDoctor
