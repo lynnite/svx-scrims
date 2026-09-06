@@ -31,6 +31,15 @@ public sealed partial class CMDistressSignalRuleComponent : Component
     [DataField]
     public EntityUid Hive;
 
+    [DataField]
+    public bool Monkey;
+
+    [DataField]
+    public TimeSpan MonkeyRoundDuration = TimeSpan.FromMinutes(8);
+
+    [DataField]
+    public bool MonkeyRoundResolved;
+
     // TODO RMC14
     [DataField]
     public bool Hijack;

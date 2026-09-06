@@ -80,6 +80,9 @@ public sealed partial class RMCPlanetMapPrototypeComponent : Component
     [DataField, AutoNetworkedField]
     public bool InRotation = true;
 
+    [DataField, AutoNetworkedField]
+    public bool Monkey;
+
     /// <summary>
     /// Special faxes that should be sent roundstart.
     /// The dictionary is the fax ID and then the entity to be faxed.

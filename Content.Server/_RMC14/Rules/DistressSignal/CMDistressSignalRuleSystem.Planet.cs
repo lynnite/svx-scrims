@@ -24,7 +24,7 @@ public sealed partial class CMDistressSignalRuleSystem
     /// <returns>True if the map was successfully loaded, false otherwise.</returns>
     private bool SpawnXenoMap(Entity<CMDistressSignalRuleComponent> rule)
     {
-        var planet = SelectRandomPlanet();
+        var planet = SelectRandomPlanet(rule.Comp.Monkey);
         _lastPlanetMaps.Enqueue(planet.Proto.ID);
         while (_lastPlanetMaps.Count > 0 && _lastPlanetMaps.Count > _mapVoteExcludeLast)
         {
@@ -89,12 +89,12 @@ public sealed partial class CMDistressSignalRuleSystem
         return true;
     }
 
-    private RMCPlanet SelectRandomPlanet()
+    private RMCPlanet SelectRandomPlanet(bool monkey = false)
     {
         if (SelectedPlanetMap != null)
             return SelectedPlanetMap.Value;
 
-        var planet = _random.Pick(_rmcPlanet.GetCandidatesInRotation());
+        var planet = _random.Pick(_rmcPlanet.GetCandidatesInRotation(monkey));
         SelectedPlanetMap = planet;
         return planet;
     }
@@ -116,12 +116,17 @@ public sealed partial class CMDistressSignalRuleSystem
     /// <summary>
     /// Starts a voting session for selecting the next planet map, supporting carryover votes from previous rounds.
     /// </summary>
-    private void StartPlanetVote()
+    private void StartPlanetVote(bool monkey = false)
     {
         if (!_config.GetCVar(RMCCVars.RMCPlanetMapVote))
+        {
+            Log.Info("[modevote] StartPlanetVote: rmc.planet_map_vote cvar is disabled");
             return;
+        }
 
-        var planets = _rmcPlanet.GetCandidatesInRotation();
+        var planets = _rmcPlanet.GetCandidatesInRotation(monkey);
+        Log.Info($"[modevote] StartPlanetVote(monkey={monkey}): {planets.Count} candidate planet(s): " +
+                 string.Join(",", planets.Select(p => p.Proto.ID)));
         if (!_useCarryoverVoting)
         {
             foreach (var planet in planets)

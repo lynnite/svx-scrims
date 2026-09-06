@@ -1,0 +1,23 @@
+- type: entity
+  id: CMDistressSignalMonkeyRule
+  parent: CMDistressSignal
+  categories: [ HideSpawnMenu ]
+  name: CMDistress Signal Monkey
+  components:
+  - type: GameRule
+    minPlayers: 1
+  - type: CMDistressSignalRule
+    monkey: true
+
+- type: gamePreset
+  id: CMDistressSignalMonkey
+  alias:
+  - distresssignalmonkey
+  - cmdistresssignalmonkey
+  - cmdsmonkey
+  # name/description localisation ids are meant to be added under _SVX locale.
+  name: svx-distress-signal-monkey-title
+  description: svx-distress-signal-monkey-description
+  showInVote: false
+  rules:
+  - CMDistressSignalMonkeyRule

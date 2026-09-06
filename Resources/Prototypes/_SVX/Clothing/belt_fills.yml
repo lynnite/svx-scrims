@@ -1,0 +1,11 @@
+- type: entity
+  parent: CMBeltMarine
+  id: RMCBeltMarinePistolHoldout
+  name: M276 pattern .22 ammo rig
+  suffix: Filled, .22 Holdout
+  description: The M276 is the standard load-bearing equipment of the UNMC. This variant is filled with five small pistol box magazines chambered for the PP-3200 holdout pistol.
+  components:
+  - type: StorageFill
+    contents:
+    - id: RMCMagazinePistolHoldout
+      amount: 5

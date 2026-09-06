@@ -8,12 +8,15 @@ using Content.Shared._RMC14.Marines.Orders;
 using Content.Shared._RMC14.Marines.Skills;
 using Content.Shared._RMC14.Movement;
 using Content.Shared._RMC14.Projectiles;
+using Content.Shared._RMC14.Rules;
 using Content.Shared._RMC14.Stealth;
 using Content.Shared._RMC14.Weapons.Common;
 using Content.Shared._RMC14.Weapons.Ranged.IFF;
 using Content.Shared._RMC14.Weapons.Ranged.Whitelist;
 using Content.Shared._RMC14.Vehicle;
 using Content.Shared.Containers.ItemSlots;
+using Content.Shared.GameTicking;
+using Content.Shared.GameTicking.Components;
 using Content.Shared.DoAfter;
 using Content.Shared.Examine;
 using Content.Shared.FixedPoint;
@@ -86,6 +89,8 @@ public sealed class CMGunSystem : EntitySystem
     private EntityQuery<PhysicsComponent> _physicsQuery;
     private EntityQuery<ProjectileComponent> _projectileQuery;
 
+    private bool _monkeyMode;
+
     private HashSet<Entity<FixturesComponent>> _intersectedEntities = new();
     private HashSet<Entity<FixturesComponent>> _impassableEntities = new();
 
@@ -93,10 +98,15 @@ public sealed class CMGunSystem : EntitySystem
 
     private const string AccuracyExamineColour = "yellow";
 
+    private const float MonkeyGunDamageModifier = 0.5f;
+
     public override void Initialize()
     {
         _physicsQuery = GetEntityQuery<PhysicsComponent>();
         _projectileQuery = GetEntityQuery<ProjectileComponent>();
+
+        SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
+        _monkeyMode = IsMonkeyMode();
 
         SubscribeLocalEvent<ShootAtFixedPointComponent, AmmoShotEvent>(OnShootAtFixedPointShot);
         SubscribeLocalEvent<IgnoreArcComponent, BeforeArcEvent>(OnBeforeArc);
@@ -416,13 +426,33 @@ public sealed class CMGunSystem : EntitySystem
 
     private void OnGunDamageModifierAmmoShot(Entity<GunDamageModifierComponent> ent, ref AmmoShotEvent args)
     {
+        // Monkey game mode: all firearms deal 50% damage against the monkey swarm.
+        var multiplier = _monkeyMode ? ent.Comp.ModifiedMultiplier * MonkeyGunDamageModifier : ent.Comp.ModifiedMultiplier;
+
         foreach (var projectile in args.FiredProjectiles)
         {
             if (!_projectileQuery.TryGetComponent(projectile, out var comp))
                 continue;
 
-            comp.Damage *= ent.Comp.ModifiedMultiplier;
+            comp.Damage *= multiplier;
         }
+    }
+
+    private void OnRoundRestart(RoundRestartCleanupEvent ev)
+    {
+        _monkeyMode = IsMonkeyMode();
+    }
+
+    private bool IsMonkeyMode()
+    {
+        var rules = EntityQueryEnumerator<ActiveGameRuleComponent, CMDistressSignalRuleComponent>();
+        while (rules.MoveNext(out _, out var rule))
+        {
+            if (rule.Monkey)
+                return true;
+        }
+
+        return false;
     }
 
     private void OnGunPointBlankMeleeHit(Entity<GunPointBlankComponent> gun, ref MeleeHitEvent args)

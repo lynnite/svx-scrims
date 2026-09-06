@@ -18,16 +18,17 @@ public sealed class RMCLobbyUIController : UIController
         if (_joinXenoWindow is not { IsOpen: true })
             return;
 
-        RefreshWindow(ev.Larva);
+        var system = EntityManager.System<JoinXenoSystem>();
+        RefreshWindow(ev.Larva, system.ClientMonkeyRound);
     }
 
     public void OpenJoinXenoWindow()
     {
         var system = EntityManager.System<JoinXenoSystem>();
-        RefreshWindow(system.ClientBurrowedLarva);
+        RefreshWindow(system.ClientBurrowedLarva, system.ClientMonkeyRound);
     }
 
-    private void RefreshWindow(int larva)
+    private void RefreshWindow(int larva, bool monkeyRound)
     {
         var system = EntityManager.System<JoinXenoSystem>();
         if (_joinXenoWindow == null || _joinXenoWindow.Disposed)
@@ -43,7 +44,13 @@ public sealed class RMCLobbyUIController : UIController
             _joinXenoWindow.OpenCentered();
         }
 
-        if (larva == 0)
+        if (monkeyRound)
+        {
+            _joinXenoWindow.Label.Text = "Join the hive as a monkey.";
+            _joinXenoWindow.LarvaButton.Text = "Join as Monkey";
+            _joinXenoWindow.Buttons.Visible = true;
+        }
+        else if (larva == 0)
         {
             _joinXenoWindow.Label.Text = Loc.GetString("rmc-lobby-no-burrowed-larva");
             _joinXenoWindow.Buttons.Visible = false;
@@ -57,3 +64,4 @@ public sealed class RMCLobbyUIController : UIController
         system.RequestBurrowedLarvaStatus();
     }
 }
+
