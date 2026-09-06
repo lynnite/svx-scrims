@@ -40,6 +40,12 @@ public sealed partial class CMDistressSignalRuleSystem
 
         distress.NextCheck ??= Timing.CurTime + distress.CheckEvery;
 
+        if (distress.Monkey)
+        {
+            CheckMonkeyRoundShouldEnd(distress);
+            return;
+        }
+
         if (distress.ScuttleFinalSequenceStarted || distress.ScuttleDetonated)
             return;
 
@@ -255,7 +261,7 @@ public sealed partial class CMDistressSignalRuleSystem
     private void OnRoundRestartCleanup(RoundRestartCleanupEvent ev)
     {
         InvalidateActiveRule();
-        StartPlanetVote();
+        ConfigureNextRound();
         ResetSelectedPlanet();
         _spawnedDropships = false;
         OperationName = null;

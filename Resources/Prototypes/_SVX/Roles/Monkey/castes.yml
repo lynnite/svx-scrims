@@ -1,0 +1,80 @@
+- type: startingGear
+  id: SVXMonkeyCasteBase
+  equipment:
+    jumpsuit: RMCJumpsuitNormCivilianBrown
+    shoes: CMBootsBlack
+
+- type: startingGear
+  id: SVXMonkeyCasteTactical
+  parent: SVXMonkeyCasteBase
+  equipment:
+    mask: CMMaskCoif
+  inhand:
+  - RMCCombatUtilityKnifeA
+
+- type: startingGear
+  id: SVXMonkeyCasteNinja
+  parent: SVXMonkeyCasteBase
+  equipment:
+    jumpsuit: RMCJumpsuitMarsoc
+    mask: CMMaskCoif
+  inhand:
+  - RMCKatana
+
+- type: startingGear
+  id: SVXMonkeyCastePizzaDriver
+  parent: SVXMonkeyCasteBase
+  equipment:
+    jumpsuit: RMCJumpsuitPizza
+    head: ClothingHeadHatRedsoft
+    belt: RMCBeltMarinePistolHoldout
+  inhand:
+  - RMCWeaponPistolHoldout
+
+- type: startingGear
+  id: SVXMonkeyCasteBreacher
+  parent: SVXMonkeyCasteBase
+  equipment:
+    mask: CMMaskCoif
+    belt: CMBeltMarineBuckshot
+  inhand:
+  - RMCWeaponShotgunM12
+
+- type: startingGear
+  id: SVXMonkeyCasteCLF
+  parent: SVXMonkeyCasteBase
+  equipment:
+    outerClothing: RMCCoatMilitia
+    mask: CMMaskCoif
+    belt: RMCBeltMarineMAR
+  inhand:
+  - WeaponRifleMAR40
+
+- type: startingGear
+  id: SVXMonkeyCasteChimp
+  parent: SVXMonkeyCasteBase
+  equipment:
+    mask: CMMaskCoif
+    belt: RMCBeltSPPBrownHalfFill
+  inhand:
+  - RMCWeaponRifleType77
+
+- type: startingGear
+  id: SVXMonkeyCasteGrenadier
+  parent: SVXMonkeyCasteBase
+  equipment:
+    jumpsuit: RMCJumpsuitHEFA
+    head: RMCArmorHelmetHEFAFilled
+    pocket1: RMCPouchExplosiveFilledHEDP
+    pocket2: RMCPouchExplosiveFilledHEDP
+
+- type: startingGear
+  id: SVXMonkeyCasteCommando
+  parent: SVXMonkeyCasteBase
+  equipment:
+    jumpsuit: RMCJumpsuitVeteranPMCNoWebbing
+    outerClothing: CMArmorM4PMCCommandoSurvivorFilled
+    mask: CMMaskCoif
+    belt: RMCBeltPMCFilledCommando
+  inhand:
+  - RMCWeaponRifleM54CWhiteCommando

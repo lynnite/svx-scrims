@@ -190,12 +190,24 @@ public sealed class RMCPlanetSystem : EntitySystem
 
     public List<RMCPlanet> GetAllPlanetsInRotation()
     {
-        return GetAllPlanets().Where(p => p.Comp.InRotation).ToList();
+        return GetAllPlanets().Where(p => p.Comp.InRotation && !p.Comp.Monkey).ToList();
+    }
+
+    public List<RMCPlanet> GetAllPlanetsInRotation(bool monkey)
+    {
+        return GetAllPlanets()
+            .Where(p => p.Comp.InRotation && (monkey ? p.Comp.Monkey : !p.Comp.Monkey))
+            .ToList();
     }
 
     public List<RMCPlanet> GetCandidatesInRotation()
     {
-        var candidates = GetAllPlanetsInRotation();
+        return GetCandidatesInRotation(monkey: false);
+    }
+
+    public List<RMCPlanet> GetCandidatesInRotation(bool monkey)
+    {
+        var candidates = GetAllPlanetsInRotation(monkey);
         var players = _player.PlayerCount;
         if (players == 0)
             return candidates;

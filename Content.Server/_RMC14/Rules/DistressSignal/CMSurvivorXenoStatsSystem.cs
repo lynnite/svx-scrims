@@ -1,6 +1,7 @@
 using System.Linq;
 using Content.Server.GameTicking;
 using Content.Shared.GameTicking;
+using Content.Shared.GameTicking.Components;
 using Content.Shared.Damage;
 using Content.Shared.Mind;
 using Content.Shared.Mobs;
@@ -10,6 +11,7 @@ using Content.Shared._RMC14.Rules;
 using Content.Shared._RMC14.Survivor;
 using Content.Shared._RMC14.Xenonids;
 using Content.Shared._RMC14.Xenonids.Damage;
+using Content.Shared._SVX.Monkey;
 
 namespace Content.Server._RMC14.Rules.DistressSignal;
 
@@ -45,6 +47,7 @@ public sealed class CMSurvivorXenoStatsSystem : EntitySystem
     public override void Initialize()
     {
         SubscribeLocalEvent<XenoComponent, ProjectileDamageDealtEvent>(OnXenoProjectileHit);
+        SubscribeLocalEvent<SVXMonkeyComponent, ProjectileDamageDealtEvent>(OnMonkeyProjectileHit);
         SubscribeLocalEvent<MeleeWeaponComponent, MeleeHitEvent>(OnMeleeHit);
         SubscribeLocalEvent<RMCSurvivorComponent, ProjectileDamageDealtEvent>(OnSurvivorProjectileHit);
 
@@ -87,7 +90,7 @@ public sealed class CMSurvivorXenoStatsSystem : EntitySystem
     private void OnSurvivorProjectileHit(Entity<RMCSurvivorComponent> survivor, ref ProjectileDamageDealtEvent args)
     {
         if (args.Origin is not { } origin ||
-            !HasComp<XenoComponent>(origin) ||
+            !IsEnemyEntity(origin) ||
             args.DamageDelta is not { } delta ||
             !HasPositiveDamage(delta))
         {
@@ -100,9 +103,25 @@ public sealed class CMSurvivorXenoStatsSystem : EntitySystem
             damage: delta.GetTotal().Double());
     }
 
+    private void OnMonkeyProjectileHit(Entity<SVXMonkeyComponent> monkey, ref ProjectileDamageDealtEvent args)
+    {
+        if (args.Origin is not { } origin ||
+            !HasComp<RMCSurvivorComponent>(origin) ||
+            args.DamageDelta is not { } delta ||
+            !HasPositiveDamage(delta))
+        {
+            return;
+        }
+
+        RegisterDamage(
+            victim: monkey.Owner, victimSide: Side.Xeno,
+            attacker: origin, attackerSide: Side.Survivor,
+            damage: delta.GetTotal().Double());
+    }
+
     private void OnMeleeHit(Entity<MeleeWeaponComponent> weapon, ref MeleeHitEvent args)
     {
-        if (!args.IsHit || args.HitEntities.Count == 0 || !HasComp<XenoComponent>(args.User))
+        if (!args.IsHit || args.HitEntities.Count == 0 || !IsEnemyEntity(args.User))
             return;
 
         var swing = (args.BaseDamage + args.BonusDamage).GetTotal().Double();
@@ -124,6 +143,23 @@ public sealed class CMSurvivorXenoStatsSystem : EntitySystem
 
     private static bool HasPositiveDamage(DamageSpecifier delta) => delta.GetTotal().Float() > 0;
 
+    private bool IsMonkeyRound()
+    {
+        var rules = EntityQueryEnumerator<ActiveGameRuleComponent, CMDistressSignalRuleComponent>();
+        while (rules.MoveNext(out _, out _, out var rule))
+        {
+            if (rule.Monkey)
+                return true;
+        }
+
+        return false;
+    }
+
+    private bool IsEnemyEntity(EntityUid ent)
+    {
+        return HasComp<SVXMonkeyComponent>(ent) || HasComp<XenoComponent>(ent);
+    }
+
     private void RegisterDamage(EntityUid victim, Side victimSide, EntityUid attacker, Side attackerSide, double damage)
     {
         if (attackerSide == victimSide || damage <= 0)
@@ -142,7 +178,7 @@ public sealed class CMSurvivorXenoStatsSystem : EntitySystem
             return;
 
         Side victimSide;
-        if (HasComp<XenoComponent>(victim))
+        if (HasComp<XenoComponent>(victim) || HasComp<SVXMonkeyComponent>(victim))
             victimSide = Side.Xeno;
         else if (HasComp<RMCSurvivorComponent>(victim))
             victimSide = Side.Survivor;
@@ -176,7 +212,7 @@ public sealed class CMSurvivorXenoStatsSystem : EntitySystem
 
     private bool TryGetSide(EntityUid ent, out Side side)
     {
-        if (HasComp<XenoComponent>(ent))
+        if (HasComp<XenoComponent>(ent) || HasComp<SVXMonkeyComponent>(ent))
         {
             side = Side.Xeno;
             return true;
@@ -249,16 +285,22 @@ public sealed class CMSurvivorXenoStatsSystem : EntitySystem
             return;
 
         var survivors = RankedSide(Side.Survivor);
-        var xenos = RankedSide(Side.Xeno);
+        var enemies = RankedSide(Side.Xeno);
 
-        if (survivors.Count == 0 && xenos.Count == 0)
+        if (survivors.Count == 0 && enemies.Count == 0)
             return;
+
+        var monkey = IsMonkeyRound();
 
         if (survivors.Count > 0)
             AppendSection(ev, "rmc-survivors-roundend-header", survivors, "green");
 
-        if (xenos.Count > 0)
-            AppendSection(ev, "rmc-xenos-roundend-header", xenos, "purple");
+        if (enemies.Count > 0)
+        {
+            var header = monkey ? "svx-monkey-roundend-monkeys-header" : "rmc-xenos-roundend-header";
+            var color = monkey ? "red" : "purple";
+            AppendSection(ev, header, enemies, color);
+        }
     }
 
     private void AppendSection(RoundEndTextAppendEvent ev, string headerLoc, List<PlayerStats> entries, string color)

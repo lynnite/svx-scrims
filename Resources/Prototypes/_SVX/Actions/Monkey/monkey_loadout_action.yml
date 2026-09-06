@@ -1,0 +1,12 @@
+- type: entity
+  id: ActionMonkeyLoadout
+  name: Monkey Loadout
+  description: Pre-select the loadout you come back as on your next (re)spawn.
+  components:
+  - type: Action
+    checkCanInteract: false
+    icon:
+      sprite: _RMC14/Interface/Alerts/xeno_health.rsi
+      state: health_full
+  - type: InstantAction
+    event: !type:SVXMonkeyLoadoutActionEvent

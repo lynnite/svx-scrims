@@ -37,6 +37,10 @@ public sealed partial class CMDistressSignalRuleSystem
     private static readonly EntProtoId VehicleHumveeArcUnlock = "VehicleHumveeARC";
     private static readonly EntProtoId VehicleTankUnlock = "VehicleTank";
 
+    private static readonly EntProtoId MonkeyXenoMob = "SVXMonkeyXenoBase";
+    private static readonly ProtoId<JobPrototype> MonkeyXenoJob = "SVXJobMonkeyXeno";
+    private static readonly ProtoId<StartingGearPrototype> MonkeyRoundstartGear = "SVXMonkeyCasteTactical";
+
     /// <summary>
     /// Main handler for player spawning during the distress signal round.
     /// Initializes the xeno map, sets up survivor jobs, applies job slot scaling,
@@ -228,6 +232,12 @@ public sealed partial class CMDistressSignalRuleSystem
             xenoLeaderSpawnPoints.Add(spawnUid);
         }
 
+        if (comp.Monkey)
+        {
+            SpawnMonkeys(comp, ev, xenoSpawnPoints, xenoLeaderSpawnPoints);
+            return;
+        }
+
         NetUserId? SpawnXeno(List<NetUserId> list, EntProtoId ent, bool doBurst = false)
         {
             var playerId = _random.PickAndTake(list);
@@ -299,6 +309,80 @@ public sealed partial class CMDistressSignalRuleSystem
 
         if (totalXenos - selectedXenos > 0)
             _hive.ChangeBurrowedLarva(totalXenos - selectedXenos);
+    }
+
+    private void SpawnMonkeys(CMDistressSignalRuleComponent comp, RulePlayerSpawningEvent ev,
+        List<EntityUid> xenoSpawnPoints, List<EntityUid> xenoLeaderSpawnPoints)
+    {
+        var spawnPoints = xenoSpawnPoints.Count > 0 ? xenoSpawnPoints : xenoLeaderSpawnPoints;
+        if (spawnPoints.Count == 0)
+        {
+            Log.Error("[monkey] No xeno spawn points found during monkey selection.");
+            return;
+        }
+
+        var totalMonkeys = (int) Math.Round(Math.Max(100, ev.PlayerPool.Count / _marinesPerXeno));
+        var priorities = Enum.GetValues<JobPriority>().Length;
+        var monkeyCandidates = new List<NetUserId>[priorities];
+        for (var i = 0; i < priorities; i++)
+            monkeyCandidates[i] = new();
+
+        foreach (var (id, profile) in ev.Profiles)
+        {
+            var queenPriority = IsJobAllowed(id, comp.QueenJob) &&
+                                profile.JobPriorities.TryGetValue(comp.QueenJob, out var qp) && qp > JobPriority.Never;
+            var xenoPriority = IsJobAllowed(id, comp.XenoSelectableJob) &&
+                               profile.JobPriorities.TryGetValue(comp.XenoSelectableJob, out var sp) && sp > JobPriority.Never;
+            if (!queenPriority && !xenoPriority)
+                continue;
+
+            var priority = Math.Max(
+                profile.JobPriorities.TryGetValue(comp.QueenJob, out var q) ? (int)q : 0,
+                profile.JobPriorities.TryGetValue(comp.XenoSelectableJob, out var s) ? (int)s : 0);
+            monkeyCandidates[priority].Add(id);
+        }
+
+        NetUserId? SpawnMonkey(List<NetUserId> list)
+        {
+            var playerId = _random.PickAndTake(list);
+            if (!_player.TryGetSessionById(playerId, out var player))
+            {
+                Log.Error($"Failed to find player with id {playerId} during monkey selection.");
+                return null;
+            }
+
+            ev.PlayerPool.Remove(player);
+            GameTicker.PlayerJoinGame(player);
+
+            var point = _random.Pick(spawnPoints);
+            var monkeyEnt = SpawnAtPosition(MonkeyXenoMob, point.ToCoordinates());
+
+            if (!_mind.TryGetMind(playerId, out var mind))
+                mind = _mind.CreateMind(playerId);
+            _mind.TransferTo(mind.Value, monkeyEnt);
+
+            ApplyMonkeyRoundstartGear(monkeyEnt);
+
+            _adminLog.Add(LogType.RMCXenoSpawn, $"Player {player} spawned as monkey {ToPrettyString(monkeyEnt):monkey}");
+            return playerId;
+        }
+
+        var spawned = 0;
+        for (var i = priorities - 1; i >= 0 && spawned < totalMonkeys; i--)
+        {
+            while (monkeyCandidates[i].Count > 0 && spawned < totalMonkeys)
+            {
+                if (SpawnMonkey(monkeyCandidates[i]) != null)
+                    spawned++;
+            }
+        }
+
+    }
+
+    private void ApplyMonkeyRoundstartGear(EntityUid monkey)
+    {
+        var gear = _prototypes.Index<StartingGearPrototype>(MonkeyRoundstartGear);
+        _stationSpawning.EquipStartingGear(monkey, gear);
     }
 
     private EntityUid SpawnXenoEnt(EntProtoId ent, ICommonSession player, bool doBurst,

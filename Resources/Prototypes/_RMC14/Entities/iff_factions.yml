@@ -70,3 +70,10 @@
     - SPPEngi
     - SPPMed
     - SPPCCT
+
+- type: entity
+  id: FactionMonkey
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: IFFFaction
+

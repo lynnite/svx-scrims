@@ -3,6 +3,7 @@ using Content.Shared._RMC14.Dialog;
 using Content.Shared._RMC14.GameTicking;
 using Content.Shared._RMC14.Rules;
 using Content.Shared._RMC14.Xenonids.Hive;
+using Content.Shared._SVX.Monkey;
 using Content.Shared.Actions;
 using Content.Shared.GameTicking;
 using Content.Shared.GameTicking.Components;
@@ -29,6 +30,8 @@ public sealed class JoinXenoSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
 
     public int ClientBurrowedLarva { get; private set; }
+
+    public bool ClientMonkeyRound { get; private set; }
 
     private TimeSpan _burrowedLarvaDeathTime;
     private TimeSpan _burrowedLarvaDeathIgnoreTime;
@@ -60,6 +63,7 @@ public sealed class JoinXenoSystem : EntitySystem
     private void OnRoundRestartCleanup(RoundRestartCleanupEvent ev)
     {
         ClientBurrowedLarva = 0;
+        ClientMonkeyRound = false;
         SendLarvaStatus(null);
     }
 
@@ -153,6 +157,7 @@ public sealed class JoinXenoSystem : EntitySystem
     private void OnBurrowedLarvaStatus(BurrowedLarvaStatusEvent ev)
     {
         ClientBurrowedLarva = ev.Larva;
+        ClientMonkeyRound = ev.Monkey;
 
         if (_net.IsServer)
             return;
@@ -173,6 +178,12 @@ public sealed class JoinXenoSystem : EntitySystem
 
     private void OnJoinBurrowedLarva(JoinBurrowedLarvaRequest msg, EntitySessionEventArgs args)
     {
+        if (IsMonkeyRoundActive(args.SenderSession))
+        {
+            RaiseLocalEvent(new RequestMonkeyJoinEvent(args.SenderSession));
+            return;
+        }
+
         if (!_rmcGameTicker.PlayerGameStatuses.TryGetValue(args.SenderSession.UserId, out var status) ||
             status == PlayerGameStatus.JoinedGame)
         {
@@ -193,6 +204,18 @@ public sealed class JoinXenoSystem : EntitySystem
         }
     }
 
+    private bool IsMonkeyRoundActive(ICommonSession session)
+    {
+        var query = EntityQueryEnumerator<CMDistressSignalRuleComponent>();
+        while (query.MoveNext(out _, out var comp))
+        {
+            if (comp.Monkey)
+                return true;
+        }
+
+        return false;
+    }
+
     private void OnBurrowedLarvaStatusRequest(BurrowedLarvaStatusRequest msg, EntitySessionEventArgs args)
     {
         SendLarvaStatus(args.SenderSession);
@@ -203,23 +226,50 @@ public sealed class JoinXenoSystem : EntitySystem
         if (_net.IsClient)
             return;
 
-        var query = EntityQueryEnumerator<ActiveGameRuleComponent, CMDistressSignalRuleComponent, GameRuleComponent>();
-        while (query.MoveNext(out _, out var comp, out _))
+        var anySent = false;
+        var query = EntityQueryEnumerator<CMDistressSignalRuleComponent>();
+        while (query.MoveNext(out _, out var comp))
         {
             if (!TryComp(comp.Hive, out HiveComponent? hive))
                 continue;
 
-            var statusEv = new BurrowedLarvaStatusEvent(hive.BurrowedLarva);
+            anySent = true;
+            var statusEv = new BurrowedLarvaStatusEvent(hive.BurrowedLarva, comp.Monkey);
             if (to != null)
             {
                 RaiseNetworkEvent(statusEv, to);
-                return;
+                continue;
             }
 
             var filter = Filter.Empty()
                 .AddWhere(s =>
                     _rmcGameTicker.PlayerGameStatuses.GetValueOrDefault(s.UserId) != PlayerGameStatus.JoinedGame);
             RaiseNetworkEvent(statusEv, filter);
+        }
+
+        if (!anySent)
+        {
+            var monkeyQuery = EntityQueryEnumerator<ActiveGameRuleComponent, CMDistressSignalRuleComponent>();
+            while (monkeyQuery.MoveNext(out _, out _, out var comp))
+            {
+                if (!comp.Monkey)
+                    continue;
+
+                var statusEv = new BurrowedLarvaStatusEvent(1, monkey: true);
+                if (to != null)
+                {
+                    RaiseNetworkEvent(statusEv, to);
+                }
+                else
+                {
+                    var filter = Filter.Empty()
+                        .AddWhere(s =>
+                            _rmcGameTicker.PlayerGameStatuses.GetValueOrDefault(s.UserId) != PlayerGameStatus.JoinedGame);
+                    RaiseNetworkEvent(statusEv, filter);
+                }
+
+                break;
+            }
         }
     }
 

@@ -1,0 +1,23 @@
+- type: job
+  parent: CMJobXenoBase
+  id: SVXJobMonkeyXeno
+  name: svx-job-name-monkey-xeno
+  playTimeTracker: SVXJobMonkeyXeno
+  icon: RMCJobIconXeno
+  supervisors: cm-job-supervisors-nobody
+
+- type: playTimeTracker
+  id: SVXJobMonkeyXeno
+  isXeno: true
+
+- type: entity
+  parent: SVXMonkey
+  id: SVXMonkeyXenoBase
+  name: monkey (SVX xeno base)
+  components:
+  - type: SVXMonkey
+  - type: SVXMonkeyLoadout
+  - type: UserIFF
+    factions:
+    - FactionMonkey
+

@@ -1,0 +1,12 @@
+<cc:SVXMonkeyCasteWindow
+    xmlns="https://spacestation14.io"
+    xmlns:cc="clr-namespace:Content.Client._SVX.Monkey"
+    Title="Monke Evolution"
+    MinSize="280 320">
+    <BoxContainer Orientation="Vertical" Margin="4">
+        <Label Name="InfoLabel" Access="Public" Text="Select your caste for the next (re)spawn."
+               StyleClasses="LabelSubText" HorizontalExpand="True" HorizontalAlignment="Center"
+               Margin="0 0 0 6" />
+        <BoxContainer Orientation="Vertical" Name="CasteList" Access="Public" />
+    </BoxContainer>
+</cc:SVXMonkeyCasteWindow>
