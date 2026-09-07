@@ -72,7 +72,6 @@
   equipment:
     jumpsuit: RMCJumpsuitHEFA
     head: RMCArmorHelmetHEFAFilled
-    pocket1: RMCPouchExplosiveFilledHEDP
     pocket2: RMCPouchExplosiveFilledHEDP
     pocket1: RMCPouchSurvivalFill
 
