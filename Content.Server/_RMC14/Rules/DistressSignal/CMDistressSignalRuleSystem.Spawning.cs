@@ -38,7 +38,6 @@ public sealed partial class CMDistressSignalRuleSystem
     private static readonly EntProtoId VehicleTankUnlock = "VehicleTank";
 
     private static readonly EntProtoId MonkeyXenoMob = "SVXMonkeyXenoBase";
-    private static readonly ProtoId<JobPrototype> MonkeyXenoJob = "SVXJobMonkeyXeno";
     private static readonly ProtoId<StartingGearPrototype> MonkeyRoundstartGear = "SVXMonkeyCasteTactical";
 
     /// <summary>

@@ -92,9 +92,12 @@ public sealed partial class SVXMonkeyRespawnSystem : EntitySystem
 
     private void TrySpawnMonkeyForJoin(ICommonSession session)
     {
-        if (_gameTicker.RunLevel != GameRunLevel.InRound || !TryGetMonkeyRule(out _))
+        var inRound = _gameTicker.RunLevel == GameRunLevel.InRound;
+        var hasRule = TryGetMonkeyRule(out var foundRule);
+
+        if (!inRound || !hasRule)
         {
-            Log.Warning($"[monkey] Refusing latejoin for {session.Name}: not an active in-round monkey round.");
+            LogMonkeyDiagnostics(session, inRound ? "latejoin refused (no monkey rule)" : "latejoin refused (not in round)", foundRule);
             if (session.AttachedEntity is { } ghostEnt)
                 _popup.PopupEntity("You cannot join a monkey round right now.", ghostEnt, ghostEnt);
             return;
@@ -141,6 +144,36 @@ public sealed partial class SVXMonkeyRespawnSystem : EntitySystem
 
         rule = null!;
         return false;
+    }
+
+    private void LogMonkeyDiagnostics(
+        ICommonSession? session,
+        string reason,
+        CMDistressSignalRuleComponent? monopole)
+    {
+        var sb = new System.Text.StringBuilder(
+            $"[monkey-diag] {reason} for {session?.Name ?? "?"}: runLevel={_gameTicker.RunLevel}; ");
+
+        var distressCount = 0;
+        var monkeyCount = 0;
+        var query = EntityQueryEnumerator<CMDistressSignalRuleComponent>();
+        while (query.MoveNext(out _, out var comp))
+        {
+            distressCount++;
+            if (comp.Monkey)
+                monkeyCount++;
+        }
+
+        sb.Append($"distressRules={distressCount}; monkeyFlaggedRules={monkeyCount}; ");
+
+        if (monopole != null)
+        {
+            sb.Append(
+                $"match: monkey={monopole.Monkey}; resolved={monopole.MonkeyRoundResolved}; " +
+                $"result={monopole.Result}; startTimeSet={monopole.StartTime != null}; autoEnd={monopole.AutoEnd}");
+        }
+
+        Log.Warning(sb.ToString());
     }
 
     private EntityUid? PickSpawnPoint()
