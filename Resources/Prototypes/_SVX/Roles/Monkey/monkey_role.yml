@@ -36,6 +36,8 @@
     interfaces:
       enum.SVXMonkeyCasteUIKey.Key:
         type: SVXMonkeyCasteBui
+      enum.TacticalMapUserUi.Key:
+        type: TacticalMapUserBui
   - type: SVXMonkey
   - type: Skills
     preset: RMCSkillPresetSurvivor
@@ -43,4 +45,10 @@
   - type: UserIFF
     factions:
     - FactionMonkey
+  - type: TacticalMapUser
+    marines: true
+    xenos: true
+    canDraw: false
+    liveUpdate: true
+    actionId: RMCActionOpenTacticalMapMarine
 
