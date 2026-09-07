@@ -37,6 +37,8 @@
       enum.SVXMonkeyCasteUIKey.Key:
         type: SVXMonkeyCasteBui
   - type: SVXMonkey
+  - type: Skills
+    preset: RMCSkillPresetSurvivor
   - type: SVXMonkeyLoadout
   - type: UserIFF
     factions:

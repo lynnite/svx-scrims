@@ -913,7 +913,6 @@
       - RMCSurvivorCommanderNewVaradero: 1
       CMSurvivor:
       - CMSurvivor: -1
-      - SVXSurvivorMonkey: 1
       - RMCSurvivorCivilianUnique: 1
       - RMCSurvivorHybrisaTMCCMiner: -1
       - CMSurvivorPriest: 1
