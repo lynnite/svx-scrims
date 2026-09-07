@@ -11,7 +11,9 @@ public sealed partial class CMDistressSignalRuleSystem
     {
         if (distress.Result != null || distress.MonkeyRoundResolved || distress.StartTime == null)
         {
-            distress.MonkeyRoundResolved = true;
+            Log.Info(
+                $"[monkey-diag] CheckMonkeyRoundShouldEnd skipping: result={distress.Result}, " +
+                $"resolved={distress.MonkeyRoundResolved}, startTimeSet={distress.StartTime != null}");
             return;
         }
 
@@ -26,21 +28,25 @@ public sealed partial class CMDistressSignalRuleSystem
 
         if (!CheckAliveSurvivors())
         {
+            Log.Info(
+                $"[monkey-diag] no survivors alive at t={elapsed.TotalSeconds:0.0}s of " +
+                $"{distress.MonkeyRoundDuration.TotalSeconds:0}s; ending as monkey win");
             EndMonkeyRound(distress, survivorWin: false);
         }
     }
 
     private bool CheckAliveSurvivors()
     {
+        var survivors = 0;
         var query = EntityQueryEnumerator<RMCSurvivorComponent, MobStateComponent>();
         while (query.MoveNext(out var uid, out _, out var mobState))
         {
-            if (!_mobState.IsAlive(uid, mobState))
-                continue;
-
-            return true;
+            survivors++;
+            if (mobState.CurrentState == MobState.Alive)
+                return true;
         }
 
+        Log.Info($"[monkey-diag] CheckAliveSurvivors: {survivors} total RMCSurvivor entities, none alive");
         return false;
     }
 

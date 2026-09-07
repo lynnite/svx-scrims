@@ -45,7 +45,7 @@ see_own_notes = true
 
 [rmc]
 automatic_commander_promotion = false
-planet_map_vote = false
+planet_map_vote = true
 dropship_initial_delay_minutes = 0
 
 [ic]

@@ -129,6 +129,32 @@ public sealed partial class SVXMonkeyCastePickSystem : EntitySystem
         return null;
     }
 
+    private void LogMonkeyRuleDiagnostics(EntityUid mindId, string reason)
+    {
+        var query = EntityQueryEnumerator<CMDistressSignalRuleComponent>();
+        var distress = 0;
+        var monkey = 0;
+        CMDistressSignalRuleComponent? match = null;
+        while (query.MoveNext(out _, out var comp))
+        {
+            distress++;
+            if (comp.Monkey)
+            {
+                monkey++;
+                match = comp;
+            }
+        }
+
+        var detail = match == null
+            ? "no monkey-flagged distress rule found"
+            : $"monkey={match.Monkey}, resolved={match.MonkeyRoundResolved}, " +
+              $"result={match.Result}, startTimeSet={match.StartTime != null}, autoEnd={match.AutoEnd}";
+
+        Log.Warning(
+            $"[monkey-diag] {reason} for mind={mindId}: distressRules={distress}; " +
+            $"monkeyFlaggedRules={monkey}; {detail}");
+    }
+
     private bool TryGetElapsed(CMDistressSignalRuleComponent? rule, out TimeSpan elapsed)
     {
         if (rule?.StartTime is { } start)
@@ -149,7 +175,10 @@ public sealed partial class SVXMonkeyCastePickSystem : EntitySystem
 
         var rule = GetActiveMonkeyRule();
         if (rule == null)
+        {
+            LogMonkeyRuleDiagnostics(mindId, "caste-pick");
             return new PickResult(false, "no-round", "No active monkey round to evolve in.");
+        }
 
         if (!TryGetElapsed(rule, out var elapsed))
             return new PickResult(false, "round-not-started", "Round start time not set yet.");

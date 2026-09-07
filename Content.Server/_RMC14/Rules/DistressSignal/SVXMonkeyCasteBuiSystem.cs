@@ -37,12 +37,20 @@ public sealed partial class SVXMonkeyCasteBuiSystem : EntitySystem
     private void OnLoadoutMapInit(Entity<SVXMonkeyLoadoutComponent> ent, ref MapInitEvent args)
     {
         _actions.AddAction(ent, ref ent.Comp.Action, ent.Comp.ActionId);
+        Log.Info($"[monkey-diag] OnLoadoutMapInit on {ToPrettyString(ent.Owner)}: granted '{ent.Comp.ActionId}'");
     }
 
     private void OnLoadoutAction(Entity<SVXMonkeyLoadoutComponent> ent, ref SVXMonkeyLoadoutActionEvent args)
     {
+        Log.Info(
+            $"[monkey-diag] loadout action fired on {ToPrettyString(ent.Owner)}: " +
+            $"runLevel={_gameTicker.RunLevel}, hasActor={HasComp<ActorComponent>(ent.Owner)}");
+
         if (!_mind.TryGetMind(ent.Owner, out var mindId, out _))
+        {
+            Log.Warning($"[monkey-diag] loadout action: no mind attached to monkey {ToPrettyString(ent.Owner)}");
             return;
+        }
 
         OpenForMob(ent.Owner, mindId);
     }
@@ -50,7 +58,12 @@ public sealed partial class SVXMonkeyCasteBuiSystem : EntitySystem
     public void OpenForMob(EntityUid monkey, EntityUid mindId)
     {
         if (_gameTicker.RunLevel != GameRunLevel.InRound || !TryComp(monkey, out ActorComponent? actor))
+        {
+            Log.Warning(
+                $"[monkey-diag] OpenForMob blocked for {ToPrettyString(monkey)}: " +
+                $"runLevel={_gameTicker.RunLevel}, hasActor={HasComp<ActorComponent>(monkey)}");
             return;
+        }
 
         _ui.OpenUi(monkey, SVXMonkeyCasteUIKey.Key, actor.PlayerSession);
         SendState(monkey, mindId);

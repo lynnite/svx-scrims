@@ -1,20 +1,41 @@
-- type: job
-  parent: CMJobXenoBase
-  id: SVXJobMonkeyXeno
-  name: svx-job-name-monkey-xeno
-  playTimeTracker: SVXJobMonkeyXeno
-  icon: RMCJobIconXeno
-  supervisors: cm-job-supervisors-nobody
-
 - type: playTimeTracker
   id: SVXJobMonkeyXeno
   isXeno: true
 
 - type: entity
-  parent: SVXMonkey
+  parent: [RMCBaseMobSpeciesOrganic]
+  id: SVXMonkeyXenoHost
+  name: monkey (SVX xeno host)
+  suffix: svx, Monkey host
+  components:
+  - type: FireVisuals
+    sprite: Mobs/Effects/onfire.rsi
+    normalState: Monkey_burning
+    alternateState: Monkey_burning
+    fireStackAlternateState: 14
+    lightRadiusPerStack: 0.2
+    maxLightRadius: 3
+  - type: HumanoidAppearance
+    species: svxmonkey
+  - type: Speech
+    speechSounds: Monkey
+    speechVerb: Monkey
+  - type: MonkeyAccent
+  - type: Tag
+    tags:
+      - SubdermalImplant
+      - FootstepSound
+      - DoorBumpOpener
+
+- type: entity
+  parent: SVXMonkeyXenoHost
   id: SVXMonkeyXenoBase
   name: monkey (SVX xeno base)
   components:
+  - type: UserInterface
+    interfaces:
+      enum.SVXMonkeyCasteUIKey.Key:
+        type: SVXMonkeyCasteBui
   - type: SVXMonkey
   - type: SVXMonkeyLoadout
   - type: UserIFF

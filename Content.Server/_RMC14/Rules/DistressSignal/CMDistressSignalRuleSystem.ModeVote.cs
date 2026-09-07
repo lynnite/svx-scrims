@@ -13,13 +13,18 @@ public sealed partial class CMDistressSignalRuleSystem
 
     private void ConfigureNextRound()
     {
-        var monkeyPlanets = _rmcPlanet.GetCandidatesInRotation(monkey: true);
-        var monkeyAvailable = monkeyPlanets.Count > 0;
-        if (!monkeyAvailable)
+        if (_modeVote != null || HasPlanetVoteRunning())
             return;
 
-        if (_modeVote != null)
+        var monkeyPlanets = _rmcPlanet.GetCandidatesInRotation(monkey: true);
+        var monkeyAvailable = monkeyPlanets.Count > 0;
+
+        if (!monkeyAvailable)
+        {
+            Log.Info("[modevote] no monkey maps available; skipping game-mode vote, planet vote on distress pool");
+            StartPlanetVote(monkey: false);
             return;
+        }
 
         var options = new List<(string text, object data)>
         {
@@ -42,14 +47,18 @@ public sealed partial class CMDistressSignalRuleSystem
             _modeVote = null;
             if (args.Votes.Count == 0)
             {
-                Log.Info("[modevote] game-mode vote finished with no options; leaving preset unchanged");
+                Log.Info("[modevote] game-mode vote finished with no options; planet vote on distress pool");
+                StartPlanetVote(monkey: false);
                 return;
             }
 
             var distressVotes = args.Votes[0];
             var monkeyVotes = args.Votes.Count > 1 ? args.Votes[1] : 0;
             var chosen = monkeyVotes > distressVotes ? MonkeyPreset : DistressPreset;
+            var monkey = chosen == MonkeyPreset;
             Log.Info($"[modevote] game-mode vote finished: distress={distressVotes} monkey={monkeyVotes} -> preset={chosen}");
+
+            StartPlanetVote(monkey);
 
             GameTicker.SetGamePreset(chosen);
         };
