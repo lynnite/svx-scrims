@@ -3,14 +3,14 @@
   equipment:
     jumpsuit: RMCJumpsuitNormCivilianBrown
     shoes: CMBootsBlack
-    pocket1: RMCPouchSurvivalFill
+    pocket1: SVXPouchSurvivalNoRadio
 
 - type: startingGear
   id: SVXMonkeyCasteTactical
   parent: SVXMonkeyCasteBase
   equipment:
     mask: CMMaskCoif
-    pocket1: RMCPouchSurvivalFill
+    pocket1: SVXPouchSurvivalNoRadio
   inhand:
   - RMCCombatUtilityKnifeA
 
@@ -20,7 +20,9 @@
   equipment:
     jumpsuit: RMCJumpsuitMarsoc
     mask: CMMaskCoif
-    pocket1: RMCPouchSurvivalFill
+    pocket1: SVXPouchSurvivalNoRadio
+    eyes: SVXNinjaGoggles
+    shoes: SVXNinjaBoots
   inhand:
   - RMCKatana
 
@@ -31,7 +33,7 @@
     jumpsuit: RMCJumpsuitPizza
     head: ClothingHeadHatRedsoft
     belt: RMCBeltMarinePistolHoldout
-    pocket1: RMCPouchSurvivalFill
+    pocket1: SVXPouchSurvivalNoRadio
   inhand:
   - RMCWeaponPistolHoldout
 
@@ -41,7 +43,7 @@
   equipment:
     mask: CMMaskCoif
     belt: CMBeltMarineBuckshot
-    pocket1: RMCPouchSurvivalFill
+    pocket1: SVXPouchSurvivalNoRadio
   inhand:
   - RMCWeaponShotgunM12
 
@@ -52,7 +54,7 @@
     outerClothing: RMCCoatMilitia
     mask: CMMaskCoif
     belt: RMCBeltMarineMAR
-    pocket1: RMCPouchSurvivalFill
+    pocket1: SVXPouchSurvivalNoRadio
   inhand:
   - WeaponRifleMAR40
 
@@ -62,7 +64,7 @@
   equipment:
     mask: CMMaskCoif
     belt: RMCBeltSPPBrownHalfFill
-    pocket1: RMCPouchSurvivalFill
+    pocket1: SVXPouchSurvivalNoRadio
   inhand:
   - RMCWeaponRifleType77
 
@@ -73,7 +75,7 @@
     jumpsuit: RMCJumpsuitHEFA
     head: RMCArmorHelmetHEFAFilled
     pocket2: RMCPouchExplosiveFilledHEDP
-    pocket1: RMCPouchSurvivalFill
+    pocket1: SVXPouchSurvivalNoRadio
 
 - type: startingGear
   id: SVXMonkeyCasteCommando
@@ -83,6 +85,6 @@
     outerClothing: CMArmorM4PMCCommandoSurvivorFilled
     mask: CMMaskCoif
     belt: RMCBeltPMCFilledCommando
-    pocket1: RMCPouchSurvivalFill
+    pocket1: SVXPouchSurvivalNoRadio
   inhand:
   - RMCWeaponRifleM54CWhiteCommando

@@ -5,6 +5,7 @@ using Content.Shared.Mind;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs;
 using Content.Shared.Roles;
+using Content.Shared.Mobs.Systems;
 using Content.Shared._RMC14.Rules;
 using Content.Shared._RMC14.GameTicking;
 using Content.Shared._SVX.Monkey;
@@ -15,6 +16,7 @@ using Robust.Shared.Player;
 using Content.Shared.Popups;
 using Robust.Shared.Random;
 using Robust.Shared.Prototypes;
+using Robust.Shared.Timing;
 
 namespace Content.Server._RMC14.Rules.DistressSignal;
 
@@ -28,8 +30,14 @@ public sealed partial class SVXMonkeyRespawnSystem : EntitySystem
     [Dependency] private readonly SVXMonkeyCastePickSystem _caste = default!;
     [Dependency] private readonly SharedRMCGameTickerSystem _rmcGameTicker = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly MobStateSystem _mobState = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     private static readonly EntProtoId MonkeyMob = "SVXMonkeyXenoBase";
+
+    private static readonly TimeSpan CriticalToKillDelay = TimeSpan.FromSeconds(0.5f);
+
+    private readonly Dictionary<EntityUid, TimeSpan> _pendingKills = new();
 
     public override void Initialize()
     {
@@ -41,8 +49,17 @@ public sealed partial class SVXMonkeyRespawnSystem : EntitySystem
 
     private void OnMonkeyMobStateChanged(Entity<SVXMonkeyComponent> ent, ref MobStateChangedEvent args)
     {
+        if (args.NewMobState == MobState.Critical &&
+            args.OldMobState != MobState.Dead)
+        {
+            _pendingKills[ent.Owner] = _timing.CurTime + CriticalToKillDelay;
+            return;
+        }
+
         if (args.NewMobState != MobState.Dead)
             return;
+
+        _pendingKills.Remove(ent.Owner);
 
         if (!_mind.TryGetMind(ent.Owner, out var mindId, out _))
             return;
@@ -51,6 +68,41 @@ public sealed partial class SVXMonkeyRespawnSystem : EntitySystem
             return;
 
         ReborrowMonkey(actor.PlayerSession, mindId);
+    }
+
+    public override void Update(float frameTime)
+    {
+        if (_pendingKills.Count == 0)
+            return;
+
+        var curTime = _timing.CurTime;
+        List<EntityUid>? toKill = null;
+
+        foreach (var (uid, killAt) in _pendingKills)
+        {
+            if (curTime < killAt)
+                continue;
+
+            toKill ??= new List<EntityUid>();
+            toKill.Add(uid);
+        }
+
+        if (toKill == null)
+            return;
+
+        foreach (var uid in toKill)
+        {
+            _pendingKills.Remove(uid);
+
+            if (TerminatingOrDeleted(uid) ||
+                !TryComp<MobStateComponent>(uid, out var mobState) ||
+                mobState.CurrentState != MobState.Critical)
+            {
+                continue;
+            }
+
+            _mobState.ChangeMobState(uid, MobState.Dead);
+        }
     }
 
     private void ReborrowMonkey(ICommonSession session, EntityUid mindId)

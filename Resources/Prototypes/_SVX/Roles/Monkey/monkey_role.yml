@@ -51,4 +51,8 @@
     canDraw: false
     liveUpdate: true
     actionId: RMCActionOpenTacticalMapMarine
+  - type: TacticalMapIcon
+    icon:
+      sprite: /Textures/_RMC14/Interface/map_blips.rsi
+      state: forecon_synth
 
