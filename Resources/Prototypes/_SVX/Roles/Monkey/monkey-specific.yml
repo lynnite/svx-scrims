@@ -1,0 +1,43 @@
+- type: entity
+  parent: RMCPouchSurvival
+  id: SVXPouchSurvivalNoRadio
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: RMCFlashlightLantern
+    - id: CMCrowbarRed
+    - id: CMPacketPillsTricordrazine
+    - id: CMGauze10
+    - id: RMCM5Bayonet
+
+- type: entity
+  parent: RMCScoutShoes
+  id: SVXNinjaBoots
+  name: ninja master boots
+  description: A very light, nimble pair of boots.
+  components:
+  - type: ClothingSpeedModifier
+    walkModifier: 1.5
+    sprintModifier: 1.5
+  - type: Unremoveable
+  - type: ActionGrant
+    actions:
+    - ActionSVXNinjaLightSuspend
+  - type: ItemActionGrant
+    actions:
+    - ActionSVXNinjaLightSuspend
+    activeIfWorn: true
+  - type: SVXClumsyItem
+    clumsy:
+      clumsyDefaultCheck: 1
+      clumsyGuns: true
+      clumsyVaulting: false
+
+- type: entity
+  parent: CMGlassesM42ScoutSight
+  id: SVXNinjaGoggles
+  name: advanced ninja mesons
+  description: Night vision for the less skilled.
+  components:
+  - type: Unremoveable

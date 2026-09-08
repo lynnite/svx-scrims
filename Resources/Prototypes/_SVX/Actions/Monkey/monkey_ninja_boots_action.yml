@@ -1,0 +1,13 @@
+- type: entity
+  parent: BaseAction
+  id: ActionSVXNinjaLightSuspend
+  name: Light Suppression
+  description: Temporarily suspends any light sources in a 7 tile radius around you for 10 seconds.
+  components:
+  - type: Action
+    useDelay: 20
+    icon:
+      sprite: Objects/Tools/flashlight.rsi
+      state: flashlight
+  - type: InstantAction
+    event: !type:SVXNinjaLightSuspendActionEvent
