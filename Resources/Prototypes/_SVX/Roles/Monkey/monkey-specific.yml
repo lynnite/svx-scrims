@@ -41,3 +41,14 @@
   description: Night vision for the less skilled.
   components:
   - type: Unremoveable
+
+- type: entity
+  parent: RMCJumpsuitMarsoc
+  id: SVXShinobiShozoku
+  name: shinobi shozoku
+  description: Ninja wear
+  components:
+  - type: Unremoveable
+  - type: CMArmor
+    bullet: 0
+    melee: 0

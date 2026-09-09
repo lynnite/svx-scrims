@@ -18,13 +18,12 @@
   id: SVXMonkeyCasteNinja
   parent: SVXMonkeyCasteBase
   equipment:
-    jumpsuit: RMCJumpsuitMarsoc
+    jumpsuit: SVXShinobiShozoku
     mask: CMMaskCoif
     pocket1: SVXPouchSurvivalNoRadio
     eyes: SVXNinjaGoggles
     shoes: SVXNinjaBoots
-  inhand:
-  - RMCKatana
+    belt: RMCScabbardKatanaFilled
 
 - type: startingGear
   id: SVXMonkeyCastePizzaDriver
@@ -44,6 +43,7 @@
     mask: CMMaskCoif
     belt: CMBeltMarineBuckshot
     pocket1: SVXPouchSurvivalNoRadio
+    pocket2: RMCExplosivePlastic
   inhand:
   - RMCWeaponShotgunM12
 
@@ -51,6 +51,7 @@
   id: SVXMonkeyCasteCLF
   parent: SVXMonkeyCasteBase
   equipment:
+    jumpsuit: RMCJumpsuitMercenaryHeavy
     outerClothing: RMCCoatMilitia
     mask: CMMaskCoif
     belt: RMCBeltMarineMAR
@@ -75,7 +76,9 @@
     jumpsuit: RMCJumpsuitHEFA
     head: RMCArmorHelmetHEFAFilled
     pocket2: RMCPouchExplosiveFilledHEDP
-    pocket1: SVXPouchSurvivalNoRadio
+    pocket1: RMCPouchExplosiveFilledHEDP
+  inhand:
+  - SVXPouchSurvivalNoRadio
 
 - type: startingGear
   id: SVXMonkeyCasteCommando
