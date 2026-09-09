@@ -21,12 +21,12 @@ public sealed partial class SVXMonkeyCastePickSystem : EntitySystem
     public static readonly CasteDef[] Castes =
     {
         new(DefaultGear, "Tactical", TimeSpan.Zero),
-        new("SVXMonkeyCasteNinja", "Ninja", TimeSpan.FromSeconds(20)),
+        new("SVXMonkeyCasteNinja", "Ninja", TimeSpan.FromSeconds(40)),
         new("SVXMonkeyCastePizzaDriver", "Pizza Driver", TimeSpan.FromSeconds(90)),
-        new("SVXMonkeyCasteBreacher", "Breacher", TimeSpan.FromSeconds(90)),
-        new("SVXMonkeyCasteCLF", "CLF Soldier", TimeSpan.FromMinutes(2)),
-        new("SVXMonkeyCasteChimp", "Chimp", TimeSpan.FromSeconds(120)),
-        new("SVXMonkeyCasteGrenadier", "Grenadier", TimeSpan.FromMinutes(5)),
+        new("SVXMonkeyCasteBreacher", "Breacher", TimeSpan.FromSeconds(120)),
+        new("SVXMonkeyCasteCLF", "CLF Soldier", TimeSpan.FromSeconds(90)),
+        new("SVXMonkeyCasteChimp", "Chimp", TimeSpan.FromSeconds(60)),
+        new("SVXMonkeyCasteGrenadier", "Grenadier", TimeSpan.FromMinutes(4)),
         new("SVXMonkeyCasteCommando", "Commando", TimeSpan.FromMinutes(5)),
     };
 

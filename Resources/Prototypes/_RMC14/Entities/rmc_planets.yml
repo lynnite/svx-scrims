@@ -953,3 +953,47 @@
     survivorJobOverrideScenarios:
       asset_protection: # Corporate Dome Goons
         CMSurvivorScientist: CMSurvivorDoctor
+
+- type: entity
+  id: SVXPlanetRiverside
+  name: Riverside
+  components:
+  - type: RMCPlanetMapPrototype
+    map: /Maps/_RMC14/riverside.yml
+    camouflage: Jungle
+    monkey: true
+    specialFaxes:
+      Liaison: RMCPaperWeYaLiaisonBriefingLV624
+    announcement: "An automated distress signal has been received from the archaeological site of Lazarus Landing, on the border world of LV-624. A response team from the UNS Almayer will be dispatched shortly to investigate."
+    #smallHostVariants:
+      #- RMCMobSmallHostFarwa
+      #- CMMobSmallHostMonkey
+      #- CMMobSmallHostKobold
+      #- RMCMobSmallHostNeaera
+      #- RMCMobSmallHostStok
+    nightmareScenarios:
+#   - scenarioName: clf_ship
+#     scenarioProbability: 0.1
+    - scenarioName: none
+      scenarioProbability: 1
+    survivorJobVariants:
+      RMCSurvivorCommandingOfficer:
+      - RMCSurvivorCommanderNewVaradero: 1
+      CMSurvivor:
+      - CMSurvivor: -1
+      - RMCSurvivorCivilianUnique: 1
+      - RMCSurvivorHybrisaTMCCMiner: -1
+      - CMSurvivorPriest: 1
+      CMSurvivorCorporate:
+      - CMSurvivorLV624CorporateLiaison: 2
+      CMSurvivorDoctor:
+      - CMSurvivorLV624MedicalTechnician: 3
+      CMSurvivorEngineer:
+      - CMSurvivorLV624Engineer: 2
+      - CMSurvivorLV624CargoTechnician: 2
+      CMSurvivorSecurity:
+      - CMSurvivorGoon: 2
+      - CMSurvivorCMBDeputy: 2
+      - CMSurvivorLV624SecurityGuard: 2
+      CMSurvivorScientist:
+      - CMSurvivorLV624Archeologist: 2
