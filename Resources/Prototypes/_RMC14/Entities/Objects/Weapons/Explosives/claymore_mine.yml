@@ -54,6 +54,7 @@
       behaviors:
       - !type:TriggerBehavior
   - type: RMCLandmine
+    placementDelay: 1
   - type: StepTrigger
     requiredTriggeredSpeed: 0
   - type: ExplodeOnTrigger
@@ -68,11 +69,11 @@
     minVelocity: 0.5
     maxVelocity: 1.5
     fillPrototype: RMCShrapnel
-    capacity: 12
+    capacity: 16
     spreadAngle: 120
   - type: RMCMesonsNonviewable
   - type: ClusterLimitHits
-    limit: 8
+    limit: 16
   - type: RequireProjectileTarget
   - type: Flammable
     fireSpread: false
@@ -100,7 +101,7 @@
     impactEffect: BulletImpactEffect
     damage:
       types:
-        Piercing: 25
+        Piercing: 45
         Structural: 100
     soundHit:
       path: /Audio/Weapons/Guns/Hits/bullet_hit.ogg
@@ -161,3 +162,4 @@
 
 - type: Tag
   id: RMCExplosiveClaymoreMine
+
