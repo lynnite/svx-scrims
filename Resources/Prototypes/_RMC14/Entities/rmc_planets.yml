@@ -955,11 +955,11 @@
         CMSurvivorScientist: CMSurvivorDoctor
 
 - type: entity
-  id: SVXPlanetRiverside
-  name: Riverside
+  id: SVXPlanetVietnam
+  name: Vietnam
   components:
   - type: RMCPlanetMapPrototype
-    map: /Maps/_RMC14/riverside.yml
+    map: /Maps/_RMC14/vietnam.yml
     camouflage: Jungle
     monkey: true
     specialFaxes:
